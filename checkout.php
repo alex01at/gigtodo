@@ -453,7 +453,7 @@ if(isset($_POST['code'])){
 		<div class="col-md-5">
 			<div class="card checkout-details">
 				<div class="card-header">
-					<h5> <i class="fa fa-file-text-o"></i> Order Summary </h5>
+					<h5> <i class="fa fa-file-text-o"></i> <?= $lang['order_summary'];?> </h5>
 				</div>
 				<div class="card-body">
 					
@@ -468,29 +468,29 @@ if(isset($_POST['code'])){
 
 					<hr>
 
-					<h6>Proposal's Price: <span class="float-right"><?= showPrice($single_price); ?> </span></h6>
+					<h6><?=$lang['label']['proposal_price']?>: <span class="float-right"><?= showPrice($single_price); ?> </span></h6>
 
 					<?php if(isset($_POST['proposal_extras'])){ ?>
 					<hr>
-					<h6>Proposal's Extras : <span class="float-right"><?= showPrice($extra_price); ?></span> </h6>
+					<h6><?= $lang['proposals_extra']; ?> : <span class="float-right"><?= showPrice($extra_price); ?></span> </h6>
 					<?php } ?>
 
 					<hr>
-					<h6>Proposal's Quantity: <span class="float-right"><?= $proposal_qty; ?></span></h6>
+					<h6><?= $lang['order_details']['quantity']; ?>: <span class="float-right"><?= $proposal_qty; ?></span></h6>
 					<?php if(isset($_SESSION['c_proposal_minutes'])){ ?>
 					<hr>
 					<h6>Proposal's Video Call Minutes: <span class="float-right"><?= $_SESSION['c_proposal_minutes']; ?> Minutes</span></h6>
 					<?php } ?>
 					<hr class="processing-fee">
-					<h6 class="processing-fee">Processing Fee: <span class="float-right"><?= showPrice($processing_fee); ?></span></h6>
+					<h6 class="processing-fee"><?= $lang['proposal_video_call'];?>: <span class="float-right"><?= showPrice($processing_fee); ?></span></h6>
 
 					<?php if(isset($numberToAdd) and $coupon_usage == "used"){ ?>
 					<hr>
-					<h6>Coupon Discount : <span class="float-right"><?= showPrice($numberToAdd); ?></span> </h6>
+					<h6><?= $lang['coupon_discount'];?>: <span class="float-right"><?= showPrice($numberToAdd); ?></span> </h6>
 					<?php } ?>
 
 					<hr>
-					<h6>Appy Coupon Code:</h6>
+					<h6><?= $lang['cart']['apply_coupon_code'];?>:</h6>
 					<form class="input-group" method="post">
 						<input type="hidden" name="proposal_id" value="<?= $proposal_id; ?>">
 						<?php if(isset($_POST['proposal_extras'])){ ?>
@@ -505,7 +505,7 @@ if(isset($_POST['code'])){
 						<?php if(isset($_POST['proposal_extras'])){ ?>
 						<input type="hidden" name="proposal_extras" value="<?= base64_encode(serialize($proposal_extras));?>">
 						<?php } ?>
-						<input type="text" name="code" class="form-control apply-disabled" placeholder="Enter Coupon Code">
+						<input type="text" name="code" class="form-control apply-disabled" placeholder="<?=$lang['cart']['enter_coupon_code'];?>>
 						<button type="submit" name="coupon_submit" class="input-group-addon btn">Apply</button>
 					</form>
          			
@@ -522,13 +522,13 @@ if(isset($_POST['code'])){
 					<?php } ?>
 					<hr>
 					<h5 class="font-weight-bold">
-						Proposal's Total: <span class="float-right total-price"><?= showPrice($total); ?></span>
+						<?=$lang['cart']['total2'];?>: <span class="float-right total-price"><?= showPrice($total); ?></span>
 					</h5>
 					<hr>
 			    <?php include("checkoutPayMethods.php"); ?>          
 				</div>
 				<?php if($proposal_id == @$_SESSION['r_proposal_id']){ ?>
-				<div class="card-footer">Referred By : <b><?= $referrer_user_name; ?></b></div>
+				<div class="card-footer"><?=$lang['referred_by'] ;?> : <b><?= $referrer_user_name; ?></b></div>
 				<?php } ?>
 			</div>
 		</div>

@@ -39,6 +39,11 @@ $lang["promote_proposal"] ="If enabled, other users can promote your proposal by
 $lang["promote_proposal_desc_1"] = "Figure should be in percentage. E.g 20 is the same as 20% from the sale of this proposal.";
 $lang["promote_proposal_desc_2"] = "When another user promotes your proposal, how much would you like that user to get from the sale? (in euro)";
 $lang['legal'] ="Legal Notice";
+$lang['order_summary'] = "Order Summary";
+$lang['proposals_extra'] = "Proposal's Extras";
+$lang['proposal_video_call'] = "Proposal's Video Call Minutes";
+$lang['coupon_discount'] = "Coupon Discount ";
+$lang['referred_by']  ="Referred By";
 
 // User Logged In Menu Items
 $lang["menu"]["dashboard"] = "Dashboard";
@@ -789,6 +794,7 @@ $lang['cart']['no_proposals'] = "You Have No Proposals In Cart.";
 $lang['cart']['remove_proposal'] = "Remove Proposal";
 $lang['cart']['subtotal'] = "Cart Subtotal";
 $lang['cart']['apply_coupon_code'] = "Apply Coupon Code";
+$lang['cart']['enter_coupon_code'] ="Enter Coupon Code";
 $lang['cart']['processing_fee'] = "Processing Fee";
 $lang['cart']['total2'] = "Total";
 
