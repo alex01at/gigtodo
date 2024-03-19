@@ -44,6 +44,8 @@ $lang['proposals_extra'] = "Proposal's Extras";
 $lang['proposal_video_call'] = "Proposal's Video Call Minutes";
 $lang['coupon_discount'] = "Coupon Discount ";
 $lang['referred_by']  ="Referred By";
+$lang['payment_options'] ="Payment Options";
+$lang['shopping_balance'] = "Available Shopping Balance";
 
 // User Logged In Menu Items
 $lang["menu"]["dashboard"] = "Dashboard";

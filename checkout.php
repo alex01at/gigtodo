@@ -173,7 +173,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="<?= $site_author; ?>">
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
 <link href="styles/bootstrap.css" rel="stylesheet">
 <link href="styles/styles.css" rel="stylesheet">
 <link href="styles/categories_nav_styles.css" rel="stylesheet">
@@ -300,7 +299,7 @@ if(isset($_POST['code'])){
 				<div class="col-md-12 mb-3">
 					<div class="card payment-options">
 						<div class="card-header">
-							<h5><i class="fa fa-dollar"></i> Available Shopping Balance</h5>
+							<h5><i class="fa fa-dollar"></i> <?= $lang['shopping_balance'] ;?></h5>
 						</div>
 						<div class="card-body">
 						<div class="row">
@@ -321,7 +320,7 @@ if(isset($_POST['code'])){
 				<div class="col-md-12 mb-3">
 					<div class="card payment-options">
 						<div class="card-header">
-						<h5><i class="fa fa-credit-card"></i> Payment Options</h5>
+						<h5><i class="fa fa-credit-card"></i> <?=$lang['payment_options'];?></h5>
 						</div>
 						<div class="card-body">
 							<?php if($enable_paypal == "yes"){ ?>
@@ -479,10 +478,10 @@ if(isset($_POST['code'])){
 					<h6><?= $lang['order_details']['quantity']; ?>: <span class="float-right"><?= $proposal_qty; ?></span></h6>
 					<?php if(isset($_SESSION['c_proposal_minutes'])){ ?>
 					<hr>
-					<h6>Proposal's Video Call Minutes: <span class="float-right"><?= $_SESSION['c_proposal_minutes']; ?> Minutes</span></h6>
+					<h6><?= $lang['proposal_video_call'];?>: <span class="float-right"><?= $_SESSION['c_proposal_minutes']; ?> Minutes</span></h6>
 					<?php } ?>
 					<hr class="processing-fee">
-					<h6 class="processing-fee"><?= $lang['proposal_video_call'];?>: <span class="float-right"><?= showPrice($processing_fee); ?></span></h6>
+					<h6 class="processing-fee"><?= $lang['cart']['processing_fee'];?>: <span class="float-right"><?= showPrice($processing_fee); ?></span></h6>
 
 					<?php if(isset($numberToAdd) and $coupon_usage == "used"){ ?>
 					<hr>

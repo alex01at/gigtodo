@@ -757,3 +757,5 @@ $lang['proposal_video_call'] = "Preis pro Minute - Videoanruf";
 $lang['coupon_discount'] = "Rabatt";
 $lang['cart']['enter_coupon_code'] ="Rabattcode bitte eingeben";
 $lang['referred_by']  ="empfohlen von";
+$lang['payment_options'] ="Zahlungsoptionen";
+$lang['shopping_balance'] = "Verfügbares Einkaufsguthaben";
