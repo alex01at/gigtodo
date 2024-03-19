@@ -505,7 +505,7 @@ if(isset($_POST['code'])){
 						<?php if(isset($_POST['proposal_extras'])){ ?>
 						<input type="hidden" name="proposal_extras" value="<?= base64_encode(serialize($proposal_extras));?>">
 						<?php } ?>
-						<input type="text" name="code" class="form-control apply-disabled" placeholder="<?=$lang['cart']['enter_coupon_code'];?>"
+						<input type="text" name="code" class="form-control apply-disabled" placeholder="<?=$lang['cart']['enter_coupon_code'];?>">
 						<button type="submit" name="coupon_submit" class="input-group-addon btn"><?= $lang['button']['apply'];?></button>
 					</form>
          			
