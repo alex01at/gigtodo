@@ -682,7 +682,7 @@ $lang['cart']['no_proposals'] = "Sie haben keine Vorschläge im Warenkorb!";
 $lang['cart']['remove_proposal'] = "Vorschlag entfernen";
 $lang['cart']['subtotal'] = "Zwischensumme des Warenkorbs";
 $lang['cart']['apply_coupon_code'] = "Gutscheincode anwenden";
-$lang['cart']['processing_fee'] = "Verarbeitungsgebühr";
+$lang['cart']['processing_fee'] = "Bearbeitungsgebühr";
 $lang['cart']['total2'] = "Insgesamt";
 
 
