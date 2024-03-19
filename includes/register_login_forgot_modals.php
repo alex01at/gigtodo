@@ -35,7 +35,7 @@
           });
         </script>
         <?php } ?>
-        <form action="" method="post" class="pb-3">
+        <form action="process.php" method="post" class="pb-3">
 
           <div class="form-group">
             <label class="form-control-label font-weight-bold"> <?= $lang['label']['full_name']; ?> </label>
@@ -105,6 +105,21 @@
             <?= $lang['warning']['accept_terms']; ?>
               <a class="text-success" href="<?= $site_url; ?>/terms_and_conditions">Terms And Conditions</a>
             </label>
+            <script>
+              const input = document.querySelector(".form-control");
+const regex = /^(?!https?:\/\/)[a-zA-ZäöüßÄÖÜß ]+$/;
+
+input.addEventListener("input", function() {
+  if (!regex.test(input.value)) {
+    // Fehlermeldung anzeigen
+    alert("Bitte geben Sie nur Buchstaben (einschließlich Umlaute), Groß- und Kleinschreibung und maximal ein Leerzeichen ein. URLs sind nicht erlaubt.");
+    // Absenden des Formulars verhindern
+    event.preventDefault();
+  }
+});
+
+
+</script>
 			  <input type="text" name="agb" style="display: none;">
 
           </div>
