@@ -97,6 +97,7 @@ $relevant_requests = $row_general_settings->relevant_requests;
 $enable_referrals = $row_general_settings->enable_referrals;
 $knowledge_bank = $row_general_settings->knowledge_bank;
 $referral_money = $row_general_settings->referral_money;
+$disable_processing_fee =$row_general_settings->disable_processing_fee;
 ?>
   <form method="post" enctype="multipart/form-data">
   <div class="row">
@@ -148,6 +149,78 @@ if(isset($_POST['manual_payout_update'])){
   }
 ?>
   </form>
+
+  <!--- Disable processing fee -->
+  <form method="post" enctype="multipart/form-data">
+  <div class="row">
+    <!--- 2 row Starts --->
+    <div class="col-lg-12">
+      <!--- col-lg-12 Starts --->
+      <div class="card mb-5">
+        <!--- card mb-5 Starts --->
+        <div class="card-header">
+          <!--- card-header Starts --->
+          <h4 class="h4"> Disable processing fee </h4>
+        </div>
+        <!--- card-header Ends --->
+        <div class="card-body">
+          <!--- card-body Starts --->
+          <form method="post" enctype="multipart/form-data">
+            <!--- form Starts --->
+            <div class="form-group row">
+              <!--- form-group row Starts --->
+              <label class="col-md-3 control-label"> Do you wish to set processing fee to null :</label>
+              <div class="col-md-6">
+                <div class="input-group">
+                <span class="input-group-addon"><b><i class="fa fa-link"></i></b></span>
+                <select name="disable_processing_fee" class="form-control" required="">
+                  <option value="0" <?php if($disable_processing_fee == 0){ echo "selected"; } ?>> Yes </option>
+                  <option value="1" <?php if($disable_processing_fee == 1){ echo "selected"; } ?>> No </option>
+                </select>
+              </div>
+            </div></div>
+            <div class="form-group row">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-6">
+              <input type="submit" name="disable_processing_fee_submit" class="form-control btn btn-success" value="Save">
+            </div>
+            
+
+          </div></div>
+          <!--- form-group row Ends --->
+          <?php
+if (isset($_POST['disable_processing_fee_submit'])) {
+  $disable_processing_fee = $input->post('disable_processing_fee');
+
+  // Update "general_settings" table
+  $disable_fee_update_general = $db->update("general_settings", array(
+    "disable_processing_fee" => $disable_processing_fee
+  ));
+
+  // Check if update in "general_settings" was successful
+  if ($disable_fee_update_general) {
+    // Update "payment_settings" table
+    $disable_fee_update_payment = $db->update("payment_settings", array(
+      "processing_fee" => $disable_processing_fee
+    ));
+
+    // Check if update in "payment_settings" was successful (optional)
+    if ($disable_fee_update_payment) {
+      $insert_log = $db->insert_log($admin_id, "disable_fee", "", "updated");
+      echo "<script>alert_success('Save successful.','index?payment');</script>";
+    } else {
+      // Handle error if update in "payment_settings" failed (optional)
+      echo "<script>alert_error('Error updating processing fee in payment settings.');</script>";
+    }
+  } else {
+    // Handle error if update in "general_settings" failed (optional)
+    echo "<script>alert_error('Error updating disable processing fee setting.');</script>";
+  }
+}
+
+?>
+  </form>
+  <!--- disable processing fee -->
 </div>
   <div class="row">
     <!--- 2 row Starts --->
@@ -549,6 +622,10 @@ if(isset($_POST['seller_settings_update'])){
               </div>
             </div>
             <!--- form-group row Ends --->
+            <?php
+            if($disable_processing_fee == 0){
+              echo 'Processing fee disabled';
+            }else { ?>
             <div class="form-group row processing-feeType">
               <label class="col-md-3 control-label"> Processing Fee : </label>
               <div class="col-md-3">
@@ -574,6 +651,7 @@ if(isset($_POST['seller_settings_update'])){
                 </div>
               </div>
             </div>
+            <?php } ?>
             <!--- form-group row Ends --->
             <div class="form-group row">
               <!--- form-group row Starts --->
