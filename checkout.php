@@ -203,7 +203,9 @@ Please confirm your email to use this feature.
 }else{
 
 $site_logo_image = getImageUrl2("general_settings","site_logo",$row_general_settings->site_logo);
-
+$get_general_settings = $db->select("general_settings");   
+$row_general_settings = $get_general_settings->fetch();
+$disable_processing_fee =$row_general_settings->disable_processing_fee;
 $coupon_usage = "no";
 $coupon_type = "";
 
@@ -480,9 +482,10 @@ if(isset($_POST['code'])){
 					<hr>
 					<h6><?= $lang['proposal_video_call'];?>: <span class="float-right"><?= $_SESSION['c_proposal_minutes']; ?> Minutes</span></h6>
 					<?php } ?>
+					<?php if($disable_processing_fee == 1) { ?>
 					<hr class="processing-fee">
 					<h6 class="processing-fee"><?= $lang['cart']['processing_fee'];?>: <span class="float-right"><?= showPrice($processing_fee); ?></span></h6>
-
+					<?php } ?>
 					<?php if(isset($numberToAdd) and $coupon_usage == "used"){ ?>
 					<hr>
 					<h6><?= $lang['coupon_discount'];?>: <span class="float-right"><?= showPrice($numberToAdd); ?></span> </h6>
