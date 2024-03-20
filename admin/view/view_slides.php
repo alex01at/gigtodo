@@ -7,30 +7,7 @@ echo "<script>window.open('login','_self');</script>";
 
 
 ?>
-<div class="breadcrumbs">
 
-  <div class="col-sm-4">
-  <div class="page-header float-left">
-    <div class="page-title">
-      <h1><i class="menu-icon fa fa-picture-o"></i> Slides</h1>
-    </div>
-  </div>
-  </div>
-  <div class="col-sm-8">
-  <div class="page-header float-right">
-    <div class="page-title">
-      <ol class="breadcrumb text-right">
-        <li class="active">
-          <a href="index?insert_slide" class="btn btn-success">
-            <i class="fa fa-plus-circle text-white"></i> <span class="text-white">Add New Slide</span>
-          </a>
-        </li>
-      </ol>
-    </div>
-  </div>
-  </div>
-
-</div>
 
 <div class="main-container">
 
@@ -45,6 +22,14 @@ echo "<script>window.open('login','_self');</script>";
 
 <div class="card-header">
   <!--- card-header Starts --->
+  
+      <div class="text-right">
+        
+          <a href="index?insert_slide" class="btn btn-success">
+            <i class="fa fa-plus-circle text-white"></i> <span class="text-white">Add New Slide</span>
+          </a>
+      
+    </div>
   <h4 class="h4">
     View Slides <br><small>These slides will show up in logged in homepage</small>
   </h4>
