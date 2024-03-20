@@ -115,6 +115,7 @@ input.addEventListener("input", function() {
     alert("Bitte geben Sie nur Buchstaben (einschließlich Umlaute), Groß- und Kleinschreibung und maximal ein Leerzeichen ein. URLs sind nicht erlaubt.");
     // Absenden des Formulars verhindern
     event.preventDefault();
+    input.value = "";
   }
 });
 
