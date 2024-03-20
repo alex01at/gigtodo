@@ -206,10 +206,10 @@ if($notifierPlugin == 1){
 
 	
 
-	<?php include('includes/menu.php'); ?>
+	
 	<div class="mobile-menu-overlay"></div>
 
-	
+	<?php include('includes/menu.php'); ?>
 	<!-- js -->
 	<?php 
 	include('includes/body.php'); 

@@ -179,7 +179,7 @@ echo "<script>window.open('login','_self');</script>";
 					<div class="dropdown-divider"></div>
 				</li>
 				<li>
-					<a href="#" class="dropdown-toggle no-arrow">
+					<a href="index?credits" class="dropdown-toggle no-arrow">
 						<span class="micon dw dw-chat3"></span><span class="mtext">Credits</span>
 					</a>
 				</li>

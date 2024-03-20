@@ -3,6 +3,9 @@
 	if(isset($_GET['dashboard'])){
 		include("dashboard.php");
 	}
+	if(isset($_GET['credits'])){
+		include("includes/credits.php");
+	}
 
 	if($a_admins == 1){
 	}
@@ -84,9 +87,7 @@
 		include("app_update.php");
 		}
 
-		if(isset($_GET['app_license'])){
-			include("app_license.php");
-		}
+		
 		
 	}
 
