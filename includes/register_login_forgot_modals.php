@@ -85,7 +85,7 @@
 
               <input type="text" class="form-control w-750" name="phone" placeholder="<?= $lang['placeholder']['phone']; ?>" value="<?php if(isset($_SESSION['phone'])) echo $_SESSION['phone']; ?>" <?= ($make_phone_number_required == 1)?"required":""; ?>/>
 
-            </div>
+            </div> 
           </div>
 
           <div class="form-group">
