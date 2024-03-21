@@ -100,7 +100,7 @@ while($row_cart = $select_cart->fetch()){
 <div class="col-md-5"><!--- col-md-5 Starts --->
   <div class="card">
     <div class="card-body cart-order-details">
-      <p>Cart Subtotal <span class="float-right"><?= showPrice($total); ?></span></p>
+      <p><?=$lang['cart']['subtotal'] ;?><span class="float-right"><?= showPrice($total); ?></span></p>
       <hr>
       <p>Apply Coupon Code</p>
       <form class="input-group" method="post">

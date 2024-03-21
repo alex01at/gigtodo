@@ -5,7 +5,7 @@ $enable_maintenance_mode = $row_general_settings->enable_maintenance_mode;
 
 ?>
 <div class="header-left">
-
+<div class="menu-icon fa fa-bars"></div>
 			<div class="col-4"><span class="lang">current Settings for: </div>
 			<div class="col-4">
 				<select id="languageSelect" class="form-control">

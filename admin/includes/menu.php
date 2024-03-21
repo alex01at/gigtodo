@@ -37,6 +37,7 @@ echo "<script>window.open('login','_self');</script>";
 						<li><a href="index?mail-templates">Mail Templates</a></li>
 						<li><a href="index?api_settings">API Settings</a></li>
 						<li><a href="index?view_words">Restricted Words</a></li>
+						<li><a href="index?countries">Countries</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -179,7 +180,7 @@ echo "<script>window.open('login','_self');</script>";
 					<div class="dropdown-divider"></div>
 				</li>
 				<li>
-					<a href="#" class="dropdown-toggle no-arrow">
+					<a href="index?credits" class="dropdown-toggle no-arrow">
 						<span class="micon dw dw-chat3"></span><span class="mtext">Credits</span>
 					</a>
 				</li>

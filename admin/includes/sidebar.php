@@ -183,6 +183,17 @@ echo "<script>window.open('login','_self');</script>";
   </li>
 
 <?php } ?>
+<?php if($a_country == 1){ ?>
+
+<li class="menu-item-has-children dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="menu-icon fa fa-fax"></i>Countries</a>
+    <ul class="sub-menu children dropdown-menu">
+        <!-- <li><i class="fa  fa-arrow-circle-right"></i><a href="index?insert_word">Insert Word</a></li> -->
+        <li><i class="fa  fa-arrow-circle-right"></i><a href="index?countries">View Countries</a></li>
+    </ul>
+</li>
+
+<?php } ?>
 
 
 <?php if($a_alerts == 1){ ?>

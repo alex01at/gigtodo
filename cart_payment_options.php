@@ -164,7 +164,7 @@ if($seller_verification != "ok"){
 				<div class="col-md-12 mb-3">
 					<div class="card payment-options">
 						<div class="card-header">
-							<h5><i class="fa fa-credit-card"></i> Payment Options</h5>
+							<h5><i class="fa fa-credit-card"></i> <?=$lang['payment_options'];?></h5>
 						</div>
 						<div class="card-body">
 							<?php if($enable_paypal == "yes"){ ?>
@@ -296,9 +296,9 @@ if($seller_verification != "ok"){
 		<div class="col-md-5">
 			<div class="card">
 				<div class="card-body cart-order-details">
-					<p>Cart Subtotal <span class="float-right"><?= showPrice($sub_total); ?></span></p>
+					<p><?=$lang['cart']['subtotal'];?><span class="float-right"><?= showPrice($sub_total); ?></span></p>
 					<hr>
-					<p class="processing-fee">Processing Fee <span class="float-right"><?= showPrice($processing_fee); ?> </span></p>
+					<p class="processing-fee"><?= $lang['cart']['processing_fee'];?> <span class="float-right"><?= showPrice($processing_fee); ?> </span></p>
 					<hr class="processing-fee">
 					<p>Total <span class="float-right font-weight-bold total-price"><?= showPrice($total); ?></span></p>
 					<hr>

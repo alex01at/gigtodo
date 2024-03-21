@@ -63,6 +63,7 @@ $a_inbox = $row_rights->inbox;
 $a_reviews = $row_rights->reviews;
 $a_buyer_requests = $row_rights->buyer_requests;
 $a_restricted_words = $row_rights->restricted_words;
+$a_country_list = $row_rights->country_list;
 $a_alerts = $row_rights->notifications;
 $a_cats = $row_rights->cats;
 $a_delivery_times = $row_rights->delivery_times;
@@ -206,10 +207,10 @@ if($notifierPlugin == 1){
 
 	
 
-	<?php include('includes/menu.php'); ?>
+	
 	<div class="mobile-menu-overlay"></div>
 
-	
+	<?php include('includes/menu.php'); ?>
 	<!-- js -->
 	<?php 
 	include('includes/body.php'); 
