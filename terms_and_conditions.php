@@ -12,7 +12,6 @@
     <meta name="description" content="<?= $site_desc; ?>">
     <meta name="keywords" content="<?= $site_keywords; ?>">
     <meta name="author" content="<?= $site_author; ?>">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
     <link href="styles/bootstrap.css" rel="stylesheet">
     <link href="styles/styles.css" rel="stylesheet">
     <link href="styles/categories_nav_styles.css" rel="stylesheet">
@@ -30,7 +29,7 @@
   </head>
   <body class="is-responsive">
     <?php require_once("includes/header.php"); ?>
-    <div class="container-fluid mt-5 mb-5">
+    <div class="container mt-5 mb-5">
       <div class="row mb-4">
         <div class="col-md-12 text-center">
           <h1>Our Policies</h1>
