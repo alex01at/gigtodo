@@ -9,6 +9,18 @@
 
 	if($a_admins == 1){
 	}
+	
+		if(isset($_GET['countries'])){
+			include("countries.php");
+			}
+		if(isset($_GET['delete_country'])){
+				include("delete/delete_country.php");
+				}
+		if(isset($_GET['insert_country'])){
+					include("insert/insert_country.php");
+					}
+	
+
 
 	if($a_settings == 1){
 		if(isset($_GET['general'])){
