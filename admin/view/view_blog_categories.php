@@ -112,7 +112,7 @@ if(isset($_POST['insert'])){
 	if(!in_array($file_extension,$allowed) & !empty($cat_image)){
 	   echo "<script>alert('Your File Format Extension Is Not Supported.')</script>";
 	}else{
-		uploadToS3("blog_cat_images/$cat_image",$tmp_cat_image);      
+		uploadToS3("images/blog_cat_images/$cat_image",$tmp_cat_image);      
 		$isS3 = $enable_s3;
 		$post_categories = $db->insert("post_categories",array("date_time"=>$data['date_time'],'cat_image' => $cat_image, 'isS3'=> $isS3));
 		if($post_categories){

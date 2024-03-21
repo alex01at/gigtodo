@@ -157,7 +157,7 @@
       <?php if(!empty($login_seller_cover_image)){ ?>
       <img src="<?= getImageUrl2("sellers","seller_cover_image",$login_seller_cover_image); ?>" width="80" class="img-thumbnail img-circle"/>
       <?php }else{ ?>
-      <img src="cover_images/empty-cover.png" width="80" class="img-thumbnail img-circle" >
+      <img src="images/cover_images/empty-cover.png" width="80" class="img-thumbnail img-circle" >
       <?php } ?>
     </div>
   </div>
@@ -308,7 +308,7 @@
           }else{
             $cover_photo = pathinfo($cover_photo, PATHINFO_FILENAME);
             $cover_photo = $cover_photo."_".time().".$cover_file_extension";
-            uploadToS3("cover_images/$cover_photo",$cover_photo_tmp);
+            uploadToS3("images/cover_images/$cover_photo",$cover_photo_tmp);
             $seller_cover_image_s3 = $enable_s3;
           }
 

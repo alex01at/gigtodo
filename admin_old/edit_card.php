@@ -209,7 +209,7 @@ if(isset($_POST['update_card'])){
          if(empty($card_image)){
             $card_image = $b_image;
          }else{
-            uploadToS3("card_images/$card_image",$tmp_name);
+            uploadToS3("images/card_images/$card_image",$tmp_name);
             $isS3 = $enable_s3;
          }
 

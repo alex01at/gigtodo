@@ -47,7 +47,7 @@ $show_image = getImageUrl("post_categories",$cat->cat_image);
 				            <?php if(!empty($cat->cat_image)){ ?>
 				            	<img src="<?= $show_image; ?>" width="70" height="55">
 				            <?php }else{ ?>
-				            	<img src="../blog_cat_images/empty-image.jpg" width="70" height="55">
+				            	<img src="../images/blog_cat_images/empty-image.jpg" width="70" height="55">
 				            <?php } ?>
 			            </div>
 		            </div><!--- form-group row Ends --->
@@ -79,7 +79,7 @@ if(isset($_POST['update'])){
 			$cat_image = $cat->cat_image;
 			$isS3 = $cat->isS3;
 		}else{
-         uploadToS3("blog_cat_images/$cat_image",$tmp_cat_image);
+         uploadToS3("images/blog_cat_images/$cat_image",$tmp_cat_image);
          $isS3 = $enable_s3;
       	}
     	$update = $db->update("post_categories", array('cat_image' => $cat_image, 'isS3' => $isS3 ),array("id" => $cat->id));

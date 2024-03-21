@@ -86,9 +86,9 @@ function getFolderName($table){
 	}elseif($table == "sellers"){
 		return "user_images";
 	}elseif($table == "categories"){
-		return "cat_images";
+		return "images/cat_images";
 	}elseif($table == "post_categories"){
-		return "blog_cat_images";
+		return "images/blog_cat_images";
 	}elseif($table == "proposals"){
 		return "proposal_files";
 	}elseif($table == "order_conversations"){
@@ -102,9 +102,9 @@ function getFolderName($table){
 	}elseif($table == "languages"){
 		return "images";
 	}elseif($table == "section_boxes"){
-		return "box_images";
+		return "images/box_images";
 	}elseif($table == "home_cards"){
-		return "card_images";
+		return "images/card_images";
 	}elseif($table == "home_section_slider"){
 		return "home_slider_images";
 	}elseif($table == "slider"){
@@ -191,7 +191,7 @@ function getImageUrl2($table,$field,$key){
 	$folder = getFolderName($table);
 
 	if($field == "seller_cover_image"){
-		$folder = "cover_images";
+		$folder = "images/cover_images";
 	}
 
 	$select_table = $db->select("$table",["$field"=>$key]);

@@ -131,7 +131,7 @@ if(isset($_POST['update_card'])){
          if(empty($card_image)){
             $card_image = $b_image;
          }else{
-            uploadToS3("card_images/$card_image",$tmp_name);
+            uploadToS3("images/card_images/$card_image",$tmp_name);
             $isS3 = $enable_s3;
          }
          $update_card = $db->update("home_cards",array("card_title" => $card_title,"card_desc" => $card_desc,"card_link" => $card_link,"card_image" => $card_image,"isS3"=>$isS3),array("card_id" => $card_id));

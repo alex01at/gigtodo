@@ -95,7 +95,7 @@ if(isset($_GET['edit_post'])){
 						<?php if(!empty($post->image)){ ?>
 							<img src="<?= getImageUrl("posts",$post->image); ?>" width="100" height="55">
 						<?php }else{ ?>
-							<img src="../cat_images/empty-image.jpg" width="70" height="55">
+							<img src="../images/cat_images/empty-image.jpg" width="70" height="55">
 						<?php } ?>
 					</div>
 				</div><!--- form-group row Ends --->

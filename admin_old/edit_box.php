@@ -198,7 +198,7 @@ if(isset($_POST['update_box'])){
       if(empty($box_image)){
         $box_image = $b_image;
       }else{
-        uploadToS3("box_images/$box_image",$tmp_name);
+        uploadToS3("images/box_images/$box_image",$tmp_name);
         $isS3 = $enable_s3;
       }
 

@@ -149,7 +149,7 @@ if(isset($_POST['submit'])){
         if(!in_array($file_extension,$allowed) & !empty($cat_image)){
             echo "<script>alert('Your File Format Extension Is Not Supported.')</script>";
         }else{
-            uploadToS3("cat_images/$cat_image",$tmp_cat_image);
+            uploadToS3("images/cat_images/$cat_image",$tmp_cat_image);
             if($videoPlugin == 1){
                 $video = $input->post('video');
                 $reminder_emails = $input->post('reminder_emails');

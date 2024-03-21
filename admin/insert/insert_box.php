@@ -113,7 +113,7 @@ if(isset($_POST['submit'])){
       if(!in_array($file_extension,$allowed)){
          echo "<script>alert('Your File Format Extension Is Not Supported.')</script>";
       }else{
-         uploadToS3("box_images/$box_image",$tmp_name);
+         uploadToS3("images/box_images/$box_image",$tmp_name);
          $insert_box = $db->insert("section_boxes",array("language_id" => $adminLanguage,"box_title" => $box_title,"box_desc" => $box_desc,"box_image" => $box_image,"isS3"=>$enable_s3));
          if($insert_box){
             $insert_id = $db->lastInsertId();

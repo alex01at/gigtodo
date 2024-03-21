@@ -227,7 +227,7 @@ $show_image = getImageUrl("categories",$row_edit->cat_image);
                                 <?php if(!empty($c_image)){ ?>
                                 <img src="<?= $show_image; ?>" width="70" height="55">
                                 <?php }else{ ?>
-                                <img src="../cat_images/empty-image.jpg" width="70" height="55">
+                                <img src="../images/cat_images/empty-image.jpg" width="70" height="55">
                                 <?php } ?>
                             </div>
                         </div>
@@ -303,7 +303,7 @@ if(isset($_POST['update_cat'])){
 			if(empty($cat_image)){
 				$cat_image = $c_image;
 			}else{
-            uploadToS3("cat_images/$cat_image",$tmp_cat_image);
+            uploadToS3("images/cat_images/$cat_image",$tmp_cat_image);
             $isS3 = $enable_s3;
          }
 			if($videoPlugin == 1){

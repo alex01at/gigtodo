@@ -167,7 +167,7 @@ if(isset($_POST['submit'])){
         
       }else{
 
-         uploadToS3("box_images/$box_image",$tmp_name);
+         uploadToS3("images/box_images/$box_image",$tmp_name);
 
          $insert_box = $db->insert("section_boxes",array("language_id" => $adminLanguage,"box_title" => $box_title,"box_desc" => $box_desc,"box_image" => $box_image,"isS3"=>$enable_s3));
 

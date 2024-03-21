@@ -187,7 +187,7 @@ if(isset($_POST['submit'])){
 
       }else{
 
-         uploadToS3("card_images/$card_image",$tmp_name);
+         uploadToS3("images/card_images/$card_image",$tmp_name);
 
          $insert_card = $db->insert("home_cards",array("language_id" => $adminLanguage,"card_title" => $card_title,"card_desc" => $card_desc,"card_link" => $card_link,"card_image" => $card_image,"isS3"=>$enable_s3));
 
