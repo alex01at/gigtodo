@@ -183,7 +183,7 @@ if(isset($_POST['update'])){
             $slide_image = $s_image;
             $isS3 = $row_edit->isS3;
          }else{
-            uploadToS3("home_slider_images/$slide_image",$tmp_slide_image);
+            uploadToS3("images/home_slider_images/$slide_image",$tmp_slide_image);
             $isS3 = $enable_s3;
          }
 

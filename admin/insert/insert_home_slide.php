@@ -153,7 +153,7 @@ if(isset($_POST['submit'])){
             echo "<script>alert('Your File Format Extension Is Not Supported.')</script>";
         }else{
 
-            uploadToS3("home_slider_images/$slide_image",$tmp_slide_image); 
+            uploadToS3("images/home_slider_images/$slide_image",$tmp_slide_image); 
 
             $insert_slide = $db->insert("home_section_slider",array("slide_name" => $slide_name,"slide_image" => $slide_image,"isS3"=>$enable_s3));
 

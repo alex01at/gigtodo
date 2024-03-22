@@ -153,7 +153,7 @@ if(isset($_POST['update'])){
          if(empty($slide_image)){
             $slide_image = $s_image;
          }else{
-            uploadToS3("slides_images/$slide_image",$tmp_slide_image);
+            uploadToS3("images/slides_images/$slide_image",$tmp_slide_image);
             $isS3 = $enable_s3;
          }
 

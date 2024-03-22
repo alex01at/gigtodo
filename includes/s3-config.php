@@ -106,9 +106,9 @@ function getFolderName($table){
 	}elseif($table == "home_cards"){
 		return "images/card_images";
 	}elseif($table == "home_section_slider"){
-		return "home_slider_images";
+		return "images/home_slider_images";
 	}elseif($table == "slider"){
-		return "slides_images";
+		return "images/slides_images";
 	}elseif($table == "support_tickets"){
 		return "ticket_files";
 	}elseif($table == "support_conversations"){
