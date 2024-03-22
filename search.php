@@ -1,9 +1,7 @@
 <?php
-
   session_start();
   require_once("includes/db.php");
   require_once("functions/functions.php");
-
 ?>
 <!DOCTYPE html>
 <html lang="en" class="ui-toolkit">
@@ -14,15 +12,13 @@
   <meta name="description" content="<?= $site_desc; ?>">
   <meta name="keywords" content="<?= $site_keywords; ?>">
   <meta name="author" content="<?= $site_author; ?>">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
-  <link href="styles/bootstrap.css" rel="stylesheet">
+   <link href="styles/bootstrap.css" rel="stylesheet">
   <link href="styles/custom.css" rel="stylesheet"> <!-- Custom css code from modified in admin panel --->
   <link href="styles/styles.css" rel="stylesheet">
   <link href="styles/categories_nav_styles.css" rel="stylesheet">
   <link href="font_awesome/css/font-awesome.css" rel="stylesheet">
   <link href="styles/sweat_alert.css" rel="stylesheet">
   <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
-  <script src="js/ie.js"></script>
   <script type="text/javascript" src="js/sweat_alert.js"></script>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <?php if(!empty($site_favicon)){ ?>
@@ -30,9 +26,7 @@
   <?php } ?>
 </head>
 <body class="bg-white is-responsive">
-
 <?php require_once("includes/header.php"); ?>
-
 <div class="wide-header">
 <div class="container-fluid mt-5"> <!-- Container start -->
   <div class="row mt-3">
@@ -65,15 +59,12 @@
   </div>
 </div>
 </div><!-- Container ends -->
-
 <div class="append-modal"></div>
 <?php require_once("includes/footer.php"); ?>
-  
 <script>
 function get_search_proposals(){
   var sPath = '';
   var aInputs = Array();
-
   var aInputs = $('li').find('.get_online_sellers');
   var aKeys   = Array();
   var aValues = Array();
@@ -90,13 +81,10 @@ function get_search_proposals(){
   sPath = sPath + 'online_sellers[]=' + aKeys[i]+'&';
   }
   }
-
   var instant_delivery = $('.get_instant_delivery:checked').val();
   sPath = sPath + 'instant_delivery[]=' + instant_delivery +'&'; 
-  
   var order = $('.get_order:checked').val();
   sPath = sPath + 'order[]=' + order +'&';
-
   var aInputs = $('li').find('.get_seller_country');
   var aKeys   = Array();
   var aValues = Array();
@@ -113,7 +101,6 @@ function get_search_proposals(){
       // console.log(aKeys[i]);
     }
   }
-
   var aInputs = $('li').find('.get_seller_city');
   var aKeys   = Array();
   var aValues = Array();
@@ -129,7 +116,6 @@ function get_search_proposals(){
     sPath = sPath + 'seller_city[]=' + aKeys[i]+'&';
     }
   }
-
   var aInputs = $('li').find('.get_cat_id');
   var aKeys   = Array();
   var aValues = Array();
@@ -145,7 +131,6 @@ function get_search_proposals(){
       sPath = sPath + 'cat_id[]=' + aKeys[i]+'&';
     }
   }
-
   var aInputs = $('li').find('.get_delivery_time');
   var aKeys   = Array();
   var aValues = Array();
@@ -161,7 +146,6 @@ function get_search_proposals(){
       sPath = sPath + 'delivery_time[]=' + aKeys[i]+'&';
     }
   }
-
   var aInputs = Array();
   var aInputs = $('li').find('.get_seller_level');
   var aKeys   = Array();
@@ -178,7 +162,6 @@ function get_search_proposals(){
   sPath = sPath + 'seller_level[]=' + aKeys[i]+'&';
   }
   }
-
   var aInputs = Array();
   var aInputs = $('li').find('.get_seller_language');
   var aKeys   = Array();
@@ -195,9 +178,7 @@ function get_search_proposals(){
   sPath = sPath + 'seller_language[]=' + aKeys[i]+'&';
   }
   }
-
   $('#wait').addClass("loader");
-
   $.ajax({  
   url:"search_load",  
   method:"POST",  
@@ -208,7 +189,6 @@ function get_search_proposals(){
     $('#wait').removeClass("loader");
   }  
   });  
-
   $.ajax({  
   url:"search_load",  
   method:"POST",  
@@ -219,53 +199,40 @@ function get_search_proposals(){
   }  
   });
 }
-
 $('.get_online_sellers').click(function(){ 
   get_search_proposals(); 
 });
-
 $('.get_instant_delivery').click(function(){ 
   get_search_proposals();
 });
-
 $('.get_order').click(function(){ 
   get_search_proposals();
 });
-
 $('.get_seller_country').click(function(){ 
   get_search_proposals();
 });
-
 $('.get_seller_city').click(function(){ 
   get_search_proposals();
 });
-
 $('.get_cat_id').click(function(){ 
   get_search_proposals(); 
 });
-
 $('.get_delivery_time').click(function(){ 
   get_search_proposals(); 
 });
-
 $('.get_seller_level').click(function(){ 
   get_search_proposals(); 
 });
-
 $('.get_seller_language').click(function(){ 
   get_search_proposals(); 
 });
-
 </script>
 <script type="text/javascript">
 $(document).ready(function(){
-
   $(".get_seller_country").click(function(){
     if($(".get_seller_country:checked").length > 0){
-
       $(".clear_seller_country").show();
       $('.seller-cities li').addClass('d-none');
-
       var aInputs = $('li').find('.get_seller_country');
       var cities = Array();
       iKey = 0;
@@ -282,20 +249,17 @@ $(document).ready(function(){
           iKey++;
         };
       });
-      
       if(cities.length > 0){
         $(".seller-cities").removeClass('d-none');
       }else{
         $(".seller-cities").addClass('d-none');
       }
-
     }else{
       $(".seller-cities").addClass('d-none');
       $(".clear_seller_country").hide();
       clearCity();
     }
   });
-
   $(".get_seller_city").click(function(){
     if($(".get_seller_city:checked").length > 0 ) {
       $(".clear_seller_city").show();
@@ -303,7 +267,6 @@ $(document).ready(function(){
       $(".clear_seller_city").hide();
     }
   });
-
   $(".get_cat_id").click(function(){
     if($(".get_cat_id:checked").length > 0 ) {
       $(".clear_cat_id").show();
@@ -355,14 +318,12 @@ $(document).ready(function(){
     $(".clear_seller_language").hide();
   });
 });
-
 function clearCountry(){
   $('.get_seller_country').prop('checked',false);
   $('.get_seller_city').prop('checked',false);
   $(".seller-cities").addClass('d-none');
   get_search_proposals();
 }
-
 function clearCity(){
   $('.get_seller_city').prop('checked',false);
   get_search_proposals(); 
