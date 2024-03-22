@@ -1,68 +1,8 @@
 <?php
-
-session_start();
-include("includes/db.php");
+@session_start();
 if(!isset($_SESSION['admin_email'])){
 echo "<script>window.open('login','_self');</script>";
-}
-if((time() - $_SESSION['loggedin_time']) > 9800){
-echo "<script>window.open('logout.php?session_expired','_self');</script>";
-}
-if(!$_SESSION['adminLanguage']){
-$_SESSION['adminLanguage'] = 1;
-}
-$adminLanguage = $_SESSION['adminLanguage'];
-$row_language = $db->select("languages",array("id"=>$adminLanguage))->fetch();
-$currentLanguage = $row_language->title;
-$admin_email = $_SESSION['admin_email'];
-$get_admin = $db->query("select * from admins where admin_email=:a_email OR admin_user_name=:a_user_name",array("a_email"=>$admin_email,"a_user_name"=>$admin_email));
-$row_admin = $get_admin->fetch();
-$admin_id = $row_admin->admin_id;
-$login_admin_id = $row_admin->admin_id;
-$admin_name = $row_admin->admin_name;
-$admin_user_name = $row_admin->admin_user_name;
-$admin_image = $row_admin->admin_image;
-$admin_country = $row_admin->admin_country;
-$admin_job = $row_admin->admin_job;
-$admin_contact = $row_admin->admin_contact;
-$admin_about = $row_admin->admin_about;
-
-
-$get_rights = $db->select("admin_rights",array("admin_id" => $admin_id));
-$row_rights = $get_rights->fetch();
-$a_settings = $row_rights->settings;
-$a_plugins = $row_rights->plugins;
-$a_pages = $row_rights->pages;
-$a_blog = $row_rights->blog;
-$a_feedback = $row_rights->feedback;
-$a_video_schedules = $row_rights->video_schedules;
-$a_proposals = $row_rights->proposals;
-$a_accounting = $row_rights->accounting;
-$a_payouts = $row_rights->payouts;
-$a_reports = $row_rights->reports;
-$a_inbox = $row_rights->inbox;
-$a_reviews = $row_rights->reviews;
-$a_buyer_requests = $row_rights->buyer_requests;
-$a_restricted_words = $row_rights->restricted_words;
-$a_alerts = $row_rights->notifications;
-$a_cats = $row_rights->cats;
-$a_delivery_times = $row_rights->delivery_times;
-$a_seller_languages = $row_rights->seller_languages;
-$a_seller_skills = $row_rights->seller_skills;
-$a_seller_levels = $row_rights->seller_levels;
-$a_customer_support = $row_rights->customer_support;
-$a_coupons = $row_rights->coupons;
-$a_slides = $row_rights->slides;
-$a_sellers = $row_rights->sellers;
-$a_slides = $row_rights->slides;
-$a_terms = $row_rights->terms;
-$a_orders = $row_rights->orders;
-$a_referrals = $row_rights->referrals;
-$a_files = $row_rights->files;
-$a_knowledge_bank = $row_rights->knowledge_bank;
-$a_currencies = $row_rights->currencies;
-$a_languages = $row_rights->languages;
-$a_admins = $row_rights->admins;
+}else{
 
 
 $count_sellers = $db->count("sellers");
@@ -84,33 +24,6 @@ $paymentGateway = $core->checkPlugin("paymentGateway");
 $videoPlugin = $core->checkPlugin("videoPlugin");;
 
 ?>
-<!DOCTYPE html>
-<html class="no-js">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Admin Panel - Control Your Entire Site.</title>
-    <meta name="description" content="With the GigToDoScript admin panel, controlling your website has never been eassier.">
-    <meta name="author" content="GigToDoScript">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link href="../styles/custom.css" rel="stylesheet"> <!-- Custom css code from modified in admin panel --->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/flag-icon.min.css">
-    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
-    <link rel="stylesheet" href="assets/scss/style.css">
-    <?php if(!empty($site_favicon)){ ?>
-    <link rel="shortcut icon" href="<?= $site_favicon; ?>" type="image/x-icon">
-    <?php } ?>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800'rel='stylesheet'type='text/css'>
-    <link rel="stylesheet" href="assets/css/sweat_alert.css" >
-    <script type="text/javascript" src="assets/js/ie.js"></script>
-    <script type="text/javascript" src="assets/js/sweat_alert.js"></script>
-    <script src="../js/jquery.min.js"></script>
     <script>
     
     function alert_error(text){
@@ -704,11 +617,4 @@ $(document).ready(function(){
 });
 </script>
 
-</div><!-- Right Panel -->
-
-<script src="assets/js/popper.min.js"></script>
-
-<script src="assets/js/plugins.js"></script>
-
-</body>
-</html>
+<?php } ?>

@@ -18,54 +18,7 @@ $count_trash_proposals = $db->count("proposals",array("proposal_status" => "tras
             <div class="p-3 mb-3  ">
                 <!--- p-3 mb-3 filter-form Starts --->
                 <h2 class="pb-4">Filter Proposals/Services</h2>
-                <form class="form-inline pb-2" method="get" action="filter_proposals.php">
-                    <div class="form-group">
-                        <!--- form-group Starts --->
-                        <label> Category : </label>
-                        <select name="cat_id" required class="form-control mb-2 ml-1 mr-sm-2 mb-sm-0">
-                            <option value=""> Select A Category </option>
-                            <?php
-   $get_categories = $db->select("categories");
-   while($row_categories = $get_categories->fetch()){
-      $cat_id = $row_categories->cat_id;
-      $get_meta = $db->select("cats_meta",array("cat_id" => $cat_id, "language_id" => $adminLanguage));
-      $cat_title = $get_meta->fetch()->cat_title;
-      echo "<option value='$cat_id'>$cat_title</option>";
-   }
-   ?>
-                        </select>
-                    </div>
-                    <!--- form-group Ends --->
-                    <div class="form-group">
-                        <label> Delivery Time: </label>
-                        <select name="delivery_id" class="form-control mb-2 ml-1 mr-sm-2 mb-sm-0">
-                            <option value=""> Select A Delivery Time </option>
-                            <?php
-      $get_delivery_times = $db->select("delivery_times");
-      while($row_delivery_times = $get_delivery_times->fetch()){
-         $delivery_id = $row_delivery_times->delivery_id;
-         $delivery_title= $row_delivery_times->delivery_title;
-         echo "<option value='$delivery_id'>$delivery_title</option>";
-      }
-      ?>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label> Seller Level: </label>
-                        <select name="level_id" class="form-control mb-2 ml-1 mr-sm-2 mb-sm-0">
-                            <option value=""> Select A Seller Level </option>
-                            <?php
-      $get_seller_levels = $db->select("seller_levels");
-      while($row_seller_levels = $get_seller_levels->fetch()){
-         $level_id = $row_seller_levels->level_id;
-         $level_title = $db->select("seller_levels_meta",array("level_id"=>$level_id,"language_id"=>$adminLanguage))->fetch()->title;
-         echo "<option value='$level_id'>$level_title</option>";
-      }
-      ?>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-success"> Filter</button>
-                </form>
+                
             </div>
             <!--- p-3 mb-3 filter-form Ends --->
         </div>

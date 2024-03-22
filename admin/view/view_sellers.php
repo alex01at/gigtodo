@@ -3,57 +3,12 @@
 if(!isset($_SESSION['admin_email'])){
 echo "<script>window.open('login','_self');</script>";
 }else{
+    $pagination_options = array(10, 20, 30, 50);
+    $default_per_page = 10;
+
 ?>
 <div class="main-container">
-    <div class="row">
-        <!--- 2 row Starts --->
-        <div class="col-lg-12">
-            <!--- col-lg-12 Starts --->
-            <div class="card">
-                <!--- card Starts --->
-                <div class="card-body">
-                    <!--- card-body Starts --->
-                    <?php $count_sellers = $db->count("sellers"); ?>
-                    <h4 class="mb-4"> User Summary <small>All Users (<?= $count_sellers; ?>)</small> </h4>
-                    <div class="row">
-                        <!--- row Starts --->
-                        <div class="text-center border-box col-md-3">
-                            <!---- text-center border-box col-md-3 Starts --->
-                            <p> Top Rated Sellers </p>
-                            <?php $count_sellers = $db->count("sellers",array("seller_level" => 4)); ?>
-                            <h2><?= $count_sellers; ?></h2>
-                        </div>
-                        <!---- text-center border-box col-md-3 Ends --->
-                        <div class="text-center border-box col-md-3">
-                            <!---- text-center border-box col-md-3 Starts --->
-                            <p> Level Two Sellers </p>
-                            <?php $count_sellers = $db->count("sellers",array("seller_level" => 3)); ?>
-                            <h2><?= $count_sellers; ?></h2>
-                        </div>
-                        <!---- text-center border-box col-md-3 Ends --->
-                        <div class="text-center border-box col-md-3">
-                            <!---- text-center border-box col-md-3 Starts --->
-                            <p> Level One Sellers </p>
-                            <?php  $count_sellers = $db->count("sellers",array("seller_level" => 2)); ?>
-                            <h2><?= $count_sellers; ?></h2>
-                        </div>
-                        <!---- text-center border-box col-md-3 Ends --->
-                        <div class="text-center col-md-3">
-                            <!---- text-center col-md-3 Starts --->
-                            <p> New Users </p>
-                            <?php $count_sellers = $db->count("sellers",array("seller_level" => 1));  ?>
-                            <h2><?= $count_sellers; ?></h2>
-                        </div>
-                        <!---- text-center col-md-3 Ends --->
-                    </div>
-                    <!--- row Ends --->
-                </div>
-                <!--- card-body Ends --->
-            </div>
-            <!--- card Ends --->
-        </div>
-        <!--- col-lg-12 Ends --->
-    </div>
+    
     <!--- 2 row Ends --->
     <div class="row mt-4">
         <!--- 3 row Starts --->
@@ -64,6 +19,21 @@ echo "<script>window.open('login','_self');</script>";
                 <div class="card-header">
                     <!--- card-header Starts --->
                     <h4 class="h4"> <i class="fa fa-money-bill-alt"></i> View All Users </h4>
+                    <form action="" method="post">
+    <select name="per_page">
+        <?php
+        // Durch die verfügbaren Optionen iterieren und das entsprechende selected-Attribut setzen
+        foreach ($pagination_options as $option) {
+            if ($option == $per_page) {
+                echo "<option value='$option' selected>$option</option>";
+            } else {
+                echo "<option value='$option'>$option</option>";
+            }
+        }
+        ?>
+    </select>
+    <button type="submit">Submit</button>
+</form>
                 </div>
                 <!--- card-header Ends --->
                 <div class="card-body">
@@ -107,14 +77,14 @@ echo "<script>window.open('login','_self');</script>";
                             <tbody>
                                 <!--- tbody Starts --->
                                 <?php
-$per_page = 8;
+$per_page = isset($_POST['per_page']) ? intval($_POST['per_page']) : (isset($_GET['per_page']) ? intval($_GET['per_page']) : $default_per_page);
 if(isset($_GET['view_sellers'])){
     $page = intval($_GET['view_sellers']); // Wert in Ganzzahl umwandeln
     if($page == 0){ $page = 1; }
 } else {
     $page = 1;
 }
-$i = ($page * $per_page) - 8;
+$i = ($page * $per_page) - $per_page;
                 if(isset($_GET['search'])){ $search = $input->get('search'); }else{ $search = ""; }
                 /// Page will start from 0 and multiply by per page
                 $start_from = ($page-1) * $per_page;
@@ -168,67 +138,36 @@ $i = ($page * $per_page) - 8;
                                       <?php  }?>
                                     </td>
                                     <td width="100px;">
-
                             <div class="dropdown"><!--- dropdown Starts --->
-
                             <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Actions</button>
-
                                 <div class="dropdown-menu" style="margin-left:-125px;"><!--- dropdown-menu Starts --->
-
                                     <a class="dropdown-item" href="index?single_seller=<?= $seller_id; ?>">
-
                                         <i class="fa fa-info-circle"></i> User's Details
-
                                     </a>
-                                        
                                     <?php if($seller_verification != "ok"){ ?>
                                     <a class="dropdown-item" href="index?verify_email=<?= $seller_id; ?>">
-
                                         <i class="fa fa-envelope"></i> Verify Seller Email
-
                                     </a>
                                     <?php } ?>    
-
                                     <a target="_blank" class="dropdown-item" href="index?seller_login=<?= $seller_user_name; ?>">
-
                                         <i class="fa fa-sign-in"></i> Login As <?= $seller_user_name; ?>
-
                                     </a>
-
-                                        
                                     <a class="dropdown-item" href="index?update_balance=<?= $seller_id; ?>">
-
                                     <i class="fa fa-money"></i> Change Seller Balance
-
                                     </a>
-
-
                                     <?php if($seller_status == "block-ban"){ ?>
-
                                     <a class="dropdown-item" href="index?unblock_seller=<?= $seller_id; ?>">
-
                                         <i class="fa fa-unlock"></i> Already Banned! Unblock Seller?
-
                                     </a>
-
                                     <?php }else{ ?>
-
                                     <a class="dropdown-item" href="index?ban_seller=<?= $seller_id; ?>">
-
                                         <i class="fa fa-ban"></i> Block / Ban User
-
                                     </a>
-
                                     <?php } ?>
-
                                 </div><!--- dropdown-menu Ends --->
-
                             </div><!--- dropdown Ends --->
-
                         </td>
-
                     </tr>
-
                     <?php } ?>
                             </tbody>
                             <!--- tbody Ends --->

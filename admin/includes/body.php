@@ -239,6 +239,9 @@
 		if(isset($_GET['pause_proposal'])){
 		include("pause_proposal.php");
 		}
+		if(isset($_GET['filter_proposals'])){
+			include("filter_proposals.php");
+			}
 		if(isset($_GET['feature_proposal'])){
 		include("feature_proposal.php");
 		}
