@@ -30,84 +30,61 @@
   <body class="is-responsive">
     <?php require_once("includes/header.php"); ?>
     <div class="container mt-5 mb-5">
-      <div class="row mb-4">
+    <div class="row mb-4">
         <div class="col-md-12 text-center">
-          <h1>Our Policies</h1>
-          <p class="lead pb-4"> Terms & Conditions, Refund Policy, Pricing & Promotion Policy. </p>
+            <h1>Our Policies</h1>
+            <p class="lead pb-4"> Terms & Conditions, Refund Policy, Pricing & Promotion Policy. </p>
         </div>
-      </div>
-      <div class="row terms-page" style="<?=($lang_dir == "right" ? 'direction: rtl;':'')?>">
+    </div>
+    <div class="row terms-page" style="<?= ($lang_dir == "right" ? 'direction: rtl;' : '') ?>">
         <div class="col-md-3 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <ul class="nav nav-pills flex-column mt-2">
-                <?php
-                  $get_terms = $db->query("select * from terms where language_id='$siteLanguage' LIMIT 0,1");
-                  while($row_terms = $get_terms->fetch()){
-                      $term_title = $row_terms->term_title;
-                      $term_link = $row_terms->term_link;
-                  ?>
-                <li class="nav-item">
-                  <a class="nav-link active" data-toggle="pill" href="#<?= $term_link; ?>">
-                  <?= $term_title; ?>
-                  </a>
-                </li>
-                <?php } ?>
-                <?php
-                  $count_terms = $db->count("terms",array("language_id" => $siteLanguage));
-                  $get_terms = $db->query("select * from terms where language_id='$siteLanguage' LIMIT 1,$count_terms");
-                  while($row_terms = $get_terms->fetch()){
-                      $term_title = $row_terms->term_title;
-                      $term_link = $row_terms->term_link;
-                  ?>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="pill" href="#<?= $term_link; ?>">
-                  <?= $term_title; ?>
-                  </a>
-                </li>
-                <?php } ?>
-              </ul>
+            <div class="card">
+                <div class="card-body">
+                    <ul class="nav nav-pills flex-column mt-2">
+                        <?php
+                        $get_terms = $db->query("SELECT * FROM terms WHERE language_id='$siteLanguage'");
+                        $terms = $get_terms->fetchAll();
+                        foreach ($terms as $term) {
+                            $term_title = $term->term_title;
+                            $term_link = $term->term_link;
+                            $active_class = ($term === $terms[0]) ? 'active' : '';
+                            ?>
+                            <li class="nav-item">
+                                <a class="nav-link <?= $active_class ?>" data-toggle="pill" href="#<?= $term_link; ?>">
+                                    <?= $term_title; ?>
+                                </a>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </div>
             </div>
-          </div>
         </div>
         <div class="col-md-9">
-          <div class="card">
-            <div class="card-body">
-              <div class="tab-content">
-                <?php
-                  $get_terms = $db->query("select * from terms where language_id='$siteLanguage' LIMIT 0,1");
-                  while($row_terms = $get_terms->fetch()){
-                      $term_title = $row_terms->term_title;
-                      $term_link = $row_terms->term_link;
-                      $term_description = $row_terms->term_description;
-                  ?>
-                <div id="<?= $term_link; ?>" class="tab-pane fade show active">
-                  <h2 class="mb-4"><?= $term_title; ?></h2>
-                  <p class="text-justify">
-                    <?= $term_description; ?>
-                  </p>
+            <div class="card">
+                <div class="card-body">
+                    <div class="tab-content">
+                        <?php foreach ($terms as $term) {
+                            $term_title = $term->term_title;
+                            $term_link = $term->term_link;
+                            $term_description = $term->term_description;
+                            $active_class = ($term === $terms[0]) ? 'show active' : '';
+                            ?>
+                            <div id="<?= $term_link; ?>" class="tab-pane fade <?= $active_class ?>">
+                                <h2 class="mb-4"><?= $term_title; ?></h2>
+                                <p class="text-justify">
+                                    <?= $term_description; ?>
+                                </p>
+                                <!-- Hier einen Link zur jeweiligen Unterseite einfügen -->
+                                <a href="#<?= $term_link; ?>">Link zur Unterseite</a>
+                            </div>
+                        <?php } ?>
+                    </div>
                 </div>
-                <?php } ?>
-                <?php
-                  $get_terms = $db->query("select * from terms where language_id='$siteLanguage' LIMIT 1,$count_terms");
-                  while($row_terms = $get_terms->fetch()){
-                      $term_title = $row_terms->term_title;
-                      $term_link = $row_terms->term_link;
-                      $term_description = $row_terms->term_description;
-                  ?>
-                <div id="<?= $term_link; ?>" class="tab-pane fade ">
-                  <h1 class="mb-4"><?= $term_title; ?></h1>
-                  <p class="text-justify">
-                    <?= $term_description; ?>
-                  </p>
-                </div>
-                <?php } ?>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
+</div>
+
     <?php require_once("includes/footer.php"); ?>
   </body>
 </html>
