@@ -46,6 +46,7 @@ $lang['coupon_discount'] = "Coupon Discount ";
 $lang['referred_by']  ="Referred By";
 $lang['payment_options'] ="Payment Options";
 $lang['shopping_balance'] = "Available Shopping Balance";
+$lang['chat_with_me'] = "Chat With Me";
 
 // User Logged In Menu Items
 $lang["menu"]["dashboard"] = "Dashboard";

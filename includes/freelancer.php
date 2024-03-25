@@ -19,7 +19,7 @@
 			  <img src="images/level_badge_3.png" class="level_badge">
 			<?php } ?>
 		</div>
-		<a id="chatBtn" data-toggle="tooltip" data-placement="top" title="Chat With Me" href="conversations/message.php?seller_id=<?= $seller_id; ?>" class="btn btn-success mt-4 text-white "><i class="fa fa-comments-o" aria-hidden="true"></i> Chat</a>
+		<a id="chatBtn" data-toggle="tooltip" data-placement="top" title="<?=$lang['chat_with_me'];?>" href="conversations/message.php?seller_id=<?= $seller_id; ?>" class="btn btn-success mt-4 text-white "><i class="fa fa-comments-o" aria-hidden="true"></i> Chat</a>
   </figure>
 	<div class="request-description">
 		<div class="row">
@@ -31,20 +31,20 @@
 				<ul class="tagline mb-2 p-0">
 					<li>
 					<i class="fa fa-user"></i>
-					<strong>Member Since: </strong> <?= $seller_register_date; ?>
+					<strong><?=$lang['user_profile']['member_since'];?>: </strong> <?= $seller_register_date; ?>
 					</li>
 					<?php if($seller_recent_delivery != "none"){ ?>
 					<li>
 					<i class="fa fa-truck fa-flip-horizontal"></i>
-					<strong>Recent Delivery: </strong> <?= $seller_recent_delivery; ?>
+					<strong><?= $lang['user_profile']['recent_delivery'];?>: </strong> <?= $seller_recent_delivery; ?>
 					</li>
 					<?php } ?>
 					<li>
 					<i class="fa fa-map-marker"></i>
-					<strong>Country: </strong> <?= $seller_country; ?>
+					<strong><?= $lang["dashboard"]['country'];?>: </strong> <?= $seller_country; ?>
 					</li>
 					<li>
-						<a href="conversations/message.php?seller_id=<?= $seller_id; ?>"><i class="fa fa-comments-o"></i> <strong>Contact:</strong> <?= $seller_user_name; ?> </a>
+						<a href="conversations/message.php?seller_id=<?= $seller_id; ?>"><i class="fa fa-comments-o"></i> <strong><?= $lang["user_home"]['contact'];?>:</strong> <?= $seller_user_name; ?> </a>
 					</li>
 			  </ul>
 			</div>
@@ -59,7 +59,7 @@
 				}
 				?>
 				<h4 class="mb-1"><?php printf("%.1f", $average); ?>/<small class="text-muted font-weight-normal">5</small></h4>
-				<a>(<?= $count_reviews; ?> Reviews)</a>
+				<a>(<?= $count_reviews; ?> <?=$lang['proposal']['reviews'];?>)</a>
 				</div>
 			</div>
 		</div>
@@ -85,7 +85,7 @@
 			<button class="btn btn-light tags-<?= $seller_id; ?> <?= $dNone; ?>"><?= $skill_title; ?></button>
 			<?php } ?>
 			<?php if($countSkills > 5){ ?>
-			<button class="btn btn-light showMore" data-id="<?= $seller_id; ?>">More..</button>
+			<button class="btn btn-light showMore" data-id="<?= $seller_id; ?>"><?=$lang["more"];?>...</button>
 			<?php } ?>
 		</div>
 	</div>

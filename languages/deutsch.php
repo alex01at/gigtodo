@@ -759,3 +759,4 @@ $lang['cart']['enter_coupon_code'] ="Rabattcode bitte eingeben";
 $lang['referred_by']  ="empfohlen von";
 $lang['payment_options'] ="Zahlungsoptionen";
 $lang['shopping_balance'] = "Verfügbares Einkaufsguthaben";
+$lang['chat_with_me'] = "Chatte mit mir";
