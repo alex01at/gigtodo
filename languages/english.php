@@ -47,6 +47,9 @@ $lang['referred_by']  ="Referred By";
 $lang['payment_options'] ="Payment Options";
 $lang['shopping_balance'] = "Available Shopping Balance";
 $lang['chat_with_me'] = "Chat With Me";
+$lang['our_policies'] = "Our Policies";
+$lang['terms_desc'] ="Terms & Conditions, Refund Policy, Pricing & Promotion Policy";
+$lang['terms_title'] = "Terms & Conditions";
 
 // User Logged In Menu Items
 $lang["menu"]["dashboard"] = "Dashboard";

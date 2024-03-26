@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en" class="ui-toolkit">
   <head>
-    <title><?= $site_name; ?> - Terms and Conditions.</title>
+    <title><?= $site_name; ?> - <?=$lang['terms_title'];?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="<?= $site_desc; ?>">
@@ -32,8 +32,8 @@
     <div class="container mt-5 mb-5">
     <div class="row mb-4">
         <div class="col-md-12 text-center">
-            <h1>Our Policies</h1>
-            <p class="lead pb-4"> Terms & Conditions, Refund Policy, Pricing & Promotion Policy. </p>
+            <h1><?= $lang['our_policies']; ?></h1>
+            <p class="lead pb-4"><?=$lang['terms_desc'];?></p>
         </div>
     </div>
     <div class="row terms-page" style="<?= ($lang_dir == "right" ? 'direction: rtl;' : '') ?>">
