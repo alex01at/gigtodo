@@ -21,7 +21,7 @@ if (!isset($_GET['id'])) {
 		<div class="alert alert-warning rounded-0">
 		    
 		<p class="lead mt-1 mb-1 text-center">
-			<strong>Sorry!</strong> You can't submit an idea/feedback without logging in first. If you have a general question, please email us at <?= $site_email_address ?>.
+			<?= $lang['login_for_idea'];?> <?= $site_email_address ?>.
 		</p>
 
 		</div>

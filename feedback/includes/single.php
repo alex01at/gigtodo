@@ -21,10 +21,10 @@
 
 		<p> 
 			<img class="mr-2 img-thumbnail p-1" src="<?= getImageUrl2("sellers","seller_image",$seller->seller_image); ?>" width="50">
-			<span><b><?= $seller->seller_user_name; ?></b> shared this idea · <?= $idea->date; ?></span>
+			<span><b><?= $seller->seller_user_name; ?></b> <?= $lang['shared_idea'];?> · <?= $idea->date; ?></span>
 		</p>
 
-		<h4 class="mb-3"><?= $count_comments; ?> comments</h4>
+		<h4 class="mb-3"><?= $count_comments; ?> <?=$lang['comments'];?></h4>
 
 		<?php if(isset($_SESSION["seller_user_name"])){ ?>
 
@@ -44,7 +44,7 @@
 
 		<div class="alert alert-info rounded-0">
 			<p class="mt-1 mb-1 text-center">
-				<strong>Sorry!</strong> You can't submit a comment without logging in first. If you have a general question, please email us at <?= $site_email_address; ?>
+			<?= $lang['login_for_idea'];?> <?= $site_email_address; ?>
 			</p>
 		</div>
 

@@ -33,7 +33,7 @@
   <?php require_once("../includes/header.php"); ?>
   <div class="container pt-5 pb-5"><!-- Container starts -->
 
-	<h2>I suggest you ...</h2>
+	<h2><?=$lang['idea_suggest'];?> ...</h2>
 
 	<a href="index"><i class="fa fa-arrow-left"></i> General</a>
 

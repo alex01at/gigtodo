@@ -20,17 +20,17 @@ if(isset($_GET['search'])){
 	<div class="card-body"><!--- card-body Starts -->
 		<form action="post-idea" method="post">
 			<div class="form-group"><!--- form-group Starts --->
-			<h5 class="<?= $textRight; ?>"> I suggest you ...</h5>
+			<h5 class="<?= $textRight; ?>"> <?= $lang['idea_suggest'];?> ...</h5>
 			<div class="input-group mb-3">
 				<?php if($lang_dir == "right"){ ?>
 					<div class="input-group-addon bg-success">
-						<button class="btn bg-transparent text-white rounded-right" name="post_idea" type="submit">Post idea</button>
+						<button class="btn bg-transparent text-white rounded-right" name="post_idea" type="submit"><?=$lang['post_idea'];?></button>
 					</div>
-					<input type="text" name="title" class="form-control form-control-lg  text-right" placeholder="Enter your idea" required/>
+					<input type="text" name="title" class="form-control form-control-lg  text-right" placeholder="<?=$lang['placeholder']['idea'];?>" required/>
 				<?php }else{ ?>
-					<input type="text" name="title" class="form-control form-control-lg" placeholder="Enter your idea" required/>
+					<input type="text" name="title" class="form-control form-control-lg" placeholder="<?=$lang['placeholder']['idea'];?>" required/>
 					<div class="input-group-addon bg-success">
-						<button class="btn bg-transparent text-white rounded-right" name="post_idea" type="submit">Post idea</button>
+						<button class="btn bg-transparent text-white rounded-right" name="post_idea" type="submit"><?=$lang['post_idea'];?></button>
 					</div>
 				<?php } ?>
 			</div>
@@ -46,7 +46,7 @@ if(isset($_GET['search'])){
 		</h3>
 		<?php } ?>
 		<?php if(!empty($ideas->rowCount()) and isset($_GET['search'])){ ?>
-			<h4>Search results</h4>
+			<h4><?= $lang['search']['title']; ?></h4>
 		<?php } ?>
 		<div class="ideas-list mt-4 mb-0"><!-- ideas-list Starts -->
 		<?php
@@ -57,7 +57,7 @@ if(isset($_GET['search'])){
 			<div class="card-body">
 				  <h5><a href="idea?id=<?= $idea->id; ?>"><?= $idea->title; ?></a></h5>
 				  <p class="mb-2"><?= substr($idea->content, 0,176); ?></p>
-				  <span class="text-muted"><?= $count_comments; ?> comments</span>
+				  <span class="text-muted"><?= $count_comments; ?> <?= $lang['comments']; ?></span>
 			</div>
 		</div>
 		<?php } ?>

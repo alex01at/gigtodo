@@ -38,14 +38,14 @@
 		<h4><a class="text-dark" href="#">General</a></h4>
 
 		<a class="btn btn-success mb-4" href="post-idea">
-			<i class="fa fa-plus-circle"></i> Post a new idea
+			<i class="fa fa-plus-circle"></i> <?= $lang['post_new_idea'];?>
 		</a>
 
-		<h5>My Ideas/Comments</h5>
-
+		<h5><?= $lang['own_ideas'];?></h5>
+		<?php if(isset($_SESSION['seller_user_name'])){ ?>
 		<a class="text-success" href="my-feedback"> 
 			<i class="fa fa-comments-o" aria-hidden="true"></i> My feedback
 		</a>
-
+<?php }else { ?><a href="#" data-toggle="modal" data-target="#login-modal"><?= $lang['sign_in']; ?></a> <?php } ?>
 	</div><!--- card-body Ends -->
 </div><!--- card Ends -->
