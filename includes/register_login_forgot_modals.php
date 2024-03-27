@@ -267,7 +267,7 @@ input.addEventListener("input", function() {
           <div class="form-group">
             <input type="text" name="forgot_email" class="form-control" placeholder="<?= $lang['placeholder']['email']; ?>" required>
           </div>
-          <input type="submit" class="btn btn-success btn-block" value="submit" name="forgot">
+          <input type="submit" class="btn btn-success btn-block" value="<?=$lang['button']['submut'];?>" name="forgot">
           <p class="text-muted text-center mt-4">
             <?= $lang['modals']['forgot']['not_member_yer']; ?>
             <a href="#"class="text-success" data-toggle="modal" data-target="#register-modal" data-dismiss="modal">
