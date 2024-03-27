@@ -761,5 +761,5 @@ $lang['payment_options'] ="Zahlungsoptionen";
 $lang['shopping_balance'] = "Verfügbares Einkaufsguthaben";
 $lang['chat_with_me'] = "Chatte mit mir";
 $lang['our_policies'] ="unsere Bestimmungen";
-$lang['terms_desc'] ="Allgemeine Geschäftsbedingungen, Rückerstattungsrichtlinien, Preis- und Werberichtlinien";
+$lang['terms_desc'] ="Allgemeine Geschäftsbedingungen, Rückerstattungsrichtlinien, Nutzungsbedinungen";
 $lang['terms_title'] = "rechtliche Informationen";

@@ -178,6 +178,7 @@ echo "<script>window.open('login','_self');</script>";
             ['fontsize', ['fontsize']],
             ['height', ['height']],
             ['color', ['color']],
+            ['table', ['table']],
             ['para', ['ul', 'ol', 'paragraph']],
             ['misc', ['codeview']]
           ],

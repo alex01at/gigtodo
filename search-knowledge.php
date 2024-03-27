@@ -35,7 +35,7 @@ if($count_articles > 0){
 
 	$output['count'] = 0;
 
-	$output['message'] = "Sorry, we couldn't find any results for your search.";
+	$output['message'] =  $lang["popup"]['knowledge_bank']['no_results'];
 
 }
 
