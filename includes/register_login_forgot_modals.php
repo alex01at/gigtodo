@@ -51,7 +51,7 @@
 
             </label>
 
-            <input type="text" class="form-control" name="u_name" placeholder="Enter Your Username" value="<?php if(isset($_SESSION['u_name'])) echo $_SESSION['u_name']; ?>" required="">
+            <input type="text" class="form-control" name="u_name" placeholder="<?= $lang['placeholder']['username']; ?>" value="<?php if(isset($_SESSION['u_name'])) echo $_SESSION['u_name']; ?>" required="">
             <small class="form-text text-muted"><?= $lang['warning']['note']; ?></small>
             
             <?php 
@@ -103,7 +103,7 @@
             <input type="checkbox" style="position: relative; top: 1px;" id="check" value="1" required=""/>
             <label for="check">
             <?= $lang['warning']['accept_terms']; ?>
-              <a class="text-success" href="<?= $site_url; ?>/terms_and_conditions">Terms And Conditions</a>
+              <a class="text-success" href="<?= $site_url; ?>/terms_and_conditions"><?=$lang['terms_title'];?></a>
             </label>
             <script>
               const input = document.querySelector(".form-control");
