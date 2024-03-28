@@ -44,7 +44,7 @@
 		<h5><?= $lang['own_ideas'];?></h5>
 		<?php if(isset($_SESSION['seller_user_name'])){ ?>
 		<a class="text-success" href="my-feedback"> 
-			<i class="fa fa-comments-o" aria-hidden="true"></i> My feedback
+			<i class="fa fa-comments-o" aria-hidden="true"></i> <?= $lang['my_feedback'];?>
 		</a>
 <?php }else { ?><a href="#" data-toggle="modal" data-target="#login-modal"><?= $lang['sign_in']; ?></a> <?php } ?>
 	</div><!--- card-body Ends -->

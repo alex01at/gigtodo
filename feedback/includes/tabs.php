@@ -5,14 +5,14 @@
 		  
 			<div class="form-group"><!--- form-group Starts --->
 
-			<h5> I suggest you ...</h5>
+			<h5> <?=$lang['idea_suggest'];?> ...</h5>
 
 			<div class="input-group mb-3">
 
-			<input type="text" name="title" class="form-control form-control-lg" placeholder="Enter your idea" required/>
+			<input type="text" name="title" class="form-control form-control-lg" placeholder="<?= $lang['placeholder']['idea'];?>" required/>
 
 			<div class="input-group-addon bg-success">
-				<button class="btn bg-transparent text-white rounded-right" name="post_idea" type="submit">Post idea</button>
+				<button class="btn bg-transparent text-white rounded-right" name="post_idea" type="submit"><?=$lang['post_new_idea'] ;?></button>
 			</div>
 
 			</div>
@@ -25,10 +25,10 @@
 
 		<ul class="nav nav-tabs">
 		  <li class="nav-item">
-		    <a class="nav-link <?php if(!$input->get('comments')){ echo "active"; } ?>" data-toggle="tab" href="#ideas">Ideas</a>
+		    <a class="nav-link <?php if(!$input->get('comments')){ echo "active"; } ?>" data-toggle="tab" href="#ideas"><?=$lang['ideas'];?></a>
 		  </li>
 		  <li class="nav-item">
-		   <a class="nav-link <?php if($input->get('comments')){ echo "active"; } ?>" data-toggle="tab" href="#comments">Comments</a>
+		   <a class="nav-link <?php if($input->get('comments')){ echo "active"; } ?>" data-toggle="tab" href="#comments"><?=$lang['comments'];?></a>
 		  </li>
 		</ul>
 
@@ -48,20 +48,20 @@
 				</a>
 				<div class="btn-group btn-group-sm <?=($lang_dir=="right"?'float-left':'float-right')?>">
 				<a href="post-idea?id=<?= $idea->id; ?>" class="btn btn-primary">
-					<i class="fas fa-pencil-alt"></i> Edit
+					<i class="fas fa-pencil-alt"></i> <?=$lang['button']['edit'];?>
 				</a>
 				<a href="index?delete_idea=<?= $idea->id; ?>/" class="btn btn-danger">
-					<i class="fas fa-trash-alt"></i> Delete
+					<i class="fas fa-trash-alt"></i> <?=$lang['th']['delete'];?>
 				</a>
 				</div>
 				</h5>
 				<p class="mb-2"><?= substr($idea->content, 0,176); ?></p>
-				<span class="text-muted"><?= $count_comments; ?> comments</span>
+				<span class="text-muted"><?= $count_comments; ?> <?=$lang['comments'];?></span>
 				</div>
 				</div>
 				<?php } ?>
-				<?php if(empty($ideas)){  ?>
-					<h3 class="text-center">You have not posted any idea yet.</h3>
+				<?php if($ideas->rowCount() == 0){  ?>
+					<h3 class="text-center"><?=$lang['no_idea'];?></h3>
 				<?php } ?>
 		  </div>
 		  <div id="comments" class="tab-pane <?php if($input->get('comments')){ echo "show active"; } ?> fade">
@@ -79,9 +79,9 @@
 				<div class="media-body">
 				<h5 class="mt-0 mb-1">
 				<?= $seller->seller_user_name; ?>
-				<small>commented on - <?= $idea; ?></small>
+				<small><?=$lang['comment_on'];?> - <?= $idea; ?></small>
 				<a href="index?delete_comment=<?= $comment->id; ?>" class="btn btn-danger btn-sm float-right">
-					<i class="fas fa-trash-alt"></i> Delete
+					<i class="fas fa-trash-alt"></i> <?=$lang['th']['delete'];?>
 				</a>
 				</h5>
 				<p><?= $comment->comment; ?></p>
@@ -89,8 +89,8 @@
 
 				</li>
 			<?php } ?>
-			<?php if(empty($comments)){  ?>
-				<h3 class="text-center">You have not posted any comment yet.</h3>
+			<?php if($comments->rowCount() == 0){  ?>
+				<h3 class="text-center"><?=$lang['no_comments'];?></h3>
 			<?php } ?>
 			</ul>
 		  </div>
@@ -98,7 +98,7 @@
 
 		<?php }else{ ?>
 		<div class="alert alert-info">
-			<p class="lead mb-0 font-weight-normal">You need to sign in to see your feedback.</p>
+			<p class="lead mb-0 font-weight-normal"><?=$lang['login_for_idea'];?></p>
 		</div>
 		<?php } ?>
 

@@ -32,22 +32,22 @@ if (!isset($_GET['id'])) {
 
 			<div class="form-group"><!--- form-group Starts --->
 
-			<h5> I suggest you ...</h5>
+			<h5> <?=$lang['idea_suggest'];?></h5>
 
-			<input type="text" name="title" class="form-control <?= $textRight; ?>" value="<?= $title; ?>" placeholder="Enter your idea" required>
+			<input type="text" name="title" class="form-control <?= $textRight; ?>" value="<?= $title; ?>" placeholder="<?=$lang['placeholder']['idea'];?>" required>
 
 			</div><!--- form-group Ends --->
 
 			<div class="form-group"><!--- form-group Starts --->
 
-			<textarea name="content" class="form-control <?= $textRight; ?>" placeholder="Describe your idea..." rows="5" required=""><?= $content; ?></textarea>
+			<textarea name="content" class="form-control <?= $textRight; ?>" placeholder="<?=$lang['placeholder']['desc_idea']?>" rows="5" required=""><?= $content; ?></textarea>
 
 			</div><!--- form-group Ends --->
 
 			<div class="form-group"><!--- form-group Starts --->
 
 			<button class="btn btn-success mr-2" name="submit" type="submit" value="submit">
-				<i class="fa fa-plus-circle"></i> <?php if(empty($idea)){ ?> Post idea <?php }else{ ?> Update Idea <?php } ?>
+				<i class="fa fa-plus-circle"></i> <?php if(empty($idea)){ ?> <?=$lang['post_new_idea'];?> <?php }else{ ?> <?=$lang['update_idea']; } ?>
 			</button>
 
 			<a href="index" class="btn btn-danger"><i class="fa fa-times-circle"></i> Cancel</a>

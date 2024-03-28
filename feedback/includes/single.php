@@ -31,11 +31,11 @@
 		<form action="" method="post">
 
 		  <div class="form-group"><!--- form-group Starts --->
-		  	<textarea name="comment" class="form-control" placeholder="Add A Comment..."></textarea>
+		  	<textarea name="comment" class="form-control" placeholder="<?=$lang['add_comment'];?>"></textarea>
 		  </div><!--- form-group Ends --->
 
 		  <div class="form-group"><!--- form-group Starts --->
-		  	<button class="btn btn-success" name="submit" type="submit"> Post Comment </button>
+		  	<button class="btn btn-success" name="submit" type="submit"> <?=$lang['post_comment'];?> </button>
 		  </div><!--- form-group Ends --->
 
 		</form>
@@ -65,11 +65,11 @@
 		      <h5 class="mt-0 mb-1">
 		       <?= $seller->seller_user_name; ?>
 		       <small>
-		        commented - <?= $comment->date; ?>
+		        <?=$lang['commented'];?> - <?= $comment->date; ?>
 		        <?php if($comment->seller_id == @$login_seller_id){ ?>
 
               <a href="index?delete_comment=<?= $comment->id; ?>" class="btn btn-sm btn-success">
-                <i class="fa fa-trash-o"></i> Delete
+                <i class="fa fa-trash-o"></i> <?=$lang['th']['delete'];?>
               </a>
 
 		        <?php } ?>
