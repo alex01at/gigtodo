@@ -12,7 +12,6 @@
 <meta name="description" content="<?= $site_desc; ?>">
 <meta name="keywords" content="<?= $site_keywords; ?>">
 <meta name="author" content="<?= $site_author; ?>">
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
 <link href="../styles/bootstrap.css" rel="stylesheet">
 <link href="../styles/custom.css" rel="stylesheet">
 <!-- Custom css code from modified in admin panel --->
@@ -34,7 +33,7 @@
   <?php require_once("../includes/header.php"); ?>
   <div class="container pt-5 pb-5"><!-- Container starts -->
 
-	<h2>I suggest you ...</h2>
+	<h2><?=$lang['idea_suggest'];?> ...</h2>
 
 	<a href="index"><i class="fa fa-arrow-left"></i> General</a>
 

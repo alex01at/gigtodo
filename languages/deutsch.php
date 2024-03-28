@@ -761,5 +761,18 @@ $lang['payment_options'] ="Zahlungsoptionen";
 $lang['shopping_balance'] = "Verfügbares Einkaufsguthaben";
 $lang['chat_with_me'] = "Chatte mit mir";
 $lang['our_policies'] ="unsere Bestimmungen";
+<<<<<<< HEAD
 $lang['terms_desc'] ="Allgemeine Geschäftsbedingungen, Rückerstattungsrichtlinien, Nutzungsbedinungen";
 $lang['terms_title'] = "rechtliche Informationen";
+=======
+$lang['terms_desc'] ="Allgemeine Geschäftsbedingungen, Rückerstattungsrichtlinien, Preis- und Werberichtlinien";
+$lang['terms_title'] = "rechtliche Informationen";
+$lang['idea_suggest'] = "Meine Idee";
+$lang['post_idea'] = "Idee übermitteln";
+$lang['comments'] = "Kommentare";
+$lang['placeholder']['idea'] = "schreibe deine Idee";
+$lang['post_new_idea'] = "neue Idee schreiben";
+$lang['own_ideas'] = "meine Ideen/Kommentare";
+$lang['login_for_idea'] ="Entschuldigung! Sie können keine Idee/Feedback einreichen, ohne sich vorher anzumelden. Wenn Sie eine allgemeine Frage haben, senden Sie uns bitte eine E-Mail an";
+$lang['shared_idea'] = "schrieb diese Idee am";
+>>>>>>> a127baa0d5ca59a7cab96342ab84ba069f1ebbc1

@@ -50,7 +50,14 @@ $lang['chat_with_me'] = "Chat With Me";
 $lang['our_policies'] = "Our Policies";
 $lang['terms_desc'] ="Terms & Conditions, Refund Policy, Pricing & Promotion Policy";
 $lang['terms_title'] = "Terms & Conditions";
-
+$lang['idea_suggest'] = "I suggest you";
+$lang['post_idea'] = "Post idea";
+$lang['comments'] = "comments";
+$lang['placeholder']['idea'] = "Enter your idea";
+$lang['post_new_idea'] = "Post a new idea";
+$lang['own_ideas'] = "My Ideas/Comments";
+$lang['login_for_idea'] ="Sorry! You can't submit an idea/feedback without logging in first. If you have a general question, please email us at";
+$lang['shared_idea'] = "shared this idea";
 // User Logged In Menu Items
 $lang["menu"]["dashboard"] = "Dashboard";
 $lang["menu"]["notifications"] = "Notifications";
