@@ -85,17 +85,17 @@
     <?= $lang['button']['send']; ?>
   </button>
   <button type="button" class="btn btn-outline-success arrow-drop float-right" data-html="true" data-toggle="popover" data-placement="top" data-content='
-  <strong>Pressing Enter will :</strong>
+  <strong><?= $lang['pressing_enter'];?>:</strong>
   
   <label class="fake-radio-green">
     <input type="radio" name="toggle-send" value="new-line">
     <span class="radio-img"></span>
-    <div>Start a new line <small>Press Ctrl+Enter to send message.</small></div>
+    <div><?=$lang['start_new_line'];?> <small><?=$lang['start_new_line_desc'];?></small></div>
   </label>
 
   <label class="fake-radio-green">
     <input type="radio" name="toggle-send" value="send-msg"><span class="radio-img"></span>
-    <div>Send message<small>Press Shift+Enter to start a new line.</small></div>
+    <div><?=$lang['send_message'];?><small><?=$lang['send_message_desc'];?></small></div>
   </label>
   
   <script>

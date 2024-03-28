@@ -56,14 +56,14 @@ $count_active_proposals = $db->count("proposals",array("proposal_seller_id"=>$lo
 <div class="col-md-4 <?=($lang_dir == "right" ? 'order-1 order-sm-2 pr-0 border-right':'pl-0 border-left')?>" id="msgSidebar">
 	<h5 class="pt-3 p-2">Orders</h5>
 	<div class="dropdown">
-		<a class="lead text-muted p-2 pt-0" href="#" role="button" data-toggle="dropdown">Past Orders (<?= $count_orders; ?>)</a>
+		<a class="lead text-muted p-2 pt-0" href="#" role="button" data-toggle="dropdown"><?=$lang['_past_orders'];?> (<?= $count_orders; ?>)</a>
 		<div class="dropdown-menu pt-1 pb-1">
-			<a href="../buying_history?buyer_id=<?= $seller_id; ?>" class="dropdown-item">Buying History</a>
-			<a href="../selling_history?seller_id=<?= $seller_id; ?>" class="dropdown-item">Selling History</a>
+			<a href="../buying_history?buyer_id=<?= $seller_id; ?>" class="dropdown-item"><?=$lang['b_history'];?></a>
+			<a href="../selling_history?seller_id=<?= $seller_id; ?>" class="dropdown-item"><?=$lang['s_history'];?></a>
 		</div>
 	</div>
 	<hr>
-	<h5 class="pb-0 p-2">About</h5>
+	<h5 class="pb-0 p-2"><?=$lang["about"];?></h5>
 	<center class="mb-3">
 		
 		<a href="../<?= $seller_user_name; ?>">
@@ -83,9 +83,9 @@ $count_active_proposals = $db->count("proposals",array("proposal_seller_id"=>$lo
 	</center>
 	<div class="row p-3">
 		<div class="col-md-6">
-			<p><i class="fa fa-star pr-1"></i> Rating </p>
-			<p><i class="fa fa-globe pr-1"></i> From</p>
-			<p><i class="fa fa-truck pr-1"></i> Last delivery</p>
+			<p><i class="fa fa-star pr-1"></i> <?=$lang['rating'];?> </p>
+			<p><i class="fa fa-globe pr-1"></i> <?=$lang["from"];?></p>
+			<p><i class="fa fa-truck pr-1"></i> <?=$lang['last_delivery'];?></p>
 			<?php
 			$select_languages_relation = $db->select("languages_relation",array("seller_id"=>$seller_id));
 			while($row_languages_relation = $select_languages_relation->fetch()){

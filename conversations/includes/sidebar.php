@@ -8,7 +8,7 @@
     </div><!--- input-group Ends --->
 	</div><!--- search-bar Ends --->
     <div class="dropdown float-left mt-1"><!--- dropdown float-left mt-1 Starts --->
-			<a class="dropdown-toggle" href="#" data-toggle="dropdown">All Conversations</a>
+			<a class="dropdown-toggle" href="#" data-toggle="dropdown"><?=$lang['all_conversations'];?></a>
 			<div class="dropdown-menu">
 				<a href="#" class="dropdown-item" id="all"><?= $lang['inbox']['all']; ?></a>
 				<a href="#" class="dropdown-item" id="unread"><?= $lang['inbox']['unread']; ?></a>

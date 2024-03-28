@@ -69,6 +69,22 @@ $lang['add_comment'] = "Add a Comment...";
 $lang['commented'] ="comments";
 $lang['comment_on'] ="commented on";
 $lang['select_role'] ="Select user role";
+$lang['all_conversations'] ="All Conversations";
+$lang['local_time'] ="Local Time";
+$lang['pressing_enter'] ="Pressing Enter will ";
+$lang['start_new_line'] = "Start a new line";
+$lang['start_new_line_desc'] ="Press Ctrl+Enter to send message.";
+$lang['send_message'] ="Send message";
+$lang['send_message_desc'] = "Press Shift+Enter to start a new line.";
+$lang['rating'] ="Rating";
+$lang['last_delivery'] ="Last delivery";
+$lang['_past_orders'] = "Past Orders";
+$lang['b_history'] = "Buying History";
+$lang['s_history'] = "Selling History";
+
+ 
+
+
 // User Logged In Menu Items
 $lang["menu"]["dashboard"] = "Dashboard";
 $lang["menu"]["notifications"] = "Notifications";

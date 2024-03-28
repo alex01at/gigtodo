@@ -99,7 +99,7 @@
 
 	<span <?= $statusClass; ?>><?= check_status($seller_id); ?></span> 
 	
-	| Local Time <i class="fa fa-clock-o"></i> <?= $date; ?>
+	| <?=$lang['local_time']; ?> <i class="fa fa-clock-o"></i> <?= $date; ?>
 	
 	</span>
 

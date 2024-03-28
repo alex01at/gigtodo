@@ -69,7 +69,7 @@ function addRemoveSelected(select){
 }
 
 $('#all').click(function(){
-  $(".inboxHeader .dropdown-toggle").html("All Conversations");
+  $(".inboxHeader .dropdown-toggle").html("<?php echo $lang['all_conversations']; ?>");
   $(".dropdown-menu a").attr('class','dropdown-item');
   $("#all").attr('class','dropdown-item active');
   $(".message-recipients").show();
