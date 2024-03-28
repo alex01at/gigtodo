@@ -119,9 +119,9 @@
                   <div class="form-group">
                     <label class="<?= $floatRight ?>"><?= $lang['label']['user_role']; ?></label>
                     <select name="user_role" class="form-control" required>
-                      <option value="" class="hidden">Select user role</option>
-                      <option>Buyer</option>
-                      <option>Seller</option>
+                      <option value="" class="hidden"><?=$lang['select_role'];?></option>
+                      <option><?=$lang['order_details']['buyer'];?></option>
+                      <option><?=$lang['order_details']['seller'];?></option>
                     </select>
                   </div>
                   <?php } ?>

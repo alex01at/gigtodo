@@ -68,6 +68,7 @@ $lang['post_comment'] ="Post comment";
 $lang['add_comment'] = "Add a Comment...";
 $lang['commented'] ="comments";
 $lang['comment_on'] ="commented on";
+$lang['select_role'] ="Select user role";
 // User Logged In Menu Items
 $lang["menu"]["dashboard"] = "Dashboard";
 $lang["menu"]["notifications"] = "Notifications";

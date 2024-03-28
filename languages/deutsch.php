@@ -785,3 +785,4 @@ $lang['add_comment'] = "schreibe ein Kommentar ...";
 $lang['commented'] = "kommentierte";
 $lang['placeholder']['desc_idea'] ="Beschreibe deine Idee...";
 $lang['comment_on'] ="kommentierte";
+$lang['select_role'] ="Sie sind hier als:";
