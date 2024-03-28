@@ -1093,6 +1093,7 @@ font-size:18px;
    /*width: 26%;*/
 }
 .favoriteIcon .fa{
+   position: absolute;
    float: right;
    display: block;
    text-decoration: none!important;
