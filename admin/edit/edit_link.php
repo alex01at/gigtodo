@@ -122,7 +122,7 @@ $link_url = $input->post("link_url");
 $update_link = $db->update("footer_links",array("icon_class"=>$icon_class,"link_title"=>$link_title,"link_url"=>$link_url),array("link_id"=>$link_id,"language_id"=>$adminLanguage));
 if($update_link){
 echo "<script>alert('One Footer Link Has Been Updated.');</script>";
-echo "<script>window.open('index?layout_settings','_self');</script>";
+echo "<script>window.open('index?theme_settings','_self');</script>";
 }	
 }
 }
