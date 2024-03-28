@@ -6,22 +6,27 @@ class Input{
 	  return (is_array($val))?array_map(array($this, 'secure'),$val):htmlspecialchars($val, ENT_COMPAT, 'UTF-8');
 	}
 
-	public function get($key=''){
-		if(!empty($key)){ 
-			if(is_array($_GET[$key])){
-				$array = $this->secure($_GET[$key]);
-				return filter_var_array($array, FILTER_SANITIZE_STRING);
-			}else{
-				return htmlspecialchars(filter_input(INPUT_GET, $key), ENT_COMPAT, 'UTF-8');
+	public function get($key = '') {
+		if (!empty($key)) {
+			if (isset($_GET[$key])) {
+				if (is_array($_GET[$key])) {
+					$array = $this->secure($_GET[$key]);
+					return filter_var_array($array, FILTER_SANITIZE_STRING);
+				} else {
+					return htmlspecialchars($_GET[$key], ENT_COMPAT, 'UTF-8');
+				}
+			} else {
+				return null; 
 			}
-		}else{
-		 $values = [];
-	    foreach($_GET as $key => $value){
-	      $values["$key"] = htmlspecialchars(filter_input(INPUT_GET, $key), ENT_COMPAT, 'UTF-8');
-	    }
-    	return $values;
-    }
+		} else {
+			$values = [];
+			foreach ($_GET as $key => $value) {
+				$values[$key] = htmlspecialchars($value, ENT_COMPAT, 'UTF-8');
+			}
+			return $values;
+		}
 	}
+	
 
 	public function post($data=''){
 		if(@is_array($_POST[$data]) or empty($data)){
