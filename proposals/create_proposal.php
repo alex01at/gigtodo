@@ -179,7 +179,7 @@ $(document).ready(function(){
   });
 
   $('textarea[name="proposal_desc"]').summernote({
-      placeholder: 'Write Your Description Here.',
+      placeholder: '<?=$lang['placeholder']['proposal_desc'];?>.',
       height: 150,
       toolbar: [
       ['style', ['style']],

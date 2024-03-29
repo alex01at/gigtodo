@@ -81,8 +81,15 @@ $lang['last_delivery'] ="Last delivery";
 $lang['_past_orders'] = "Past Orders";
 $lang['b_history'] = "Buying History";
 $lang['s_history'] = "Selling History";
-
- 
+$lang['placeholder']['proposal_desc'] ="Write Your Description Here.";
+$lang['cat_error'] ="you must need to select a category";
+$lang['child_error'] ="you must need to select a child category";
+$lang['ref_error'] = "you must need to enable or disable proposal referrals.";
+$lang['img_error'] = "Proposal Image 1 Is Required.";
+$lang['tags_error'] ="Proposal Tags are required";
+$lang['delivery_error'] ="! Immediate delivery only works if someone purchases this offer directly or via the shopping cart.";
+$lang['enable_watermark'] ="Enable Watermark";
+  
 
 
 // User Logged In Menu Items

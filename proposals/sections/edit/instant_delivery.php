@@ -17,7 +17,7 @@
 <hr class="mt-0">
 
 <div class="alert alert-warning d-none">
-  ! Instant Delivery Will Only Work When Some One Buy This Proposal Directly Or Buy Cart.
+<?=$lang['delivery_error'];?>
 </div>
 
 <div class="alert alert-info">
@@ -27,8 +27,8 @@
 <form action="#" enctype="multipart/form-data" method="post" id="delivery-form"><!--- form Starts -->
 
   <div class="form-group">
-    <p class="mb-2">Message</p>
-    <textarea name="message" id="instant_delivery_message" placeholder="Message" rows="4" class="form-control"><?= $delivery_message; ?></textarea>
+    <p class="mb-2"><?=$lang['th']['message'];?></p>
+    <textarea name="message" id="instant_delivery_message" placeholder="<?=$lang['th']['message'];?>" rows="4" class="form-control"><?= $delivery_message; ?></textarea>
   </div>
 
   <div class="alert alert-info">
@@ -48,7 +48,7 @@
 
   <?php if(@$enable_watermark == 1){ ?>
   <div class="form-group float-right">
-    <label for="">Enable Watermark : </label>
+    <label for=""><?=$lang['enable_watermark'];?> : </label>
     <input type="checkbox" <?= ($delivery_watermark ==1)?"checked":""; ?> name="enable_watermark" value="1" style="position: relative; top: 2px;">
   </div>
   <?php } ?>

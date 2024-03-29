@@ -12,7 +12,7 @@ if (empty($form_data)) {
 
 <div class="form-group row"><!--- form-group row Starts --->
 <div class="col-md-3"><?= $lang['label']['proposal_title']; ?></div>
-<div class="col-md-9"><textarea name="proposal_title" rows="3" required="" placeholder="I Will" class="form-control"></textarea></div>
+<div class="col-md-9"><textarea name="proposal_title" rows="3" required="" placeholder="<?=$lang['placeholder']['i_will'];?>" class="form-control"></textarea></div>
 <small class="form-text text-danger"><?= ucfirst(@$form_errors['proposal_description']); ?></small>
 </div><!--- form-group row Ends --->
 
@@ -20,7 +20,7 @@ if (empty($form_data)) {
 <div class="col-md-3"> <?= $lang['label']['category']; ?> </div>
 <div class="col-md-9">
 <select name="proposal_cat_id" id="category" class="form-control mb-3"  required="">
-<option value="" class="hidden"> Select A Category </option>
+<option value="" class="hidden"> <?=$lang['placeholder']['select_category'];?> </option>
 <?php 
   $get_cats = $db->select("categories");
   while($row_cats = $get_cats->fetch()){
@@ -118,7 +118,7 @@ $delivery_proposal_title = $row_delivery_times->delivery_proposal_title;
 <div class="col-md-3"><?= $lang['label']['tags']; ?></div>
 <div class="col-md-9">
   <input type="text" name="proposal_tags" class="form-control" data-role="tagsinput">
-  <small class="form-text text-danger"><?= ucfirst(@$form_errors['proposal_tags']); ?></small>
+  <small class="form-text text-danger"><?= $lang['tags_error']; ?></small>
 </div>
 </div><!--- form-group row Ends --->
 <div class="form-group text-right mb-0"><!--- form-group Starts --->
@@ -147,7 +147,12 @@ if(isset($_POST['submit'])){
   "proposal_child_id" => "required",
   "proposal_tags" => "required",);
 
-  $messages = array("proposal_cat_id" => "you must need to select a category","proposal_child_id" => "you must need to select a child category","proposal_enable_referrals"=>"you must need to enable or disable proposal referrals.","proposal_img1"=>"Proposal Image 1 Is Required.");
+  $messages = array(
+  "proposal_cat_id" => $lang['cat_error'],
+  "proposal_child_id" => $lang['child_error'],
+  "proposal_enable_referrals"=> $lang['ref_error'],
+  "proposal_img1"=>$lang['img_error']
+);
   $val = new Validator($_POST,$rules,$messages);
 
   if($val->run() == false){

@@ -31,7 +31,7 @@ Class Validator{
 		if(empty($check)){
 			if(empty($this->messages[$field_name])){
 				$f_name = str_replace("_"," ",$field_name);
-				$this->errors[$field_name] = $f_name . " is required.";
+				$this->errors[$field_name] = $f_name . " ist erforderlich.";
 			}else{ 
 				$this->errors[$field_name] = $this->messages[$field_name]; 
 			}
