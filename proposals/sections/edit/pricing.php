@@ -34,9 +34,9 @@ $d_delivery_id = $row_proposal->delivery_id;
 // $delivery_proposal_title = $row_delivery_time->delivery_proposal_title;
 
 ?>
-<h5 class="font-weight-normal float-left">Pricing</h5>
+<h5 class="font-weight-normal float-left"><?= $lang['pricing']; ?></h5>
 <div class="float-right switch-box">
-  <span class="text">Fixed Price :</span>
+  <span class="text"><?= $lang['fixed_price'];?> :</span>
   <label class="switch">
     <?php if($d_proposal_price == "0" or isset($_POST["fixedPriceOff"])){ ?>
       <input type="checkbox" class="pricing">

@@ -417,7 +417,7 @@ $lang['button']['cancel'] = "abbrechen";
 $lang['button']['back'] = "Zurück";
 $lang['button']['create_new_proposal'] = "Ein neues Angebot erstellen";
 $lang['button']['save_changes'] = "Änderungen speichern";
-$lang['button']['save_continue'] = "Speichern und verbinden";
+$lang['button']['save_continue'] = "Speichern und weiter";
 $lang['button']['change_paypal_email'] = "Change Paypal Email";
 $lang['button']['change_payoneer_email'] = "Change Payoneer Email";
 $lang['button']['change_stripe_email'] = "Change Stripe Email";
@@ -597,9 +597,9 @@ $lang['edit_proposal']['instant_delivery']['title'] = "Sofortige Lieferung";
 $lang['edit_proposal']['instant_delivery']['enable'] = "Aktivierung der sofortigen Lieferung:";
 $lang['edit_proposal']['instant_delivery']['alert1'] = "Hiermit steht jede hier hochgeladene Datei nach dem Kauf sofort
 zum Download zur Verfügung.";
-$lang['edit_proposal']['instant_delivery']['alert2'] = "<p class='mb-1'>Accepted Files: jpeg, jpg, gif, png, tif, avi,
+$lang['edit_proposal']['instant_delivery']['alert2'] = "<p class='mb-1'>erlaubte Dateiendungen: jpeg, jpg, gif, png, tif, avi,
     mpeg, mpg, mov, rm, 3gp, flv, mp4, zip, rar, mp3, wav, docx, csv, xls, pptx, pdf, txt</p>
-<p class='mb-0'>Max Upload Size: 100mb</p>";
+<p class='mb-0'>Max Upload Größe: 100mb</p>";
 $lang['edit_proposal']['pricing']['warning1'] = "Wenn Sie Pakete verwenden möchten, müssen Sie diesen Wert im Feld auf 0
 setzen.";
 $lang['edit_proposal']['pricing']['warning2'] = "Set 0, wenn Ihr Angebot für die sofortige Lieferung konfiguriert ist.";
@@ -807,3 +807,5 @@ $lang['is_required'] = " ist erforderlich";
 $lang['tags_error'] ="Stichworte sind erforderlich";
 $lang['delivery_error'] ="! Die sofortige Lieferung funktioniert nur, wenn jemand dieses Angebot direkt oder über den Warenkorb kauft.";
 $lang['enable_watermark'] ="Wasserzeichen aktivieren";
+$lang['fixed_price'] ="Festpreis";
+$lang['pricing'] ="Preisgestalltung";

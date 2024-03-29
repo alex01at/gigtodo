@@ -27,9 +27,9 @@ if($enable_unlimited_revisions == 1){
 <thead>
 <tr>
   <th></th>
-  <th>Basic</th>
-  <th>Standard</th>
-  <th>Advance</th>
+  <th>Option 1</th>
+  <th>Option 2</th>
+  <th>Option 3</th>
 </tr>
 </thead>
 <tbody>
@@ -40,9 +40,9 @@ if($enable_unlimited_revisions == 1){
 
 		<tr>
 			<td>Description</td>
-			<td class="p-0"><textarea name="proposal_packages[1][description]" form="pricing-form" class="form-control" placeholder="Description" rows="3"><?= $row_1->description; ?></textarea></td>
-			<td class="p-0"><textarea name="proposal_packages[2][description]" form="pricing-form" class="form-control" placeholder="Description" rows="3"><?= $row_2->description; ?></textarea></td>
-			<td class="p-0"><textarea name="proposal_packages[3][description]" form="pricing-form" class="form-control" placeholder="Description" rows="3"><?= $row_3->description; ?></textarea></td>
+			<td class="p-0"><textarea name="proposal_packages[1][description]" form="pricing-form" class="form-control" placeholder="<?=$lang['label']['description'];?>" rows="3"><?= $row_1->description; ?></textarea></td>
+			<td class="p-0"><textarea name="proposal_packages[2][description]" form="pricing-form" class="form-control" placeholder="<?=$lang['label']['description'];?>" rows="3"><?= $row_2->description; ?></textarea></td>
+			<td class="p-0"><textarea name="proposal_packages[3][description]" form="pricing-form" class="form-control" placeholder="<?=$lang['label']['description'];?>" rows="3"><?= $row_3->description; ?></textarea></td>
 		</tr>
 		<?php
 		$i = 0;

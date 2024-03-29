@@ -89,7 +89,8 @@ $lang['img_error'] = "Proposal Image 1 Is Required.";
 $lang['tags_error'] ="Proposal Tags are required";
 $lang['delivery_error'] ="! Immediate delivery only works if someone purchases this offer directly or via the shopping cart.";
 $lang['enable_watermark'] ="Enable Watermark";
-  
+$lang['fixed_price'] ="Fixed Price";
+$lang['pricing'] = "Pricing";
 
 
 // User Logged In Menu Items
