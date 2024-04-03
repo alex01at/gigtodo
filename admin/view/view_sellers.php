@@ -4,36 +4,37 @@ if(!isset($_SESSION['admin_email'])){
 echo "<script>window.open('login','_self');</script>";
 }else{
     $pagination_options = array(10, 20, 30, 50);
-    $default_per_page = 10;
-
-?>
-<div class="main-container">
-    
-    <!--- 2 row Ends --->
-    <div class="row mt-4">
-        <!--- 3 row Starts --->
-        <div class="col-lg-12">
-            <!--- col-lg-12 Starts --->
-            <div class="card">
-                <!--- card Starts --->
-                <div class="card-header">
-                    <!--- card-header Starts --->
-                    <h4 class="h4"> <i class="fa fa-money-bill-alt"></i> View All Users </h4>
-                    <form action="" method="post">
-    <select name="per_page">
-        <?php
-        // Durch die verfügbaren Optionen iterieren und das entsprechende selected-Attribut setzen
-        foreach ($pagination_options as $option) {
-            if ($option == $per_page) {
-                echo "<option value='$option' selected>$option</option>";
-            } else {
-                echo "<option value='$option'>$option</option>";
+    $default_per_page = 30;
+    $per_page = isset($_POST['per_page']) ? $_POST['per_page'] : $default_per_page; // überprüfen, ob ein Wert aus dem Formular gesendet wurde, andernfalls Standardwert verwenden
+    ?>
+    <div class="main-container">
+        
+        <!--- 2 row Ends --->
+        <div class="row mt-4">
+            <!--- 3 row Starts --->
+            <div class="col-lg-12">
+                <!--- col-lg-12 Starts --->
+                <div class="card">
+                    <!--- card Starts --->
+                    <div class="card-header">
+                        <!--- card-header Starts --->
+                        <h4 class="h4"> <i class="fa fa-money-bill-alt"></i> View All Users </h4>
+                        <form action="" method="post">
+        <select name="per_page">
+            <?php
+            // Durch die verfügbaren Optionen iterieren und das entsprechende selected-Attribut setzen
+            foreach ($pagination_options as $option) {
+                if ($option == $per_page) {
+                    echo "<option value='$option' selected>$option</option>";
+                } else {
+                    echo "<option value='$option'>$option</option>";
+                }
             }
-        }
-        ?>
-    </select>
-    <button type="submit">Submit</button>
-</form>
+            ?>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+    
                 </div>
                 <!--- card-header Ends --->
                 <div class="card-body">
