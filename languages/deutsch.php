@@ -809,3 +809,22 @@ $lang['delivery_error'] ="! Die sofortige Lieferung funktioniert nur, wenn jeman
 $lang['enable_watermark'] ="Wasserzeichen aktivieren";
 $lang['fixed_price'] ="Festpreis";
 $lang['pricing'] ="Preisgestalltung";
+
+//new notification messages
+
+$lang['notification']['order_complete'] = "Bestellung abgeschlossen";
+$lang['notification']['approved_referral'] = "Hat Ihre Benutzerempfehlung genehmigt. Du hast die Provision bekommen.";
+$lang['notification']['approved_referral_proposal'] = "Hat die Empfehlung Ihres Vorschlags genehmigt. Du hast die Provision bekommen.";
+$lang['notification']['order'] = "Hat etwas bestellt.";
+$lang['notification']['modification'] = "Hat Änderungen an Ihrem Angebot gesendet.";
+$lang['notification']['declined'] = "Hat Ihr Angebot abgelehnt. Bitte reichen Sie ein gültiges Angebot ein.";
+$lang['notification']['approved'] = "Hat Ihrem Angebot zugestimmt. Danke fürs Schreiben.";
+$lang['notification']['unapproved_request'] ="Hat Ihrem Angebot zugestimmt. Danke fürs Schreiben.";
+$lang['notification']['approved_request'] = "Hat Ihre Anfrage genehmigt. Danke fürs Schreiben.";
+$lang['notification']['offer'] ="Hat Ihnen gerade ein Angebot zu Ihrer Anfrage gesendet. Klicken Sie hier, um es anzuzeigen.";
+$lang['notification']['order_tip'] = "Hat Ihnen Trinkgeld gesendet";
+$lang['notification']['order_message'] ="Die Bestellung wurde aktualisiert.";
+
+
+
+

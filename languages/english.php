@@ -93,6 +93,22 @@ $lang['fixed_price'] ="Fixed Price";
 $lang['pricing'] = "Pricing";
 
 
+
+// new notification messages
+$lang['notification']['order_complete'] = "Completed your order.";
+$lang['notification']['approved_referral'] = "Has approved your user referral. you have got the commission.";
+$lang['notification']['approved_referral_proposal'] = "Has approved your proposal referral. you have got the commission.";
+$lang['notification']['order'] = "Has just sent you an order.";
+$lang['notification']['modification'] = "Has sent modification to your proposal.";
+$lang['notification']['declined'] = "Has Declined your proposal. Please submit a valid proposal.";
+$lang['notification']['approved'] = "Has approved your proposal. Thanks for posting.";
+$lang['notification']['unapproved_request'] ="Has unapproved your request. Please submit a valid request.";
+$lang['notification']['approved_request'] = "Has approved your request. Thanks for posting.";
+$lang['notification']['offer'] ="Has just sent you an offer on your request click here to view.";
+$lang['notification']['order_tip'] = "Has has given you an tip.";
+$lang['notification']['order_message'] ="Updated the order."
+
+
 // User Logged In Menu Items
 $lang["menu"]["dashboard"] = "Dashboard";
 $lang["menu"]["notifications"] = "Notifications";

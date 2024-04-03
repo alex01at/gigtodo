@@ -1,54 +1,54 @@
 <?php
 
 if($reason == "referral_approved"){
-	return "Has approved your user referral. you have got the commission.";
+	return $lang['notification']['approved_prposal'];
 }
 if($reason == "proposal_referral_approved"){
-	return "Has approved your proposal referral. you have got the commission.";
+	return $lang['notification']['approved_referral_proposal'];
 }
 
 if($reason == "modification"){
-	return "Has sent modification to your proposal.";
-}
+	return $lang['notification']['modification'];
+	}
 
 if($reason == "declined"){
-	return "Has Declined your proposal. Please submit a valid proposal.";
+	return $lang['notification']['declined'];
 }
 
 if($reason == "approved"){
-	return "Has approved your proposal. Thanks for posting.";
+	return $lang['notification']['approved'];
 }
 
 if($reason == "unapproved_request"){
-	return "Has unapproved your request. Please submit a valid request.";
+	return $lang['notification']['unapproved_request'];
 }
 
 if($reason == "approved_request"){
-	return "Has approved your request. Thanks for posting.";
+	return $lang['notification']['approved_request'];
 }
 
 if($reason == "offer"){
-	return "Has just sent you an offer on your request click here to view.";
+	return $lang['notification']['offer'];
 }
 
 if($reason == "order"){
-	return "Has just sent you an order.";
+	return $lang['notification']['order'];
 }
 
 if($reason == "order_tip"){
-	return "Has has given you an tip.";
+	return $lang['notification']['order_tip'];
 }
 
 if($reason == "order_message"){
-	return "Updated the order.";
+	return $lang['notification']['order_message'];
 }
-
+//
 if($reason == "order_revision"){
 	return "Requested for a revision.";
 }
 
 if($reason == "order_completed"){
-	return "Completed your order.";
+	return $lang['notification']['order_complete'];
 }
 
 if($reason == "order_delivered"){
