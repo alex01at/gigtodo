@@ -138,7 +138,7 @@ echo "<script>window.open('login','_self');</script>";
 												<!--- form-group row Ends --->
 												<div class="form-group row">
 													<!--- form-group row Starts --->
-													<label class="col-md-3 control-label"> Confirm Admin Password :
+													<label class="col-md-3 control-label"> Confirm Password :
 													</label>
 													<div class="col-md-6">
 														<div class="input-group">
