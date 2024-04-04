@@ -41,7 +41,7 @@ $enable_maintenance_mode = $row_general_settings->enable_maintenance_mode;
 					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
 						<span class="user-icon">
                         <?php if(!empty($admin_image)){ ?>
-         <img src="<?= getImageUrl("admins",$admin_image); ?>" width="30" height="30" class="rounded-circle text-white">
+         <img src="<?= getImageUrl("admins",$admin_image); ?>" width="50px" height="50px" class="rounded-circle text-white">
      <?php }else{ ?>
          <img src="admin_images/empty-image.png" width="30" height="30" class="rounded-circle text-white">
      <?php } ?>
