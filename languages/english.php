@@ -106,7 +106,7 @@ $lang['notification']['unapproved_request'] ="Has unapproved your request. Pleas
 $lang['notification']['approved_request'] = "Has approved your request. Thanks for posting.";
 $lang['notification']['offer'] ="Has just sent you an offer on your request click here to view.";
 $lang['notification']['order_tip'] = "Has has given you an tip.";
-$lang['notification']['order_message'] ="Updated the order."
+$lang['notification']['order_message'] ="Updated the order.";
 
 
 // User Logged In Menu Items

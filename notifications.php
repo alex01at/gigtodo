@@ -59,7 +59,6 @@ echo "<script>window.open('notifications','_self')</script>";
 	<meta name="description" content="<?= $site_desc; ?>">
 	<meta name="keywords" content="<?= $site_keywords; ?>">
 	<meta name="author" content="<?= $site_author; ?>">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
 	<link href="styles/bootstrap.css" rel="stylesheet">
 	<link href="styles/custom.css" rel="stylesheet"> <!-- Custom css code from modified in admin panel --->
 	<link href="styles/styles.css" rel="stylesheet">
@@ -85,7 +84,7 @@ echo "<script>window.open('notifications','_self')</script>";
 							<th><?= $lang['th']['sender']; ?></th>
 							<th><?= $lang['th']['message']; ?></th>
 							<th><?= $lang['th']['date']; ?></th>
-							<th><?= $lang['th']['delete']; ?></th>
+							<th><?= $lang['th']['action']; ?></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -140,6 +139,10 @@ echo "<script>window.open('notifications','_self')</script>";
 					<a href="notifications?delete=<?= $notification_id; ?>" class="text-white btn btn-danger">
 						<i class="fa fa-trash-o"></i>
 					</a>
+					<a href="<?= $site_url; ?>/notifications?n_id=<?= $notification_id; ?>"class="text-white btn btn-success">
+					<i class="fa fa-eye"></i>
+					</a>
+
 					</td>
 				</tr>
 			<?php } ?>
