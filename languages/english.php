@@ -107,7 +107,21 @@ $lang['notification']['approved_request'] = "Has approved your request. Thanks f
 $lang['notification']['offer'] ="Has just sent you an offer on your request click here to view.";
 $lang['notification']['order_tip'] = "Has has given you an tip.";
 $lang['notification']['order_message'] ="Updated the order.";
-
+$lang['notification']['order_revision'] = "Requested for a revision.";
+$lang['notification']['order_delivered'] = "Delivered your order.";
+$lang['notification']['cancellation_request'] = "Wants to cancel the order.";
+$lang['notification']['decline_cancellation_request'] = "Declined your cancellation request.";
+$lang['notification']['accept_cancellation_request'] = "Accepted cancellation request.";
+$lang['notification']['cancelled_by_customer_support'] = "Order has been cancelled by admin.";
+$lang['notification']['buyer_order_review'] = "Please review and rate your buyer.";
+$lang['notification']['seller_order_review'] = "Please review and rate your seller.";
+$lang['notification']['order_cancelled'] = "Your order has been cancelled.";
+$lang['notification']['withdrawal_declined'] = "your withdrawal request has been declined. click here to view reason.";
+$lang['notification']['withdrawal_approved'] = "your withdrawal request has been completed. click here to view.";
+$lang['notification']['extendTimeDeclined'] = "Has Declined your extention.";
+$lang['notification']['extendTimeAccepted'] = "Has accepted your extension. Time was increased successfully.";
+$lang['notification']['buyerExtendTimeAccepted'] = "Time increased successfully.";
+$lang['notification']['ticket_reply'] = "just responded to your ticket.";
 
 // User Logged In Menu Items
 $lang["menu"]["dashboard"] = "Dashboard";

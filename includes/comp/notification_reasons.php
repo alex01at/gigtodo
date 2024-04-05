@@ -44,7 +44,7 @@ if($reason == "order_message"){
 }
 //
 if($reason == "order_revision"){
-	return "Requested for a revision.";
+	return $lang['notification']['order_revision'];
 }
 
 if($reason == "order_completed"){
@@ -52,56 +52,56 @@ if($reason == "order_completed"){
 }
 
 if($reason == "order_delivered"){
-	return "Delivered your order.";
+	return $lang['notification']['order_delivered'];
 }
 
 if($reason == "cancellation_request"){
-	return "Wants to cancel the order.";
+	return $lang['notification']['cancellation_request'];
 }
 
 if($reason == "decline_cancellation_request"){
-	return "Declined your cancellation request.";
+	return $lang['notification']['decline_cancellation_request'];
 }
 
 if($reason == "accept_cancellation_request"){
-	return "Accepted cancellation request.";
+	return $lang['notification']['accept_cancellation_request'];
 }
 
 if($reason == "cancelled_by_customer_support"){
-	return "Order has been cancelled by admin.";
+	return $lang['notification']['cancelled_by_customer_support'];
 }
 
 if($reason == "buyer_order_review"){
-	return "Please review and rate your buyer.";
+	return $lang['notification']['buyer_order_review'];
 }
 if($reason == "seller_order_review"){
-	return "Please review and rate your seller.";
+	return $lang['notification']['seller_order_review'];
 }
 
 if($reason == "order_cancelled"){
-	return "Your order has been cancelled.";
+	return $lang['notification']['order_cancelled'];
 }
 
 if($reason == "withdrawal_declined"){
-	return "your withdrawal request has been declined. click here to view reason.";
+	return $lang['notification']['withdrawal_declined'];
 }
 
 if($reason == "withdrawal_approved"){
-	return "your withdrawal request has been completed. click here to view.";
+	return $lang['notification']['withdrawal_approved'];
 }
 
 if($reason == "extendTimeDeclined"){
-	return "Has Declined your extention.";
+	return $lang['notification']['extendTimeDeclined'];
 }
 
 if($reason == "extendTimeAccepted"){
-	return "Has accepted your extension. Time was increased successfully.";
+	return $lang['notification']['extendTimeAccepted'];
 }
 
 if($reason == "buyerExtendTimeAccepted"){
-	return "Time increased successfully.";
+	return $lang['notification']['buyerExtendTimeAccepted'];
 }
 
 if($reason == "ticket_reply"){
-	return "just responded to your ticket.";
+	return $lang['notification']['ticket_reply'];
 }

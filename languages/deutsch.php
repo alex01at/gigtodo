@@ -824,7 +824,21 @@ $lang['notification']['approved_request'] = "Hat Ihre Anfrage genehmigt. Danke f
 $lang['notification']['offer'] ="Hat Ihnen gerade ein Angebot zu Ihrer Anfrage gesendet. Klicken Sie hier, um es anzuzeigen.";
 $lang['notification']['order_tip'] = "Hat Ihnen Trinkgeld gesendet";
 $lang['notification']['order_message'] ="Die Bestellung wurde aktualisiert.";
-
+$lang['notification']['order_revision'] = "Um eine Überarbeitung gebeten.";
+$lang['notification']['order_delivered'] = "Ihre Bestellung wurde geliefert.";
+$lang['notification']['cancellation_request'] = "Möchte die Bestellung stornieren.";
+$lang['notification']['decline_cancellation_request'] = "Ihre Stornierungsanfrage wurde abgelehnt.";
+$lang['notification']['accept_cancellation_request'] = "Stornierungsanfrage angenommen.";
+$lang['notification']['cancelled_by_customer_support'] = "Die Bestellung wurde vom Administrator storniert.";
+$lang['notification']['buyer_order_review'] = "Bitte überprüfen und bewerten Sie Ihren Käufer.";
+$lang['notification']['seller_order_review'] = "Bitte überprüfen und bewerten Sie Ihren Verkäufer.";
+$lang['notification']['order_cancelled'] = "Ihre Bestellung wurde storniert.";
+$lang['notification']['withdrawal_declined'] = "Ihr Auszahlungsantrag wurde abgelehnt. Klicken Sie hier, um den Grund anzuzeigen.";
+$lang['notification']['withdrawal_approved'] = "Ihr Auszahlungsantrag wurde abgeschlossen. Klicke hier, um anzusehen.";
+$lang['notification']['extendTimeDeclined'] = "Hat Ihre Verlängerung abgelehnt.";
+$lang['notification']['extendTimeAccepted'] = "Hat Ihre Verlängerung akzeptiert. Die Zeit wurde erfolgreich verlängert.";
+$lang['notification']['buyerExtendTimeAccepted'] = "Zeit erfolgreich erhöht.";
+$lang['notification']['ticket_reply'] = "habe gerade auf dein Ticket geantwortet.";
 
 
 
