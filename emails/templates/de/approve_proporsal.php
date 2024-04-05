@@ -8,13 +8,11 @@
         </div>
       </div>
 
-      <h2 class="o_heading">Proposal Approved </h2>
-
-      <p class="text-muted">Congratulations, your proposal has been approved and is now public for everyone in the community to see. Good sales!</p>
-
+      <h2 class="o_heading">Vorschlag genehmigt</h2>
+<p class="text-muted">Herzlichen Glückwunsch, Ihr Vorschlag wurde genehmigt und ist nun öffentlich für alle Mitglieder der Gemeinschaft sichtbar. Gute Verkäufe!</p>
       <div class="btn btn-green o_heading o_text" style="background-color: <?= $site_color;?>;">
         <a class="o_text-primary" href='<?= $site_url; ?>/proposals/<?= $data['user_name']; ?>/<?= $data['proposal_url']; ?>'>
-          See More Details
+          Details ansehen
         </a>
       </div>
 

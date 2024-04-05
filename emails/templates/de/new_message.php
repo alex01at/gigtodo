@@ -3,7 +3,7 @@
   <table class="o_block" width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" style="max-width: 632px;margin: 0 auto;">
     <tbody>
       <tr>
-        <td class="o_bg-white o_px-md o_pt" align="center" style="background-color: #ffffff;padding-left: 24px;padding-right: 24px;padding-top: 16px;"><h4 class="o_heading o_text-dark" style="font-family: Helvetica, Arial, sans-serif;font-weight: bold;margin-top: 0px;margin-bottom: 0px;color: #242b3d;font-size: 18px;line-height: 23px;">You have a message</h4>
+        <td class="o_bg-white o_px-md o_pt" align="center" style="background-color: #ffffff;padding-left: 24px;padding-right: 24px;padding-top: 16px;"><h4 class="o_heading o_text-dark" style="font-family: Helvetica, Arial, sans-serif;font-weight: bold;margin-top: 0px;margin-bottom: 0px;color: #242b3d;font-size: 18px;line-height: 23px;">Sie haben eine Nachricht</h4>
           <table align="center" cellspacing="0" cellpadding="0" border="0" role="presentation">
             <tbody>
               <tr>
@@ -38,7 +38,7 @@
             </tbody>
           </table>
           <div style="font-size: 24px; line-height: 24px; height: 24px;">&nbsp; </div>
-          <p class="o_mb-xs" style="margin-top: 0px;margin-bottom: 8px;"><strong>Message:</strong></p>
+          <p class="o_mb-xs" style="margin-top: 0px;margin-bottom: 8px;"><strong>Nachricht:</strong></p>
           <p class="o_mb-xs" style="margin-top: 0px;margin-bottom: 8px;"><?= $data['message']; ?> </p>
           <?php if(!empty($data['attachment'])){ ?>
           <a class="o_text-primary" href="#" style="color: #126de5;display: block;padding: 7px 8px;font-weight: bold; font-size: 14px;">
@@ -65,7 +65,7 @@
                 <tbody>
                   <tr>
                     <td class="o_btn o_bg-primary o_br o_heading o_text" align="center" style="font-family: Helvetica, Arial, sans-serif;font-weight: bold;margin-top: 0px;margin-bottom: 0px;font-size: 16px;line-height: 24px;mso-padding-alt: 12px 24px;background-color: <?= $site_color; ?>;border-radius: 4px;">
-                      <a class="o_text-white" href='<?= $site_url; ?>/conversations/inbox?single_message_id=<?= $data['message_group_id']; ?>' style="text-decoration: none;outline: none;color: #ffffff;display: block;padding: 12px 24px;mso-text-raise: 3px;">Reply to Message</a>
+                      <a class="o_text-white" href='<?= $site_url; ?>/conversations/inbox?single_message_id=<?= $data['message_group_id']; ?>' style="text-decoration: none;outline: none;color: #ffffff;display: block;padding: 12px 24px;mso-text-raise: 3px;">auf Nachricht antworten</a>
                     </td>
                   </tr>
                 </tbody>
