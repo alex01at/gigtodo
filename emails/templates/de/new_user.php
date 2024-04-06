@@ -17,8 +17,8 @@
                     </tr>
                   </tbody>
                 </table>
-                <h2 class="o_heading o_text-dark o_mb-xxs" style="font-family: Helvetica, Arial, sans-serif;font-weight: bold;margin-top: 0px;margin-bottom: 4px;color: #242b3d;font-size: 30px;line-height: 39px;">New User Registered.</h2>
-                <p style="margin-top: 0px;margin-bottom: 0px;"><?= $data['seller_user_name']; ?> has just Registered on <?= $site_name; ?>.</p></td>
+                <h2 class="o_heading o_text-dark o_mb-xxs" style="font-family: Helvetica, Arial, sans-serif;font-weight: bold;margin-top: 0px;margin-bottom: 4px;color: #242b3d;font-size: 30px;line-height: 39px;">Neuer Benutzer registriert.</h2>
+                <p style="margin-top: 0px;margin-bottom: 0px;"><?= $data['seller_user_name']; ?> hat sich auf <?= $site_name; ?>registriert.</p></td>
               </tr>
             </tbody>
           </table>

@@ -17,8 +17,8 @@
                     </tr>
                   </tbody>
                 </table>
-                <h2 class="o_heading o_mb-xxs" style="font-family: Helvetica, Arial, sans-serif;font-weight: bold;margin-top: 0px;margin-bottom: 4px;font-size: 30px;line-height: 39px;">New Offer Received!</h2>
-                <p class="o_mb-md" style="margin-top: 0px;margin-bottom: 24px;">You just received an offer from <?= $data['seller_user_name']; ?> for your request.</p>
+                <h2 class="o_heading o_mb-xxs" style="font-family: Helvetica, Arial, sans-serif;font-weight: bold;margin-top: 0px;margin-bottom: 4px;font-size: 30px;line-height: 39px;">Neues Angebot erhalten!</h2>
+                <p class="o_mb-md" style="margin-top: 0px;margin-bottom: 24px;">Sie haben gerade ein Angebot erhalten von <?= $data['seller_user_name']; ?> für Ihre Anfrage.</p>
                 <table align="center" cellspacing="0" cellpadding="0" border="0" role="presentation">
                   <tbody>
                     <tr>
