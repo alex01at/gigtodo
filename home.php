@@ -61,8 +61,8 @@ $slide_image = $row_slides->slide_image;
 <div class="container" style="max-width: 1360px !important;">
   <div class="row">
     <div class="col-md-12">
-      <!--<h2><?= $lang['home']['categories']['title']; ?></h2>
-      <h4><?= $lang['home']['categories']['desc']; ?></h4>--!>
+      <!-- <h2><?= $lang['home']['categories']['title']; ?></h2>
+      <h4><?= $lang['home']['categories']['desc']; ?></h4> -->
       <div class="row space80">
         <?php
           $get_categories = $db->query("select * from categories where cat_featured='yes' ".($lang_dir == "right" ? 'order by 1 DESC LIMIT 4,4':' LIMIT 0,4')."");
@@ -78,7 +78,7 @@ $slide_image = $row_slides->slide_image;
         <div class="col-md-3 col-6">
           <a href="categories/<?= $cat_url; ?>">
             <div class="grn_box">
-              <img src="<?= $cat_image; ?>" class="mx-auto d-block">
+              <img src="<?= $cat_image; ?>" class="mx-auto d-block" width="96px" height="96px">
               <p><?= $cat_title; ?></p>
             </div>
           </a>
@@ -102,7 +102,7 @@ $slide_image = $row_slides->slide_image;
         <div class="col-md-3 col-6">
           <a href="categories/<?= $cat_url; ?>">
             <div class="grn_box">
-              <img src="<?= $cat_image; ?>" class="mx-auto d-block" />
+              <img src="<?= $cat_image; ?>" class="mx-auto d-block" width="96px" height="96px">
               <p><?= $cat_title; ?></p>
             </div>
           </a>
