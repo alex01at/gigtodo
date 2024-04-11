@@ -82,7 +82,7 @@ $lang["sidebar"]["request_box"]["desc"] = "Sie sich ein Angebot von unseren Anbi
 $lang["sidebar"]["request_box"]["button"] = "Einen Auftrag veröffentlichen";
 $lang["sidebar"]["buy_it_again"] = "Kaufen Sie wieder ein";
 $lang["sidebar"]["no_buy_it_again"] = "Ihr Warenkorb ist leer.";
-$lang["sidebar"]["recently_viewed"] = "Bald betrachtet";
+$lang["sidebar"]["recently_viewed"] = "zuletzt angesehen";
 $lang["sidebar"]["no_recently_viewed"] = "Immer noch nicht betrachtet";
 $lang["sidebar"]["start_selling"]["title"] = "Verkaufen beginnen.";
 $lang["sidebar"]["start_selling"]["desc"] = "Verkaufen Sie Ihre Dienstleistungen an Menschen auf der ganzen Welt.";
@@ -107,7 +107,7 @@ $lang["user_home"]["no_random_proposals"] = "Keine zufälligen Angebote/Dienstle
 $lang["user_home"]["recent_requests"] = "Kürzlich erhaltene Anfragen";
 $lang["user_home"]["no_recent_requests"] = "<i class='fa fa-frown-o'></i> Keine Bestellungen, die zu Ihren Angeboten/Dienstleistungen passen!";
 $lang['proposals']['online'] = "Online";
-$lang['proposals']['starting_at'] = "Beginnt um";
+$lang['proposals']['starting_at'] = "ab";
 $lang['proposals']['video'] = "Video";
 $lang['proposals']['instant_delivery'] = "Sofortige Lieferung";
 $lang["sidebar"]["instant_delivery"] = "Sofortige Lieferung";
