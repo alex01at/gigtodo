@@ -208,8 +208,12 @@ if (count($proposal_reviews) > 0) {
               $proposal_buyer_rating = $row_buyer_reviews->buyer_rating;
               array_push($proposal_reviews,$proposal_buyer_rating);
           }
-          $total = array_sum($proposal_reviews);
-          @$average_rating = $total/count($proposal_reviews);
+          if (!empty($proposal_reviews)) {
+            $total = array_sum($proposal_reviews);
+            $average_rating = $total / count($proposal_reviews);
+        } else {
+        }
+        
           $count_favorites = $db->count("favorites",array("proposal_id" => $proposal_id,"seller_id" => $login_seller_id));
           if($count_favorites == 0){
           $show_favorite_class = "proposal-favorite";
@@ -283,7 +287,7 @@ if (count($proposal_reviews) > 0) {
             $average_rating = $total / count($proposal_reviews);
             echo $average_rating;
         } else {
-            echo "No reviews available, cannot calculate average rating.";
+            
         }
         
           $count_favorites = $db->count("favorites",array("proposal_id" => $proposal_id,"seller_id" => $login_seller_id));
