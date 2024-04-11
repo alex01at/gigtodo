@@ -809,6 +809,7 @@ $lang['delivery_error'] ="! Die sofortige Lieferung funktioniert nur, wenn jeman
 $lang['enable_watermark'] ="Wasserzeichen aktivieren";
 $lang['fixed_price'] ="Festpreis";
 $lang['pricing'] ="Preisgestalltung";
+$lang['sidebar']['start_selling']['tour'] ="Tour";
 
 //new notification messages
 

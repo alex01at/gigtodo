@@ -91,6 +91,7 @@ $lang['delivery_error'] ="! Immediate delivery only works if someone purchases t
 $lang['enable_watermark'] ="Enable Watermark";
 $lang['fixed_price'] ="Fixed Price";
 $lang['pricing'] = "Pricing";
+$lang['sidebar']['start_selling']['tour'] ="Tour";
 
 
 

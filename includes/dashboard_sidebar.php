@@ -92,9 +92,12 @@
 		<img src="images/sales.png" class="img-fluid center-block" alt="none">
 		<h4><?= $lang['sidebar']['start_selling']['title']; ?></h4>
 		<p><?= $lang['sidebar']['start_selling']['desc']; ?></p>
-		<button onclick="location.href='start_selling'" class="btn get_btn">
+		<div class="btn-group" role="group"><button onclick="location.href='start_selling'" class="btn get_btn">
 			<?= $lang['sidebar']['start_selling']['button']; ?>
+			
 		</button>
+		<button onclick="location.href='proposals/create_proposal'" class="btn get_btn"><?= $lang['sidebar']['start_selling']['button']; ?></button>
+		</div>
 	</div>
 </div>
 <br>
