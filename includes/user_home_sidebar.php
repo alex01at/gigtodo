@@ -251,7 +251,7 @@ if (count($proposal_reviews) > 0) {
 		$average_rating = $total / count($proposal_reviews);
 		echo $average_rating;
 	} else {
-		echo "No reviews available, cannot calculate average rating.";
+	
 	}
 	
 
