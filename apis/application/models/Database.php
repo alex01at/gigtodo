@@ -87,6 +87,9 @@ class Database extends CI_Model{
 
 		$check_seller_username = $this->db->get_where("sellers",array("seller_user_name" => $user_name))->num_rows();
 		$check_seller_email = $this->db->get_where("sellers",array("seller_email" => $email))->num_rows();
+		if (!preg_match('/^[a-zA-Z\s]+$/', $name)) {
+			array_push($error_array, "Der vollständige Name darf nur Buchstaben und Leerzeichen enthalten.");
+		}
 		if(preg_match('/[اأإء-ي]/ui', $user_name)){
 		  array_push($error_array, "Foreign characters are not allowed in username, Please try another one.");
 		}
