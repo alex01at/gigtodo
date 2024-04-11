@@ -35,7 +35,7 @@
           });
         </script>
         <?php } ?>
-        <form action="process.php" method="post" class="pb-3">
+        <form action="" method="post" class="pb-3">
 
           <div class="form-group">
             <label class="form-control-label font-weight-bold"> <?= $lang['label']['full_name']; ?> </label>
