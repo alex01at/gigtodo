@@ -823,7 +823,7 @@ $lang['add_faq'] ="+ F&A hinzufügen";
 $lang['content'] ="Inhalt";
 $lang['req_hint'] ="Strukturieren Sie Ihre Hinweise als Freitext.";
 $lang['req_title'] ="Teilen Sie Ihrem Käufer mit, was Sie für den Einstieg benötigen (optional) ";
-$lang['req_placeholder'] ="Wenn Sie vor Beginn Ihrer Arbeiten Informationen, Dateien oder andere Gegenstände vom Käufer einholen müssen, fügen Sie bitte hier Ihre Anweisungen hinzu. Zum Beispiel: Bitte senden Sie mir Ihren Firmennamen oder senden Sie mir bitte das Foto, das ich bearbeiten soll."
+$lang['req_placeholder'] ="Wenn Sie vor Beginn Ihrer Arbeiten Informationen, Dateien oder andere Gegenstände vom Käufer einholen müssen, fügen Sie bitte hier Ihre Anweisungen hinzu. Zum Beispiel: Bitte senden Sie mir Ihren Firmennamen oder senden Sie mir bitte das Foto, das ich bearbeiten soll.";
 
 
 //new notification messages
