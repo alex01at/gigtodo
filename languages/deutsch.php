@@ -217,7 +217,7 @@ $lang['proposal']['other_proposals'] = "Andere Angebote / Dienstleistungen von {
 $lang['proposal']['no_other_proposals'] = "<i class='fa fa-meh-o'></i> Dieser Anbieter hat keine anderen Angebote/Dienstleistungen.";
 $lang['proposal']['recently_viewed'] = "Kürzlich geprüfte Angebote/Dienstleistungen";
 $lang['packages']['basic'] = "Basic";
-$lang['packages']['standard'] = "Standart";
+$lang['packages']['standard'] = "Standard";
 $lang['packages']['advance'] = "Fortgeschrittene";
 $lang['manage_contacts']['my_buyers'] = "Käufer, die Angebote/Dienstleistungen von Ihnen erworben haben.";
 $lang['manage_contacts']['my_sellers'] = "Anbieter, von denen Sie Angebote/Dienstleistungen erworben haben.";
