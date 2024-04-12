@@ -119,7 +119,6 @@ $img_4_extension = pathinfo($d_proposal_img4,PATHINFO_EXTENSION);
   <meta name="description" content="<?= $site_desc; ?>">
   <meta name="keywords" content="<?= $site_keywords; ?>">
   <meta name="author" content="<?= $site_author; ?>">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
   <link href="../styles/bootstrap.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-bs4.min.css" rel="stylesheet">
   <link href="../styles/styles.css" rel="stylesheet">
