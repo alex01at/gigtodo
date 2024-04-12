@@ -12,35 +12,33 @@ $get_general_settings = $db->select("general_settings");
 $row_general_settings = $get_general_settings->fetch();
 $approve_proposals = $row_general_settings->approve_proposals;
 if($approve_proposals == "yes"){
-  $text = "Save & Submit For Approval"; 
+  $text = $lang['publish']['save_approve']; 
 }else{ 
-  $text = "Save & Publish"; 
+  $text = $lang['publish']['save_publish']; 
 }
 
 ?>
 
-<h1><img style="position:relative; top:-5px;" src="../images/comp/winner.png">  Yay! You are almost done!</h1>
+<h1><img style="position:relative; top:-5px;" src="../images/comp/winner.png"> 
+ <?=$lang['publish']['grat'];?></h1>
 
 <h6 class="font-weight-normal line-height-normal">
-  Congrats! you're almost done submitting this proposal. <br>
-  You can go back and check if you entered all the details for this proposal correctly. If all looks good and you agree with 
-  <a href="<?= $site_url; ?>/terms_and_conditions" target="_black" class="text-primary">all our policies</a>, please click on the “Save & Submit For Approval” button.<br><br>
+  <?=$lang['publish']['grat'];?> <br>
+  <?=$lang['publish']['all_ok'];?><br><br>
   <span class="text-muted">
-  If you do not wish to submit this proposal for approval at this time, please exit this page. You can easily retrieve this proposal by clicking on "Selling => My Proposals => Drafts". Cheers!
+  <?=$lang['publish']['draft'];?>
   </span>
 </h6>
 
 <form action="" method="post">
   <?php if($featured_proposal_while_creating == 1){ ?>
   <?php if($featured_proposal != "yes"){ ?>
-  <h1 class="h3">Make Proposal Featured (Optional)</h1>
+  <h1 class="h3"><?=$lang['publish']['features'];?></h1>
   <h6 class="font-weight-normal line-height-normal">
-    Let your proposal appear on several places on <?= $site_name; ?><br>
-    Proposal will always be at the top section of search results <br>
-    WIth <?= $site_name; ?> feature, your proposal already has a 50% chance of getting ordered by potential buyers
+    <?=$lang['publish']['features_text'];?>
     <p class="ml-4 mt-3">
       <label for="checkid" style="word-wrap:break-word">
-        <input type="checkbox" id="checkid" name="proposal_featured" value="1" style="vertical-align:middle;margin-left: -1.25rem;"> Make Proposal Featured
+        <input type="checkbox" id="checkid" name="proposal_featured" value="1" style="vertical-align:middle;margin-left: -1.25rem;"> <?=$lang['publish']['features'];?>
       </label>
     </p>
   </h6>
@@ -48,7 +46,7 @@ if($approve_proposals == "yes"){
   <div class="form-group mb-0 mt-3"><!--- form-group Starts --->
     <a href="#" class="btn btn-secondary back-to-gallery"><?= $lang['button']['back']; ?></a>
     <input class="btn btn-success" type="submit" name="submit_proposal" value="<?= $text; ?>">
-    <a href="#" class="btn btn-success d-none" id="featured-button">Make Proposal Featured</a>
+    <a href="#" class="btn btn-success d-none" id="featured-button"><?=$lang['publish']['features'];?></a>
   </div><!--- form-group Starts --->
 </form>
 
