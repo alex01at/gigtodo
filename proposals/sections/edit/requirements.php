@@ -9,7 +9,7 @@
 </h5>
 <hr>
 <div class="form-group requirements">
-<p class="mb-1">Requirements</p>
+<p class="mb-1"><?=$lang['tabs']['requirements'];?></p>
 <textarea name="buyer_instruction" placeholder="<?=$lang['req_placeholder'];?>" rows="4" class="form-control"><?= $d_buyer_instruction; ?></textarea>
 </div>
 <div class="form-group mb-0"><!--- form-group Starts --->
