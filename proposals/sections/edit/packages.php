@@ -46,7 +46,7 @@ if($enable_unlimited_revisions == 1){
 		<input type="hidden" name="proposal_packages[3][package_id]" form="pricing-form" value="<?= $row_3->package_id; ?>">
 
 		<tr>
-			<td>Description</td>
+			<td><?=$lang['label']['description'];?></td>
 			<td class="p-0"><textarea name="proposal_packages[1][description]" form="pricing-form" class="form-control" placeholder="<?=$lang['label']['description'];?>" rows="3"><?= $row_1->description; ?></textarea></td>
 			<td class="p-0"><textarea name="proposal_packages[2][description]" form="pricing-form" class="form-control" placeholder="<?=$lang['label']['description'];?>" rows="3"><?= $row_2->description; ?></textarea></td>
 			<td class="p-0"><textarea name="proposal_packages[3][description]" form="pricing-form" class="form-control" placeholder="<?=$lang['label']['description'];?>" rows="3"><?= $row_3->description; ?></textarea></td>
@@ -91,7 +91,7 @@ if($enable_unlimited_revisions == 1){
 		<?php } ?>
 
 		<tr class="delivery-time">
-			<td>Delivery Time</td>
+			<td><?=$lang['label']['delivery_time'];?></td>
 			<td class="p-0">
 			<select name="proposal_packages[1][delivery_time]" class="form-control">
 			<?php
@@ -127,7 +127,7 @@ if($enable_unlimited_revisions == 1){
 		</tr>
 
 		<tr>
-			<td>Revisions</td>
+			<td><?= $lang['order_details']['revisions'];?></td>
 			<td class="p-0">
 			<select name="proposal_packages[1][revisions]" form="pricing-form" class="form-control">
 			<?php 
@@ -158,7 +158,7 @@ if($enable_unlimited_revisions == 1){
 		</tr>
 
 		<tr>
-			<td>Price</td>
+			<td><?= $lang['proposal']['price']; ?></td>
 			<td class="p-0">
 
 			<input type="number" min='<?= $min_proposal_price; ?>' required name="proposal_packages[1][price]" form="pricing-form" value="<?= $row_1->price; ?>" class="form-control">
@@ -180,7 +180,7 @@ if($enable_unlimited_revisions == 1){
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-			<h5 class="modal-title">Edit Attribute Name</h5>
+			<h5 class="modal-title"><?=$lang['proposal']['add_attribute_name'];?></h5>
       	<button type="button" class="close" data-dismiss="modal">
          	<span>&times;</span>
       	</button>
@@ -189,10 +189,10 @@ if($enable_unlimited_revisions == 1){
 			<form action="" method="post" class="update-attribute">
 				<input type="hidden" name="name" value="">
 				<div class="form-group">
-					<input type="text" class="form-control" name="new_name" placeholder="Attribute Name"/>
+					<input type="text" class="form-control" name="new_name" placeholder="<?=$lang['proposal']['attribute_name'];?>"/>
 				</div>
 				<div class="form-group text-center mb-0">
-					<input type="submit" class="btn btn-success" value="Update Attribute Name"/>
+					<input type="submit" class="btn btn-success" value="<?=$lang['button']['save_changes'];?>"/>
 				</div>
 			</form>
       </div>

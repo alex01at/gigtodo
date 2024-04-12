@@ -810,6 +810,16 @@ $lang['enable_watermark'] ="Wasserzeichen aktivieren";
 $lang['fixed_price'] ="Festpreis";
 $lang['pricing'] ="Preisgestalltung";
 $lang['sidebar']['start_selling']['tour'] ="Tour";
+$lang['proposal']['price'] ="Preis";
+$lang['proposal']['add_attibute'] ="neues Zusatzfeld erstellen";
+$lang['insert'] =" einfügen";
+$lang['proposal']['add_attribute_name'] = "Zusatzfeldname bearbeiten";
+$lang['proposal']['attribute_name'] ="Name für das Zusatzfeld";
+$lang['add_extra'] = "+ Extra hinzufügen";
+$lang['loader']['saved'] = "Daten gespeichert.";
+$lang['proposal_extra'] ="kostenpflichtige Extra's";
+$lang['save']="speichern";
+
 
 //new notification messages
 

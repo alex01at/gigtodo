@@ -29,19 +29,19 @@
         <input type="hidden" name="id" value="<?= $id; ?>" required>
 
         <div class="form-group">
-          <input type="text" name="name" placeholder="Extra Name" class="form-control form-control-sm" value="<?= $name; ?>" required>
+          <input type="text" name="name" placeholder="Name" class="form-control form-control-sm" value="<?= $name; ?>" required>
         </div>
         <div class="form-group">
           <div class="input-group input-group-sm">
             <!--- input-group Starts --->
               <span class="input-group-addon"><?= $s_currency; ?></span>
-            <input type="number" name="price" placeholder="Extra Price" value="<?= $price; ?>" class="form-control" required>
+            <input type="number" name="price" placeholder="<?=$lang['proposal']['price'];?>" value="<?= $price; ?>" class="form-control" required>
           </div>
           <!--- input-group Ends --->
         </div>
         <div class="form-group mb-0">
-          <a href="#" class="btn btn-danger btn-sm delete-extra">Delete</a>
-          <button type="submit" class="btn btn-success btn-sm float-right">Save</button>
+          <a href="#" class="btn btn-danger btn-sm delete-extra"><?=$lang['th']['delete'];?></a>
+          <button type="submit" class="btn btn-success btn-sm float-right"><?= $lang['save'];?></button>
         </div>
       </form>
     </div>
@@ -58,20 +58,20 @@
     <div class="tab-body rounded border-1 p-3 pb-0 collapse <?php if(!empty($form_errors)){ echo "show"; } ?>" id="insert-extra" data-parent="#allTabs">
       <form action="#" method="post" class="add-extra">
         <div class="form-group">
-          <input type="text" name="name" placeholder="Extra Name" class="form-control form-control-sm" required="">
+          <input type="text" name="name" placeholder="Name" class="form-control form-control-sm" required="">
           <small class="form-text text-danger"><?= ucfirst(@$form_errors['name']); ?></small>
         </div>
         <div class="form-group">
           <div class="input-group input-group-sm">
             <!--- input-group Starts --->
               <span class="input-group-addon"><?= $s_currency; ?></span>
-            <input type="number" name="price" placeholder="Extra Price" class="form-control form-control-sm" required="">
+            <input type="number" name="price" placeholder="<?=$lang['proposal']['price'];?>" class="form-control form-control-sm" required="">
           </div>
           <small class="form-text text-danger"><?= ucfirst(@$form_errors['price']); ?></small>
           <!--- input-group Ends --->
         </div>
         <div class="form-group mb-0">
-          <button type="submit" class="btn btn-success btn-sm float-right">Insert</button>
+          <button type="submit" class="btn btn-success btn-sm float-right"><?=$lang['insert'];?></button>
           <div class="clearfix"></div>
         </div>
       </form>

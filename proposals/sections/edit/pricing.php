@@ -107,9 +107,9 @@ $d_delivery_id = $row_proposal->delivery_id;
 <div class="form-group row add-attribute justify-content-center">
   <div class="col-md-7">
     <div class="input-group">
-      <input class="form-control form-control-sm attribute-name" placeholder="Add New Attribute" name="">
+      <input class="form-control form-control-sm attribute-name" placeholder="<?= $lang['proposal']['add_attibute'];?>" name="">
       <button class="btn btn btn-success input-group-addon insert-attribute" >
-        <i class="fa fa-cloud-upload"></i> &nbsp;Insert 
+        <i class="fa fa-cloud-upload"></i> &nbsp;<?=$lang['insert'];?> 
       </button>
     </div>
   </div>
@@ -117,8 +117,8 @@ $d_delivery_id = $row_proposal->delivery_id;
 
 <div class="card rounded-0">
   <div class="card-body bg-light pt-3 pb-0">
-  <h6 class="font-weight-normal">My Proposal Extras</h6>
-  <a data-toggle="collapse" href="#insert-extra" class="small text-success">+ Add Extra</a>
+  <h6 class="font-weight-normal"><?=$lang['proposal_extra'];?></h6>
+  <a data-toggle="collapse" href="#insert-extra" class="small text-success"><?=$lang['add_extra'];?></a>
    <div class="tabs accordion mt-2" id="allTabs"><!--- All Tabs Starts --->
       <?php include("extras.php"); ?>
     </div><!--- All Tabs Ends --->

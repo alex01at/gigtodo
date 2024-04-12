@@ -92,6 +92,17 @@ $lang['enable_watermark'] ="Enable Watermark";
 $lang['fixed_price'] ="Fixed Price";
 $lang['pricing'] = "Pricing";
 $lang['sidebar']['start_selling']['tour'] ="Tour";
+$lang['proposal']['price'] ="Price";
+$lang['proposal']['add_attibute'] ="Add New Attribute";
+$lang['proposal']['add_attribute_name'] = "Edit Attribute Name";
+$lang['proposal']['attribute_name'] ="Attribute Name";
+$lang['loader']['saved'] = "Details saved.";
+$lang['insert'] =" Insert";
+$lang['add_extra'] = "+ Add Extra";
+$lang['proposal_extra'] ="My Proposal Extras";
+$lang['save']="save";
+
+
 
 
 
