@@ -182,7 +182,7 @@ $(document).ready(function(){
 
           swal({
            type: 'success',
-           text: 'Details Saved.',
+           text: '<?=$lang['loader']['saved'];?>',
            timer: 1000,
            onOpen: function(){
              swal.showLoading();
