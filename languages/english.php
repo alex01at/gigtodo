@@ -101,7 +101,11 @@ $lang['insert'] =" Insert";
 $lang['add_extra'] = "+ Add Extra";
 $lang['proposal_extra'] ="My Proposal Extras";
 $lang['save']="save";
-
+$lang['add_faq'] = "+ Add Faq";
+$lang['content'] ="Content";
+$lang['req_title'] ="Tell your buyer what you need to get started (Optional) ";
+$lang['req_hint'] ="Structure your Buyer Instructions as free text.";
+$lang['req_placeholder'] = "If you need to obtain information, files or other items from the buyer prior to starting your work, please add your instructions here. For example: Please send me your company name or Please send me the photo you need me to edit.";
 
 
 

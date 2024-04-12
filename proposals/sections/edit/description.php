@@ -1,6 +1,6 @@
-<h5 class="font-weight-normal">Description</h5>
+<h5 class="font-weight-normal"><?=$lang['label']['description'];?></h5>
 <hr>
-<p class="small mb-2"> Project Details </p>
+<p class="small mb-2"> <?=$lang['request_desc'];?> </p>
 
 <form action="#" method="post" class="proposal-form" id="form1"><!--- form Starts -->
 	<div class="form-group">
@@ -10,7 +10,7 @@
 </form><!--- form Ends -->
 
 <hr class="mt-0">
-<h5 class="font-weight-normal"> Frequently Asked Questions  <small class="float-right"><a data-toggle="collapse" href="#insert-faq" class="text-success">+ Add Faq</a></small></h5>
+<h5 class="font-weight-normal"> <?=$lang['proposal']['faq'];?> <small class="float-right"><a data-toggle="collapse" href="#insert-faq" class="text-success"><?=$lang['add_faq'];?></a></small></h5>
 <hr>
 <div class="tabs accordion mt-2" id="faqTabs"><!--- All Tabs Starts --->
 	<?php include("faqs.php"); ?>
