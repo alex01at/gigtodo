@@ -27,9 +27,16 @@ if($enable_unlimited_revisions == 1){
 <thead>
 <tr>
   <th></th>
-  <th>Option 1</th>
-  <th>Option 2</th>
-  <th>Option 3</th>
+  <?php
+	$i=0;
+	$get_p = $db->select("proposal_packages",array("proposal_id"=>$proposal_id));
+	while($row = $get_p->fetch()){
+	$i++;
+	$package_id = $row->package_id;
+	$package_name = $row->package_name;
+	?>
+  <th><?= $lang['packages'][strtolower($package_name)]; ?></th>
+  <?php } ?>
 </tr>
 </thead>
 <tbody>
