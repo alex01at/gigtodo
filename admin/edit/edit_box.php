@@ -30,28 +30,6 @@ if(isset($_GET['edit_box'])){
 
 ?>
 
-
-
-<div class="breadcrumbs">
-            <div class="col-sm-4">
-                <div class="page-header float-left">
-                    <div class="page-title">
-                        <h1><i class="menu-icon fa fa-cog"></i> Settings / Insert Box</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <ol class="breadcrumb text-right">
-                            <li class="active">Insert Box</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-    
-    </div>
-
 <div class="main-container">
 
 <div class="row"><!--- 2 row Starts --->
