@@ -33,6 +33,7 @@ echo "<script>window.open('login','_self');</script>";
                                 <th>Category Title</th>
                                 <th>Category Description</th>
                                 <th>Category Featured</th>
+                                <th>Image</th>
                                 <th>Delete Category</th>
                                 <th>Edit Category</th>
                             </tr>
@@ -49,6 +50,7 @@ echo "<script>window.open('login','_self');</script>";
                                 $row_meta = $get_meta->fetch();
                                 $cat_title = $row_meta->cat_title;
                                 $cat_desc = $row_meta->cat_desc;
+                                $show_image = getImageUrl("categories",$row_cats->cat_image);
                                 $i++;
 
                                 // Check if language ID is not 1 and display warning with content from language ID 1
@@ -85,6 +87,7 @@ echo "<script>window.open('login','_self');</script>";
                                     <td width="20" class="text-center">
                                         <?= $cat_featured; ?>
                                     </td>
+                                    <td><?php if(!empty($show_image)) {?> <img src="<?=$show_image?>" <?php } ?></td>
                                     <td width="auto">
                                         <a href="index?delete_cat=<?= $cat_id; ?>"
                                            onclick="return confirm('Deleting this category will delete all its sub-categories. Do you wish to proceed?');"

@@ -1,9 +1,7 @@
 <?php
-
   session_start();
   require_once("../includes/db.php");
   require_once("../functions/functions.php");
-
   if(isset($_GET['cat_url'])){
     if(isset($_GET['cat_child_url'])){
       $array = explode("/",$input->get('cat_url'));
@@ -24,14 +22,12 @@
     unset($_SESSION['cat_id']);
     $get_cat = $db->select("categories",array('cat_url' => urlencode($cat_url)));
     $cat_id = $get_cat->fetch()->cat_id;
-
     $get_child = $db->select("categories_children",array('child_parent_id'=>$cat_id,'child_url'=>urlencode($input->get('cat_child_url'))));
     $count_child = $get_child->rowCount();
     if($count_child == 0){
       echo "<script>window.open('$site_url/index?not_available','_self');</script>";
     }
     $_SESSION['cat_child_id']= $get_child->fetch()->child_id;
-  
   }
 ?>
 <!DOCTYPE html>
@@ -62,7 +58,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="<?= $site_author; ?>">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
   <link href="<?= $site_url; ?>/styles/bootstrap.css" rel="stylesheet">
   <link href="<?= $site_url; ?>/styles/custom.css" rel="stylesheet">
   <!-- Custom css code from modified in admin panel --->
@@ -80,11 +75,16 @@
 </head>
 <body class="bg-white is-responsive">
 <?php require_once("../includes/header.php"); ?>
-<div class="container-fluid mt-5">
+<div class="container-fluid mt-2">
   <!-- Container start -->
-  <div class="row">
-    <div class="col-md-12">
-      <center>
+  <div class="p-5 text-center bg-image" style="
+      background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
+      height: 350px;
+      margin-top: 28px;
+    ">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="d-flex justify-content-center align-items-center h-100 m-2 p-2">
+        <div class="text-white">
         <?php
           if(isset($_SESSION['cat_id'])){
           $cat_id = $_SESSION['cat_id'];
@@ -93,9 +93,14 @@
           $cat_title = $row_meta->cat_title;
           $cat_desc = $row_meta->cat_desc;
           ?>
-        <h1> <?= $cat_title; ?> </h1>
-        <p class="lead"><?= $cat_desc; ?></p>
-        <?php } ?>
+          <h1 class="mb-3"><?= $cat_title; ?></h1>
+          <h4 class="mb-3"><?= $cat_desc; ?></h4>
+          <?php if(!isset($_SESSION['seller_user_name'])){?>
+          
+          <a href="#" data-toggle="modal" data-target="#register-modal" class="btn btn-outline-light btn-lg"><?= $lang['become_seller']; ?></a>
+          <a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-outline-light btn-lg"><?= $lang['sign_in']; ?></a> <?php } ?>
+        </div>
+        <?php  } ?>
         <?php
           if(isset($_SESSION['cat_child_id'])){
           $cat_child_id = $_SESSION['cat_child_id'];
@@ -104,13 +109,12 @@
           $child_title = $row_meta->child_title;
           $child_desc = $row_meta->child_desc;
           ?>
-        <h1> <?= $child_title; ?> </h1>
-        <p class="lead"><?= $child_desc; ?></p>
-        <?php } ?>
-      </center>
-      <hr class="mt-5 pt-2">
-    </div>
+          <h1 class="mb-3"><?= $child_title; ?></h1>
+          <h4 class="mb-3"><?= $child_desc; ?></h4>
+      </div>
+    <?php } ?>
   </div>
+  </div></div>
   <div class="row mt-3">
     <div class="col-lg-3 col-md-4 col-sm-12 <?=($lang_dir == "right" ? 'order-2 order-sm-1':'')?>">
       <?php require_once("../includes/category_sidebar.php"); ?>
@@ -139,43 +143,27 @@
 <?php require_once("../includes/footer.php"); ?>
 <script>
   function get_category_proposals(){
-  
   var sPath = ''; 
-  
   var aInputs = $('li').find('.get_online_sellers');
   var aKeys   = Array();
   var aValues = Array();
-  
   iKey = 0;
-  
   $.each(aInputs,function(key,oInput){
-  
   if(oInput.checked){
     aKeys[iKey] =  oInput.value
   };
-  
   iKey++;
-  
   });
-  
   if(aKeys.length>0){
-  	
   var sPath = '';
-  	
   for(var i = 0; i < aKeys.length; i++){
-  
   sPath = sPath + 'online_sellers[]=' + aKeys[i]+'&';
-  
   }
-  
   }
-
   var instant_delivery = $('.get_instant_delivery:checked').val();
   sPath = sPath + 'instant_delivery[]='+instant_delivery+'&'; 
-
   var order = $('.get_order:checked').val();
   sPath = sPath + 'order[]=' + order +'&';
-  
   var aInputs = $('li').find('.get_seller_country');
   var aKeys   = Array();
   var aValues = Array();
@@ -191,7 +179,6 @@
     sPath = sPath + 'seller_country[]=' + aKeys[i]+'&';
     }
   }
-
   var aInputs = $('li').find('.get_seller_city');
   var aKeys   = Array();
   var aValues = Array();
@@ -207,201 +194,115 @@
     sPath = sPath + 'seller_city[]=' + aKeys[i]+'&';
     }
   }
-
-  
   var cat_url = "<?= $input->get('cat_url'); ?>";
-  
   sPath = sPath + 'cat_url=' + cat_url +'&';
-  
   <?php if(isset($_REQUEST['cat_child_url'])){ ?>
-  
   var cat_child_url = "<?= $input->get('cat_child_url'); ?>";
-  
   sPath = sPath+ 'cat_child_url='+ cat_child_url +'&';
-  
   var url_plus = "../";
-  
   <?php }else{ ?>
-  
   var url_plus = "";
-  
   <?php } ?>
-  
-  
   var aInputs = Array();
-  
   var aInputs = $('li').find('.get_delivery_time');
-  
   var aKeys   = Array();
-  
   var aValues = Array();
-  
   iKey = 0;
-  
   $.each(aInputs,function(key,oInput){
-  
   if(oInput.checked){
-  	
   aKeys[iKey] =  oInput.value
-  
   };
-  
   iKey++;
-  
   });
-  
   if(aKeys.length>0){
-  
   for(var i = 0; i < aKeys.length; i++){
-  	
   sPath = sPath + 'delivery_time[]=' + aKeys[i]+'&';
-  
   }
-  
   }
-  
   var aInputs = Array();
-  
   var aInputs = $('li').find('.get_seller_level');
-  
   var aKeys   = Array();
-  
   var aValues = Array();
-  
   iKey = 0;
-  
   $.each(aInputs,function(key,oInput){
-  
   if(oInput.checked){
-  	
   aKeys[iKey] =  oInput.value
-  
   };
-  
   iKey++;
-  
   });
-  
   if(aKeys.length>0){
-  	
   for(var i = 0; i < aKeys.length; i++){
-  	
   sPath = sPath + 'seller_level[]=' + aKeys[i]+'&';
-  
   }
-  
   }
-  
   var aInputs = Array();
-  
   var aInputs = $('li').find('.get_seller_language');
-  
   var aKeys   = Array();
-  
   var aValues = Array();
-  
   iKey = 0;
-  
   $.each(aInputs,function(key,oInput){
-  
   if(oInput.checked){
-  	
   aKeys[iKey] =  oInput.value
-  
   };
-  
   iKey++;
-  
   });
-  
   if(aKeys.length>0){
-  	
   for(var i = 0; i < aKeys.length; i++){
-  
   sPath = sPath + 'seller_language[]=' + aKeys[i]+'&';
-  
   }
-  
   }		
-  
   $('#wait').addClass("loader");		
-  
   $.ajax({  
-  
   url: url_plus + "../category_load",  
   method:"POST",  
   data: sPath+'zAction=get_category_proposals',  
   success:function(data){
-  
   $('#category_proposals').html('');  
-  
   $('#category_proposals').html(data);
-  
   $('#wait').removeClass("loader");
-  
   }  
-  
   });							  
-  
   $.ajax({  
-  
   url: url_plus + "../category_load",  
   method:"POST",  
   data: sPath+'zAction=get_category_pagination',  
   success:function(data){  
-  
   $('#category_pagination').html('');  
-  
   $('#category_pagination').html(data); 
-  
   }  
-  
   });
-  
   }
-  
   $('.get_instant_delivery').click(function(){ 
     get_category_proposals();
   });
-
   $('.get_order').click(function(){ 
     get_category_proposals();
   });
-
   $('.get_seller_country').click(function(){ 
     get_category_proposals();
   });
-
   $('.get_seller_city').click(function(){ 
     get_category_proposals();
   });
-
   $('.get_online_sellers').click(function(){ 
     get_category_proposals();
   });
-  
   $('.get_delivery_time').click(function(){ 
     get_category_proposals(); 
   }); 
-  
   $('.get_seller_level').click(function(){ 
     get_category_proposals(); 
   }); 
-  
   $('.get_seller_language').click(function(){ 
     get_category_proposals(); 
   });
-
 </script>
 <script type="text/javascript">
 $(document).ready(function(){
-
   $(".get_seller_country").click(function(){
     if($(".get_seller_country:checked").length > 0){
-
       $(".clear_seller_country").show();
       $('.seller-cities li').addClass('d-none');
-
       var aInputs = $('li').find('.get_seller_country');
       var cities = Array();
       iKey = 0;
@@ -418,20 +319,17 @@ $(document).ready(function(){
           iKey++;
         };
       });
-      
       if(cities.length > 0){
         $(".seller-cities").removeClass('d-none');
       }else{
         $(".seller-cities").addClass('d-none');
       }
-
     }else{
       $(".seller-cities").addClass('d-none');
       $(".clear_seller_country").hide();
       clearCity();
     }
   });
-
   $(".get_seller_city").click(function(){
     if($(".get_seller_city:checked").length > 0 ) {
       $(".clear_seller_city").show();
@@ -439,7 +337,6 @@ $(document).ready(function(){
       $(".clear_seller_city").hide();
     }
   });
-
   $(".get_cat_id").click(function(){
     if($(".get_cat_id:checked").length > 0 ) {
       $(".clear_cat_id").show();
@@ -491,7 +388,6 @@ $(document).ready(function(){
     $(".clear_seller_language").hide();
   });
 });
-
   function clearCountry(){
     $('.get_seller_country').prop('checked',false);
     $('.get_seller_city').prop('checked',false);
@@ -502,27 +398,22 @@ $(document).ready(function(){
     $('.get_seller_city').prop('checked',false);
     get_category_proposals(); 
   }
-
   function clearCat(){
     $('.get_cat_id').prop('checked',false);
     get_category_proposals();
   }
-
   function clearDelivery(){
     $('.get_delivery_time').prop('checked',false);
     get_category_proposals();
   }
-
   function clearLevel(){
     $('.get_seller_level').prop('checked',false);
     get_category_proposals();
   }
-
   function clearLanguage(){
     $('.get_seller_language').prop('checked',false);
     get_category_proposals();
   }
-
 </script>
 </body>
 </html>

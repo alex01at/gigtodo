@@ -164,6 +164,7 @@ while($row_categories = $get_categories->fetch()){
 </div>
 </section>
 <!-- end timer -->
+
 <!-- start top -->
 <section class="top mb-0">
   <div class="container" style="max-width: 1360px !important;">

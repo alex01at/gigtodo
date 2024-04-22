@@ -29,6 +29,7 @@ echo "<script>window.open('login','_self');</script>";
                                 <th>Category Title</th>
                                 <th>Category Description</th>
                                 <th style="width: 20px">Category Featured</th>
+                                <th>Image</th>
                                 <th>Delete Category</th>
                                 <th>Edit Category</th>
                             </tr>
@@ -60,6 +61,7 @@ echo "<script>window.open('login','_self');</script>";
                                 <td style="width: 20px">
                                     <?= $cat_featured; ?>
                                 </td>
+                                <td>Hier kommt das bild</td>
                                 <td>
                                     <a href="index?delete_cat=<?= $cat_id; ?>"
                                         onclick="return confirm('Deleting this category will delete all its sub-categories. Do you wish to proceed?');"

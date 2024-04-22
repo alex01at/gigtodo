@@ -2335,3 +2335,6 @@
   overflow: visible;
   clip: auto;
 }
+.fa-shield-halved:before {
+  content: "\f3ed";
+}

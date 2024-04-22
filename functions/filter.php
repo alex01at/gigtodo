@@ -254,10 +254,7 @@ function get_proposals($filter_type){
       }elseif ($filter_type == "category") {
          
          if(isset($_SESSION['cat_id'])){
-            echo "
-            <div class='col-md-12'>
-            <h1 class='text-center mt-4'><i class='fa fa-meh-o'></i> {$lang['category']['no_results']} </h1>
-            </div>";
+            include "../includes/no_cat.php";
          }elseif(isset($_SESSION['cat_child_id'])){
             echo "
             <div class='col-md-12'>
