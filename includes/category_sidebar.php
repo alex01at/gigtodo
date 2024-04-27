@@ -116,10 +116,7 @@
     </ul>
   </div>
 </div>
-<?php
-session_start(); // Starte die Sitzung, falls noch nicht geschehen
-$_SESSION['current_cat_id'] = $cat_id; // Speichere die aktuelle Kategorie-ID in der Sitzung
-?>
+
 
 <div class="card border-success mb-3">
   <div class="card-body pb-2 pt-2">

@@ -15,12 +15,15 @@ echo "<script>window.open('index?dashboard','_self');</script>";
     <meta name="description" content="<?= $site_name; ?> admin, Reset your password.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/scss/style.css">
-	<link rel="stylesheet" href="assets/css/sweat_alert.css">
-    <script type="text/javascript" src="assets/js/sweat_alert.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="vendors/styles/core.css">
+	<link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/responsive.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
+	<link rel="stylesheet" type="text/css" href="vendors/styles/costum.css">
+	<script src="vendors/scripts/jquery.js"></script>
+    <script src="vendors/scripts/popper.js"></script>
+	<script type="text/javascript" src="vendors/scripts/sweat_alert.js"></script>
 </head>
 <body class="bg-dark">
 <div class="sufee-login d-flex align-content-center flex-wrap">

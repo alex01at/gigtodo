@@ -133,8 +133,10 @@
             <?php get_category_pagination(); ?>
           </ul>
         </nav>
+       
         <!-- nav Ends -->
       </div>
+      
     </div>
   </div>
 </div>

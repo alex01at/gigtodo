@@ -62,11 +62,11 @@ $navbar_color = $row_general_settings->navbar_color;
 
 <div id="gnav-header" class="gnav-header global-nav clear gnav-3" style="background-color: <?= $header_color ?>;">
   <header id="gnav-header-inner" class="gnav-header-inner clear apply-nav-height col-group has-svg-icons body-max-width">
-    <div class="col-xs-12">
+    <div>
       <div id="gigtodo-logo" class="apply-nav-height gigtodo-logo-svg gigtodo-logo-svg-logged-in <?php if(isset($_SESSION["seller_user_name"])){echo"loggedInLogo";} ?>">
         <a href="<?= $site_url; ?>">
           <?php if($site_logo_type == "image"){ ?>
-            <img class="desktop" src="<?= $site_logo_image; ?>" width="150">
+            <img class="desktop" src="<?= $site_logo_image; ?>" width="250">
           <?php }else{ ?>
             <span class="desktop text-logo"><?= $site_logo_text; ?></span>
           <?php } ?>
