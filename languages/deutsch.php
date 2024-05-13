@@ -864,6 +864,7 @@ $lang['notification']['extendTimeDeclined'] = "Hat Ihre Verlängerung abgelehnt.
 $lang['notification']['extendTimeAccepted'] = "Hat Ihre Verlängerung akzeptiert. Die Zeit wurde erfolgreich verlängert.";
 $lang['notification']['buyerExtendTimeAccepted'] = "Zeit erfolgreich erhöht.";
 $lang['notification']['ticket_reply'] = "habe gerade auf dein Ticket geantwortet.";
+$lang['affiliate'] ="Unterstütze dieses Angebot und erhalte {proposal_referral_money} % durch jeden getätigten Verkauf über deinen generierten Link. <a href='<?= $site_url; ?>/terms_and_conditions' class='strike'>Nutzungsbedinungen.</a>";
 
 
 

@@ -115,6 +115,7 @@ Proposal will always be at the top section of search results <br>
 with ". $site_name; " feature, your proposal already has a 50% chance of getting ordered by potential buyers";
 $lang['publish']['save_approve'] ="Save & Submit For Approval";
 $lang['publish']['save_publish'] ="Save & Publish";
+$lang['affiliate'] ="Support the seller and earn <?= $proposal_referral_money; ?>% of each sale made using link below. <a href='<?= $site_url; ?>/terms_and_conditions' class='strike'>Terms apply.</a>";
 
 
 

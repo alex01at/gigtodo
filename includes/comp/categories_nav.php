@@ -128,24 +128,16 @@ $navbar_color = $row_general_settings->navbar_color;
                 <?= $child_title; ?>
               </a>
             </li>
-            <?php }?>
+            <?php } ?>
           </ul>
           <ul class="list-unstyled display-inline-block col-xs-3 p-xs-3 pl-xs-5" role="presentation">
-            <?php
-            $get_child_cat = $db->query("select * from categories_children where child_parent_id='$cat_id' LIMIT 30,10");
-            while($row_child_cat = $get_child_cat->fetch()){
-            $child_id = $row_child_cat->child_id;
-            $child_url = $row_child_cat->child_url;
-            $get_meta = $db->select("child_cats_meta",array("child_id" => $child_id, "language_id" => $siteLanguage));
-            $row_meta = $get_meta->fetch();
-            $child_title = $row_meta->child_title;
-            ?>
+            
             <li>
               <a class="display-block text-gray text-body-larger pt-xs-1" href="<?= $site_url; ?>/categories/<?= $cat_url; ?>/<?= $child_url; ?>">
-                <?= $child_title; ?>
+                fehlt was?
               </a>
             </li>
-            <?php } ?>
+          
           </ul>
         </div>
       </div>
@@ -211,27 +203,14 @@ $navbar_color = $row_general_settings->navbar_color;
 
           <ul class="list-unstyled display-inline-block col-xs-3 p-xs-3 pl-xs-5" role="presentation">
 
-            <?php
-
-            $get_categories = $db->query("select * from categories where cat_featured='yes' LIMIT 29,39");
-            while($row_categories = $get_categories->fetch()){
-
-            $cat_id = $row_categories->cat_id;
-            $cat_url = $row_categories->cat_url;
-
-            $get_meta = $db->select("cats_meta",array("cat_id" => $cat_id,"language_id" => $siteLanguage));
-            $row_meta = $get_meta->fetch();
-            $cat_title = $row_meta->cat_title;
-
-            ?>
-
+            
             <li>
-              <a class="display-block text-gray text-body-larger pt-xs-1" href="<?= $site_url; ?>/categories/<?= $cat_url; ?>">
-                <?= @$cat_title; ?>
-              </a>
+              <div class="display-block text-gray text-body-larger pt-xs-1">
+          fehlt was?
+            </div>
             </li>
 
-            <?php } ?>
+         
 
           </ul>
 

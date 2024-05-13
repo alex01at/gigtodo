@@ -4302,7 +4302,9 @@ font-weight: 500;
     line-height: 25px;
     color: #fff;
     padding: 15px;
-    width: auto;
+    width: 100%;
+    height: 130px;
+    background: #00000085;
 }
 
 .card-box .subcategory h4 small {
