@@ -14,7 +14,8 @@ $slide_image = $row_slides->slide_image;
 <section class="pb-5 pt-5">
 <div class="container">
           <div class="row flex-center">
-            <div class="col-lg-6 col-md-5 order-md-1"><img class="img-fluid" src="images/computer-desk.svg" alt="" /></div>
+            <div class="col-lg-6 col-md-5 order-md-1"><object type="image/svg+xml" data="images/desk.svg"></object>
+</div>
             <div class="col-md-7 col-lg-6 mt-5 text-center text-md-start">
               <h1 class="fw-medium" style="font-size:3em; text-shadow: 3px 3px 5px rgba(30, 0, 128, 0.33);"><?= $section_heading; ?></h1>
               <p class="mt-3 mb-4"><?= $section_short_heading; ?> </p><a class="btn btn-lg btn-danger hover-top btn-glow" href="how-it-works-de">Wie funktioniert es? </a>
@@ -283,6 +284,6 @@ $(document).ready(function(){
     console.log('started');
   });
 
-});
 
+});
 </script>

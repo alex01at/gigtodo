@@ -133,9 +133,8 @@ $navbar_color = $row_general_settings->navbar_color;
           <ul class="list-unstyled display-inline-block col-xs-3 p-xs-3 pl-xs-5" role="presentation">
             
             <li>
-              <a class="display-block text-gray text-body-larger pt-xs-1" href="<?= $site_url; ?>/categories/<?= $cat_url; ?>/<?= $child_url; ?>">
-                fehlt was?
-              </a>
+            <div class="card-box">
+       <?php include("missing_cat.php"); ?>
             </li>
           
           </ul>

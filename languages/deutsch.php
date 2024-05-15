@@ -833,7 +833,8 @@ Das Angebot wird immer im oberen Bereich der Suchergebnisse angezeigt <br>
 mit der ". $site_name ." -Funktion hat Ihr Angebot bereits eine 50-prozentig höhere Chance, von potenziellen Käufern bestellt zu werden";
 $lang['publish']['save_approve'] ="speichern & zur Überprüfung einreichen";
 $lang['publish']['save_publish'] ="speichern & veröffentlichen";
-
+$lang['no_cat'] ="Kategorie fehlt?";
+$lang['no_cat_desc'] ="Dir fehlt eine<br>Kategorie?<br>Einfach eine neue<br>vorschlagen.";
 
 //new notification messages
 
