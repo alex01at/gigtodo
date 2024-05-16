@@ -65,6 +65,9 @@
         $row_meta = $get_meta->fetch();
         $contact_heading = $row_meta->contact_heading;
         $contact_desc = $row_meta->contact_desc;
+        $get_enquiry_types = $db->select("enquiry_types");
+        $row_enquiry_types = $get_enquiry_types->fetch();
+        
       ?>
       <div class="col-md-12 mt-4">
         <?php if(!isset($_SESSION['seller_user_name'])){ ?>
@@ -87,6 +90,11 @@
             <center>
               <form class="col-md-8 contact-form" action="" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
+                <?php
+             if ($row_enquiry_types && $row_enquiry_types->enquiry_id == 6) { ?>
+                  huhu
+
+                  <?php  } else { ?>
                   <label class="<?= $floatRight ?>"><?= $lang['label']['select_enquiry']; ?></label>
                   <select name="enquiry_type" class="form-control select_tag" required>
                     <option value="" url="customer_support"><?= $lang['label']['select_enquiry2']; ?></option>
@@ -134,7 +142,7 @@
                     <label><?= $lang['label']['google_recaptch']; ?></label>
                     <div class="g-recaptcha" data-sitekey="<?= $recaptcha_site_key; ?>"></div>
                   </div>
-                  <?php } ?>
+                  <?php } } ?>
                   <div class="text-center">
                     <button class="btn btn-success btn-lg" name="submit" type="submit">
                     <i class="fa fa-paper-plane"> <?= $lang['button']['submit_request2']; ?></i>

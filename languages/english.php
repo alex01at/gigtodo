@@ -118,6 +118,7 @@ $lang['publish']['save_publish'] ="Save & Publish";
 $lang['affiliate'] ="Support the seller and earn <?= $proposal_referral_money; ?>% of each sale made using link below. <a href='<?= $site_url; ?>/terms_and_conditions' class='strike'>Terms apply.</a>";
 $lang['no_cat'] ="missing category?";
 $lang['no_cat_desc'] ="You miss a acategory?<br>Please let us know it.";
+$lang['report']= "report";
 
 
 // new notification messages

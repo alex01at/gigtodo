@@ -835,6 +835,7 @@ $lang['publish']['save_approve'] ="speichern & zur Überprüfung einreichen";
 $lang['publish']['save_publish'] ="speichern & veröffentlichen";
 $lang['no_cat'] ="Kategorie fehlt?";
 $lang['no_cat_desc'] ="Dir fehlt eine<br>Kategorie?<br>Einfach eine neue<br>vorschlagen.";
+$lang['report']="melden";
 
 //new notification messages
 
