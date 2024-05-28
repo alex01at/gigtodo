@@ -38,10 +38,10 @@ if(isset($_GET['search'])){
 		</form>
 		<?php if(empty($ideas->rowCount())){ ?>
 		<h3 class="text-center">
-			<?php if(isset($_GET['search'])){ ?>
-				We couldn't find any results for your search.
-			<?php }else{ ?>
-				There are currently no ideas in feedback.
+			<?php if(isset($_GET['search'])){ echo $lang["popup"]['knowledge_bank']['no_results'];?>
+				
+			<?php }else{ echo $lang['no_ideas']; ?>
+				
 			<?php } ?>
 		</h3>
 		<?php } ?>

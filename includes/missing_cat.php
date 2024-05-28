@@ -3,5 +3,7 @@
     
     <?= $lang['no_cat_desc']; ?>
     <br>
-    <a href="#no_cat" class="btn btn-success btn-lg gradient"><?=$lang['report'];?></a>
-  </p>
+   <a href="#" data-toggle="modal" data-target="#miss-cat">
+    <?= $lang['report']; ?>
+</a>
+

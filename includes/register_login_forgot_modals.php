@@ -279,3 +279,28 @@ input.addEventListener("input", function() {
     </div>
   </div>
 </div><!-- Forgot password ends -->
+<div class="modal fade" id="miss-cat" tabindex="-1" role="dialog" aria-labelledby="nocatLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fa fa-meh-o fa-log"></i>
+                <h5 class="modal-title" id="nocatLabel"><?= $lang['modals']['forgot']['title']; ?></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="text-muted text-center mb-2"><?= $lang['modals']['forgot']['desc']; ?></p>
+                <form action="" method="post">
+                    <div class="form-group">
+                        <input type="text" name="forgot_email" class="form-control" placeholder="<?= $lang['placeholder']['email']; ?>" required>
+                    </div>
+                    <input type="submit" class="btn btn-success btn-block" value="<?= $lang['button']['submut']; ?>" name="forgot">
+                    <p class="text-muted text-center mt-4"><?= $lang['modals']['forgot']['not_member_yer']; ?>
+                        <a href="#" class="text-success" data-toggle="modal" data-target="#register-modal" data-dismiss="modal"><?= $lang['modals']['forgot']['join_now']; ?></a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

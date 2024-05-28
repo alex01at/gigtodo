@@ -134,7 +134,16 @@ $navbar_color = $row_general_settings->navbar_color;
             
             <li>
             <div class="card-box">
-       <?php include("missing_cat.php"); ?>
+            <div class="post-it">
+  <p class="sticky taped">
+    
+    <?= $lang['no_cat_desc']; ?>
+    <br>
+   <a href="#" data-toggle="modal" data-target="#miss-cat">
+    <?= $lang['report']; ?>
+</a>
+
+
             </li>
           
           </ul>

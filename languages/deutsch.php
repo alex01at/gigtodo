@@ -836,6 +836,7 @@ $lang['publish']['save_publish'] ="speichern & veröffentlichen";
 $lang['no_cat'] ="Kategorie fehlt?";
 $lang['no_cat_desc'] ="Dir fehlt eine<br>Kategorie?<br>Einfach eine neue<br>vorschlagen.";
 $lang['report']="melden";
+$lang['no_ideas'] ="Leider sind noch keine Ideen geschrieben worden.";
 
 //new notification messages
 

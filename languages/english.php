@@ -119,7 +119,7 @@ $lang['affiliate'] ="Support the seller and earn <?= $proposal_referral_money; ?
 $lang['no_cat'] ="missing category?";
 $lang['no_cat_desc'] ="You miss a acategory?<br>Please let us know it.";
 $lang['report']= "report";
-
+$lang['no_ideas'] ="There are currently no ideas in feedback.";
 
 // new notification messages
 $lang['notification']['order_complete'] = "Completed your order.";

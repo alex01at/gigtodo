@@ -132,7 +132,7 @@ $navbar_color = $row_general_settings->navbar_color;
           <?php if ($deviceType == "phone") { echo $lang['mobile_join_now']; } else { echo $lang['join_now']; } ?>
           </a>
         </li>
-        <?php 
+                <?php 
         }else{
           require_once("comp/UserMenu.php");
         }
