@@ -6,7 +6,9 @@
 	if(isset($_GET['credits'])){
 		include("includes/credits.php");
 	}
-
+	if(isset($_GET['suggest_cat'])){
+		include("view/view_suggestions.php");
+	}
 	if($a_admins == 1){
 	}
 	

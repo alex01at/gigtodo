@@ -299,7 +299,7 @@ $r_date = $row_app->r_date;
 			 
 					<div class="card-footer">
 						<span class="float-left text-success">
-						<a href="index?ideas">	View Ideas
+						<a href="index?ideas">	View Ideas</a>
 						</span>
 						<span class="float-right text-success">
 							<i class="fa fa-arrow-circle-o-right"></i>
@@ -328,13 +328,43 @@ $r_date = $row_app->r_date;
                  </div>
              </div><div class="card-footer">
 						<span class="float-left text-success">
-						<a href="index?comments">	View Comments
+						<a href="index?comments">	View Comments</a>
 						</span>
 						<span class="float-right text-success">
 							<i class="fa fa-arrow-circle-o-right"></i>
 						</span>
 						<div class="clearfix"></div>
 					</div>
+             
+        </div>    
+
+
+	</div>
+	<div class="col-xl-3 mb-30 mb-30">
+		<div class="card text-white border-secundary mb-xl-0 mb-lg-3 mb-sm-3 mb-2">
+             <div class="card-header bg-secundary">
+                 <div class="row">
+                     
+                     <div class="col-12 text-center">
+                        <div class="huge"><h2><?= $count_suggestions; ?>
+							</h2></div>
+                        <span class="h4">Suggested Categories</span>
+						
+                     </div>
+                 </div>
+             </div>
+			 
+					<div class="card-footer">
+						<span class="float-left text-success">
+						<a href="index?suggest_cat">	View Suggestions</a>
+						</span>
+						<span class="float-right text-success">
+							<i class="fa fa-arrow-circle-o-right"></i>
+						</span>
+						<div class="clearfix"></div>
+					</div>
+				</a>
+
              
         </div>    
 

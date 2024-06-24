@@ -93,6 +93,7 @@ $a_admins = $row_rights->admins;
 $count_sellers = $db->count("sellers");
 $count_ideas = $db->count("ideas");
 $count_comments = $db->count("comments");
+$count_suggestions = $db->count("suggest_category");
 $count_notifications = $db->count("admin_notifications",array("status" => "unread"));
 $count_orders = $db->count("orders",array("order_active" => "yes"));
 $count_proposals = $db->count("proposals",array("proposal_status" => "pending"));
