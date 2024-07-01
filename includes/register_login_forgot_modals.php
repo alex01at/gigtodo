@@ -278,7 +278,9 @@ input.addEventListener("input", function() {
       </div><!-- Modal body ends -->
     </div>
   </div>
-</div><!-- Forgot password ends -->
+</div><!-- Forgot password ends -->decoder01
+
+<!-- Missing cat starts -->
 <div class="modal fade" id="miss-cat" tabindex="-1" role="dialog" aria-labelledby="nocatLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -304,3 +306,4 @@ input.addEventListener("input", function() {
         </div>
     </div>
 </div>
+<!-- Missing cat ends -->
