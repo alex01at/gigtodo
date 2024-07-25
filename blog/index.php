@@ -20,7 +20,6 @@
 <meta name="description" content="<?= $site_desc; ?>">
 <meta name="keywords" content="<?= $site_keywords; ?>">
 <meta name="author" content="<?= $site_author; ?>">
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
 <link href="../styles/bootstrap.css" rel="stylesheet">
 <link href="../styles/custom.css" rel="stylesheet">
 <!-- Custom css code from modified in admin panel --->
@@ -31,6 +30,8 @@
 <link href="../styles/owl.theme.default.css" rel="stylesheet">
 <link href="../styles/sweat_alert.css" rel="stylesheet">
 <link href="../styles/animate.css" rel="stylesheet">
+<link href="<?= $site_url; ?>/styles/scoped_responsive_and_nav.css" rel="stylesheet">
+<link href="<?= $site_url; ?>/styles/vesta_homepage.css" rel="stylesheet">
 <?php if(!empty($site_favicon)){ ?>
 	<link rel="shortcut icon" href="<?= $site_favicon; ?>" type="image/x-icon">
 <?php } ?>

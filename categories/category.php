@@ -64,6 +64,8 @@
   <link href="<?= $site_url; ?>/styles/styles.css" rel="stylesheet">
   <link href="<?= $site_url; ?>/styles/categories_nav_styles.css" rel="stylesheet">
   <link href="<?= $site_url; ?>/font_awesome/css/font-awesome.css" rel="stylesheet">
+  <link href="<?= $site_url; ?>/styles/scoped_responsive_and_nav.css" rel="stylesheet">
+<link href="<?= $site_url; ?>/styles/vesta_homepage.css" rel="stylesheet">
   <link href="<?= $site_url; ?>/styles/sweat_alert.css" rel="stylesheet">
   <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
   <script src="<?= $site_url; ?>/js/ie.js"></script>

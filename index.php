@@ -39,6 +39,8 @@ $site_title = $row_general_settings->site_title;
 	<script type="text/javascript" src="js/sweat_alert.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<style>.swal2-popup .swal2-styled.swal2-confirm{background-color: #28a745;}</style>
+	<link href="<?= $site_url; ?>/styles/scoped_responsive_and_nav.css" rel="stylesheet">
+<link href="<?= $site_url; ?>/styles/vesta_homepage.css" rel="stylesheet">
 </head>
 <body class="is-responsive">
 <?php

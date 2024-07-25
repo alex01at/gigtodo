@@ -57,8 +57,7 @@ $site_border_color = $row_general_settings->site_border_color;
 $header_color = $row_general_settings->header_color;
 $navbar_color = $row_general_settings->navbar_color;
 ?>
-<link href="<?= $site_url; ?>/styles/scoped_responsive_and_nav.css" rel="stylesheet">
-<link href="<?= $site_url; ?>/styles/vesta_homepage.css" rel="stylesheet">
+
 
 <div id="gnav-header" class="gnav-header global-nav clear gnav-3" style="background-color: <?= $header_color ?>;">
   <header id="gnav-header-inner" class="gnav-header-inner clear apply-nav-height col-group has-svg-icons body-max-width">

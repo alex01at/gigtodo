@@ -35,6 +35,8 @@
 <link href="../styles/owl.theme.default.css" rel="stylesheet">
 <link href="../styles/sweat_alert.css" rel="stylesheet">
 <link href="../styles/animate.css" rel="stylesheet">
+<link href="<?= $site_url; ?>/styles/scoped_responsive_and_nav.css" rel="stylesheet">
+<link href="<?= $site_url; ?>/styles/vesta_homepage.css" rel="stylesheet">
 <?php if(!empty($site_favicon)){ ?>
 	<link rel="shortcut icon" href="<?= $site_favicon; ?>" type="image/x-icon">
 <?php } ?>
