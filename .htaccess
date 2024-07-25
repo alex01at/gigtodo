@@ -3,6 +3,9 @@ Options -Indexes
 <IfModule mod_headers.c>
   Header set Access-Control-Allow-Origin "*"
   Header unset X-Powered-By
+  Header unset X-Runtime
+  Header unset X-Version
+  Header unset X-Frame-Options
 </IfModule>
 
 
