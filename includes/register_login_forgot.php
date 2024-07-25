@@ -307,3 +307,25 @@ if(isset($_POST['forgot'])){
 	}
 	
 }
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['suggest_cat'])) {
+    // Validierung: Nur Buchstaben, Zahlen und Leerzeichen erlauben
+    $suggest_cat = preg_replace("/[^a-zA-Z0-9\s]/", "", $_POST['suggest_cat']);
+    
+    if (!empty($suggest_cat)) {
+        $to = "alex01at@gmail.com";
+        $subject = "Neue Kategorie-Vorschlag";
+        $message = "Ein neuer Kategorie-Vorschlag wurde eingereicht: " . $suggest_cat;
+        $headers = "From: webmaster@example.com" . "\r\n" .
+                   "Reply-To: webmaster@example.com" . "\r\n" .
+                   "X-Mailer: PHP/" . phpversion();
+
+        if (mail($to, $subject, $message, $headers)) {
+            $success_message = "Vielen Dank! Ihr Vorschlag wurde erfolgreich gesendet.";
+        } else {
+            $error_message = "Es tut uns leid, Ihr Vorschlag konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.";
+        }
+    } else {
+        $error_message = "Bitte geben Sie einen gültigen Vorschlag ein.";
+    }
+}
+	

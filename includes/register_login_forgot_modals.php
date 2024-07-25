@@ -278,7 +278,7 @@ input.addEventListener("input", function() {
       </div><!-- Modal body ends -->
     </div>
   </div>
-</div><!-- Forgot password ends -->decoder01
+</div><!-- Forgot password ends -->
 
 <!-- Missing cat starts -->
 <div class="modal fade" id="miss-cat" tabindex="-1" role="dialog" aria-labelledby="nocatLabel" aria-hidden="true">
@@ -286,24 +286,50 @@ input.addEventListener("input", function() {
         <div class="modal-content">
             <div class="modal-header">
                 <i class="fa fa-meh-o fa-log"></i>
-                <h5 class="modal-title" id="nocatLabel"><?= $lang['modals']['forgot']['title']; ?></h5>
+                <h5 class="modal-title" id="nocatLabel"><?= $lang['no_cat']; ?></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <p class="text-muted text-center mb-2"><?= $lang['modals']['forgot']['desc']; ?></p>
-                <form action="" method="post">
-                    <div class="form-group">
-                        <input type="text" name="forgot_email" class="form-control" placeholder="<?= $lang['placeholder']['email']; ?>" required>
-                    </div>
-                    <input type="submit" class="btn btn-success btn-block" value="<?= $lang['button']['submut']; ?>" name="forgot">
-                    <p class="text-muted text-center mt-4"><?= $lang['modals']['forgot']['not_member_yer']; ?>
-                        <a href="#" class="text-success" data-toggle="modal" data-target="#register-modal" data-dismiss="modal"><?= $lang['modals']['forgot']['join_now']; ?></a>
-                    </p>
-                </form>
+                <p class="text-muted text-center mb-2"><?= $lang['no_cat_desc']; ?></p>
+                <?php if (isset($success_message)): ?>
+                    <div class="alert alert-success"><?= $success_message; ?></div>
+                <?php elseif (isset($error_message)): ?>
+                    <div class="alert alert-danger"><?= $error_message; ?></div>
+                <?php else: ?>
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <input type="text" name="suggest_cat_text" class="form-control" placeholder="<?= $lang['placeholder']['no_cat']; ?>" required pattern="[a-zA-Z0-9\s]+">
+                        </div>
+                        <input type="submit" class="btn btn-success btn-block" value="<?= $lang['button']['submit']; ?>" name="suggest_cat_submit">
+                    </form>
+                <?php endif; ?>
             </div>
         </div>
     </div>
 </div>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['suggest_cat_submit'])) {
+  // Validierung: Nur Buchstaben, Zahlen und Leerzeichen erlauben
+  $suggest_cat = preg_replace("/[^a-zA-Z0-9\s]/", "", $_POST['suggest_cat_text']);
+  
+  if (!empty($suggest_cat)) {
+      $to = "alex01at@gmail.com";
+      $subject = "Neue Kategorie-Vorschlag";
+      $message = "Ein neuer Kategorie-Vorschlag wurde eingereicht: " . $suggest_cat;
+      $headers = "From: webmaster@example.com" . "\r\n" .
+                 "Reply-To: webmaster@example.com" . "\r\n" .
+                 "X-Mailer: PHP/" . phpversion();
+
+      if (mail($to, $subject, $message, $headers)) {
+          $success_message = "Vielen Dank! Ihr Vorschlag wurde erfolgreich gesendet.";
+      } else {
+          $error_message = "Es tut uns leid, Ihr Vorschlag konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.";
+      }
+  } else {
+      $error_message = "Bitte geben Sie einen gültigen Vorschlag ein.";
+  }
+}
+?>
 <!-- Missing cat ends -->

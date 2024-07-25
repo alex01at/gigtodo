@@ -184,6 +184,34 @@ function send_admin_forgot_password(){
 	}
 
 }
+function send_admin_suggest_cat(){
+	global $db;
+	global $dir;
+	global $suggest_cat;
+	global $select_admin;
+	global $site_name;
+	global $site_email_address;
+	global $site_logo;
+	global $site_url;
+
+	$rowAdmin = $select_admin->fetch();
+	$admin_user_name = $rowAdmin->admin_user_name;
+	$admin_pass = $rowAdmin->admin_pass;
+
+	$data = [];
+	$data['template'] = "admin_reset_pass";
+	$data['to'] = $suggest_cat;
+	$data['subject'] = "$site_name - New Category suggestion";
+	$data['user_name'] = $admin_user_name;
+	$data['admin_pass'] = $admin_pass;
+
+	if(send_mail($data)){
+		return true;
+	}else{
+		return false;
+	}
+
+}
 
 
 function send_report_email($item_type,$author,$item_link,$date){

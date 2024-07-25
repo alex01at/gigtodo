@@ -120,7 +120,7 @@ $lang['no_cat'] ="missing category?";
 $lang['no_cat_desc'] ="You miss a acategory?<br>Please let us know it.";
 $lang['report']= "report";
 $lang['no_ideas'] ="There are currently no ideas in feedback.";
-
+$lang['placeholder']['no_cat'] ="suggest a category";
 // new notification messages
 $lang['notification']['order_complete'] = "Completed your order.";
 $lang['notification']['approved_referral'] = "Has approved your user referral. you have got the commission.";
