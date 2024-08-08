@@ -42,7 +42,7 @@ $count_proposals = $db->count("proposals",["proposal_seller_id" => $seller_id,"p
 <div class="col-md-12 user-header pl-5 pr-5 pt-5 pb-5" style="background: url(<?= $seller_cover_image; ?>);">
   <?php if(isset($_SESSION['seller_user_name'])){ ?>
   <?php if($_SESSION['seller_user_name'] == $seller_user_name){ ?>
-  <a href="settings?profile_settings" class="btn btn-edit btn-success" ><i class="fa fa-pencil"></i> Edit&nbsp;</a>    
+  <a href="settings?profile_settings" class="btn btn-edit btn-success" ><i class="fa fa-pencil"></i> <?=$lang['button']['edit']; ?>&nbsp;</a>    
   <?php } ?>
   <?php } ?>
   <div class="profile-image float-lg-left flaot-md-left float-none mr-4">
@@ -95,7 +95,7 @@ $count_proposals = $db->count("proposals",["proposal_seller_id" => $seller_id,"p
     <?php }else{ ?>
     <?php if($_SESSION['seller_user_name'] != $seller_user_name){ ?>
     <a class="btn btn-success mt-3" href="<?= $site_url; ?>/conversations/message?seller_id=<?= $seller_id ?>"> 
-    Contact <small>(<?= $seller_user_name; ?>)</small>
+    <?=$lang["user_home"]['contact'];?> <small>(<?= $seller_user_name; ?>)</small>
     </a>
     <?php } ?>
     <?php } ?>
