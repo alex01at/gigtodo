@@ -14,26 +14,29 @@ if(isset($_SESSION['seller_user_name'])){
 	$login_seller_id = $row_login_seller->seller_id;
 }
 
-function check_status($seller_id){
-	global $db;
-	global $login_seller_id;
+function check_status($db, $seller_id, $login_seller_id = null): string {
+    // Verkäufer aus der Datenbank abrufen
+    $select_seller = $db->select("sellers", array("seller_id" => $seller_id));
+    $row_seller = $select_seller->fetch();
 
-	$select_seller = $db->select("sellers",array("seller_id" => $seller_id)); 
-	$row_seller = $select_seller->fetch();
-	$seller_id = $row_seller->seller_id;
-	$seller_activity = $row_seller->seller_activity;
-	if(isset($_SESSION['seller_user_name']) AND $seller_id == @$login_seller_id){
-		return 'Online';
-	}else{
-	 	$current_timestamp = strtotime(date("Y-m-d H:i:s") . '- 10 second');
-		$current_timestamp = date('Y-m-d H:i:s', $current_timestamp);
-		if($seller_activity > $current_timestamp){
-			return 'Online';
-		}else{
-			return 'Offline';
-		}
-	}
-} 
+    if (!$row_seller) {
+        return 'Offline'; // Sicherstellen, dass ein gültiger Verkäufer existiert
+    }
+
+    $seller_activity = $row_seller->seller_activity;
+
+    // Prüfen, ob der eingeloggte Verkäufer und der angefragte Verkäufer derselbe sind
+    if (isset($_SESSION['seller_user_name']) && $seller_id === $login_seller_id) {
+        return 'Online';
+    }
+
+    // Zeitstempel für den Vergleich erstellen (10 Sekunden in der Vergangenheit)
+    $current_timestamp = date('Y-m-d H:i:s', strtotime('-10 seconds'));
+
+    // Status basierend auf Aktivität zurückgeben
+    return ($seller_activity > $current_timestamp) ? 'Online' : 'Offline';
+}
+
 
 function insertSale($data){
 	global $db;
