@@ -1,5 +1,5 @@
 <?php
-
+$proposal_referral_money = null;
 $lang["welcome"] = "Welcome";
 
 // User Logged Out Menu Items
